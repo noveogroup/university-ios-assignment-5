@@ -1,4 +1,5 @@
 #import "RecursiveVC.h"
+#import "UIColor+Parsable.h"
 
 @interface RecursiveVC ()<UITextFieldDelegate>
 
@@ -7,22 +8,28 @@
 @property (nonatomic) int depth;
 @property (nonatomic, strong) NSString *name;
 
+@property (nonatomic, strong) IBOutlet UISlider *redSlider;
+@property (nonatomic, strong) IBOutlet UISlider *greenSlider;
+@property (nonatomic, strong) IBOutlet UISlider *blueSlider;
+
 @end
 
 @implementation RecursiveVC
 
 @synthesize field;
 
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil name:(NSString *)name
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+        name:(NSString *)name
 {
 	self = [self initWithNibName:nibNameOrNil bundle:nibBundleOrNil depth:0 name:name];
 
 	return self;
 }
 
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil depth: (int) depth name:(NSString *)name
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+        depth: (int) depth name:(NSString *)name
 {
-	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [self initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 
     if (self)
 	{
@@ -39,63 +46,43 @@
 {
     [super viewDidLoad];
 
-	self.title = [NSString stringWithFormat:@"%@: %d", self.name, self.depth];
-	self.navigationController.title = self.name;
-	self.field.delegate = self;
+    self.navigationItem.title = [NSString stringWithFormat:@"%@: %d", self.name, self.depth];
 
+    [self initControls];
+}
+
+- (void)initControls
+{
 	CGFloat red;
 	CGFloat green;
 	CGFloat blue;
 	CGFloat alpha;
 
-	[self.view.backgroundColor getRed:&red green:&green blue:&blue alpha:&alpha];
-
+    [self.view.backgroundColor getRed:&red green:&green blue:&blue alpha:&alpha];
 	[self setColorWithRed:red green:green blue:blue alpha:alpha];
 }
 
 - (IBAction)goDeeper:(id)sender
 {
-	[self.navigationController pushViewController:[[RecursiveVC alloc] initWithNibName:self.nib
-																				bundle:self.bundle
-																				 depth:self.depth + 1
-																				  name:self.name]
-										 animated:YES];
+    [self.navigationController pushViewController:[[RecursiveVC alloc] initWithNibName:self.nib
+            bundle:self.bundle depth:self.depth + 1 name:self.name] animated:YES];
 }
 
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-	NSError *error = nil;
-	NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"#[0-9 a-f]{6}" options:NSRegularExpressionCaseInsensitive error:&error];
+    UIColor *newColor = [UIColor getColorByHEXString:textField.text];
 
-	if (regex != nil)
-	{
-		NSUInteger matches = [regex numberOfMatchesInString:textField.text options:0 range:NSMakeRange(0, [textField.text length])];
+    if (newColor != nil) {
+        self.view.backgroundColor = newColor;
+    }
 
-		if (1 == matches)
-		{
-			unsigned red = 0;
-			unsigned green = 0;
-			unsigned blue = 0;
-
-			[[NSScanner scannerWithString:[textField.text substringWithRange:(NSRange){1, 2}]] scanHexInt:&red];
-			[[NSScanner scannerWithString:[textField.text substringWithRange:(NSRange){3, 2}]] scanHexInt:&green];
-			[[NSScanner scannerWithString:[textField.text substringWithRange:(NSRange){5, 2}]] scanHexInt:&blue];
-
-
-			[self setColorWithRed:1.0f * red / 255
-							green:1.0f * green / 255
-							 blue:1.0f * blue / 255
-							alpha:1];
-		}
-	}
-
-	[[self view] endEditing:YES];
+	[self.view endEditing:YES];
 
 	return NO;
 }
 
-- (IBAction) redSliderChanged:(UISlider *)sender
+- (IBAction)sliderChanged:(UISlider *)sender
 {
 	CGFloat red;
 	CGFloat green;
@@ -104,35 +91,15 @@
 
 	[self.view.backgroundColor getRed:&red green:&green blue:&blue alpha:&alpha];
 
-	red = sender.value;
-
-	[self setColorWithRed:red green:green blue:blue alpha:alpha];
-}
-
-- (IBAction) greenSliderChanged:(UISlider *)sender
-{
-	CGFloat red;
-	CGFloat green;
-	CGFloat blue;
-	CGFloat alpha;
-
-	[self.view.backgroundColor getRed:&red green:&green blue:&blue alpha:&alpha];
-
-	green = sender.value;
-
-	[self setColorWithRed:red green:green blue:blue alpha:alpha];
-}
-
-- (IBAction) blueSliderChanged:(UISlider *)sender
-{
-	CGFloat red;
-	CGFloat green;
-	CGFloat blue;
-	CGFloat alpha;
-
-	[self.view.backgroundColor getRed:&red green:&green blue:&blue alpha:&alpha];
-
-	blue = sender.value;
+    if (sender == self.redSlider) {
+        red = sender.value;
+    }
+    else if (sender == self.greenSlider) {
+        green = sender.value;
+    }
+    else if (sender == self.blueSlider) {
+        blue = sender.value;
+    }
 
 	[self setColorWithRed:red green:green blue:blue alpha:alpha];
 }
@@ -145,7 +112,7 @@
 	[self.greenSlider setValue:green animated:YES];
 	[self.blueSlider setValue:blue animated:YES];
 
-	self.field.text = [NSString stringWithFormat:@"#%02x%02x%02x", (unsigned int) round(red * 255), (unsigned int) round(green * 255), (unsigned int) round(blue * 255)];
+    self.field.text = [UIColor RGBStringWithRed:red green:green blue:blue];
 }
 
 @end

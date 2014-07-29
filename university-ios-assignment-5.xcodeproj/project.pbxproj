@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58603AC6363C4DA9C4421062 /* UIColor+Parsable.m in Sources */ = {isa = PBXBuildFile; fileRef = 586030E9188528FD33293AB6 /* UIColor+Parsable.m */; };
 		84D44E5219864470007E9357 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D44E5119864470007E9357 /* Foundation.framework */; };
 		84D44E5419864470007E9357 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D44E5319864470007E9357 /* CoreGraphics.framework */; };
 		84D44E5619864470007E9357 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D44E5519864470007E9357 /* UIKit.framework */; };
@@ -21,6 +22,9 @@
 		84D44E7719864470007E9357 /* university_ios_assignment_5Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D44E7619864470007E9357 /* university_ios_assignment_5Tests.m */; };
 		84D44E8C19865888007E9357 /* RecursiveVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D44E8B19865888007E9357 /* RecursiveVC.m */; };
 		84D44E8E19865DF8007E9357 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D44E8D19865DF8007E9357 /* View.xib */; };
+		84F98D391987969D00655726 /* UserShortVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F98D371987969D00655726 /* UserShortVC.m */; };
+		84F98D3A1987969D00655726 /* UserShortVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F98D381987969D00655726 /* UserShortVC.xib */; };
+		84F98D3C19879CDF00655726 /* Localizeable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84F98D3B19879CDF00655726 /* Localizeable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		586030E9188528FD33293AB6 /* UIColor+Parsable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Parsable.m"; sourceTree = "<group>"; };
+		586038AB05A4F96CE2D8DFA6 /* UIColor+Parsable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Parsable.h"; sourceTree = "<group>"; };
 		84D44E4E19864470007E9357 /* university-ios-assignment-5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "university-ios-assignment-5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D44E5119864470007E9357 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84D44E5319864470007E9357 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +59,10 @@
 		84D44E8A19865888007E9357 /* RecursiveVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecursiveVC.h; sourceTree = "<group>"; };
 		84D44E8B19865888007E9357 /* RecursiveVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecursiveVC.m; sourceTree = "<group>"; };
 		84D44E8D19865DF8007E9357 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		84F98D361987969D00655726 /* UserShortVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserShortVC.h; sourceTree = "<group>"; };
+		84F98D371987969D00655726 /* UserShortVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserShortVC.m; sourceTree = "<group>"; };
+		84F98D381987969D00655726 /* UserShortVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserShortVC.xib; sourceTree = "<group>"; };
+		84F98D3B19879CDF00655726 /* Localizeable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizeable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,9 +126,15 @@
 				84D44E6119864470007E9357 /* AppDelegate.m */,
 				84D44E6319864470007E9357 /* Images.xcassets */,
 				84D44E5819864470007E9357 /* Supporting Files */,
-				84D44E8A19865888007E9357 /* RecursiveVC.h */,
 				84D44E8D19865DF8007E9357 /* View.xib */,
+				84D44E8A19865888007E9357 /* RecursiveVC.h */,
 				84D44E8B19865888007E9357 /* RecursiveVC.m */,
+				84F98D361987969D00655726 /* UserShortVC.h */,
+				84F98D371987969D00655726 /* UserShortVC.m */,
+				84F98D381987969D00655726 /* UserShortVC.xib */,
+				84F98D3B19879CDF00655726 /* Localizeable.strings */,
+				586030E9188528FD33293AB6 /* UIColor+Parsable.m */,
+				586038AB05A4F96CE2D8DFA6 /* UIColor+Parsable.h */,
 			);
 			path = "university-ios-assignment-5";
 			sourceTree = "<group>";
@@ -227,6 +243,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F98D3A1987969D00655726 /* UserShortVC.xib in Resources */,
+				84F98D3C19879CDF00655726 /* Localizeable.strings in Resources */,
 				84D44E5C19864470007E9357 /* InfoPlist.strings in Resources */,
 				84D44E8E19865DF8007E9357 /* View.xib in Resources */,
 				84D44E6419864470007E9357 /* Images.xcassets in Resources */,
@@ -248,9 +266,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F98D391987969D00655726 /* UserShortVC.m in Sources */,
 				84D44E8C19865888007E9357 /* RecursiveVC.m in Sources */,
 				84D44E6219864470007E9357 /* AppDelegate.m in Sources */,
 				84D44E5E19864470007E9357 /* main.m in Sources */,
+				58603AC6363C4DA9C4421062 /* UIColor+Parsable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +473,7 @@
 				84D44E7C19864470007E9357 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84D44E7D19864470007E9357 /* Build configuration list for PBXNativeTarget "university-ios-assignment-5Tests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +482,7 @@
 				84D44E7F19864470007E9357 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

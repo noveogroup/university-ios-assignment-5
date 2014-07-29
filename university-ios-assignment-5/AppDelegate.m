@@ -4,7 +4,8 @@
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+- (BOOL)application:(UIApplication *)application
+        didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
@@ -13,20 +14,29 @@
     UITabBarController *rootController = [[UITabBarController alloc] init];
 	rootController.tabBar.translucent = NO;
     
-    UINavigationController *first = [[UINavigationController alloc] initWithRootViewController:[[RecursiveVC alloc] initWithNibName:@"View" bundle:[NSBundle mainBundle] name:@"First"]];
+    UINavigationController *first = [[UINavigationController alloc]
+            initWithRootViewController:[[RecursiveVC alloc]
+                    initWithNibName:@"View" bundle:[NSBundle mainBundle] name:@"First"]];
+
     first.navigationBar.translucent = NO;
 
-	UINavigationController *second = [[UINavigationController alloc] initWithRootViewController:[[RecursiveVC alloc] initWithNibName:@"View" bundle:[NSBundle mainBundle] name:@"Second"]];
+	UINavigationController *second = [[UINavigationController alloc]
+            initWithRootViewController:[[RecursiveVC alloc] initWithNibName:@"View"
+                    bundle:[NSBundle mainBundle] name:@"Second"]];
+
 	second.navigationBar.translucent = NO;
 
     UIViewController *third = [[UIViewController alloc] init];
 
-
 	rootController.viewControllers = @[first, second, third];
-    
+
+    first.tabBarItem.title = @"First";
+    second.tabBarItem.title = @"Second";
+
     self.window.rootViewController = rootController;
     
     [self.window makeKeyAndVisible];
+
     return YES;
 }
 
