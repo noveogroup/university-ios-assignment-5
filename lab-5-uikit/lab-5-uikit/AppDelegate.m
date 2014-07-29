@@ -20,37 +20,40 @@
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     [self.window setRootViewController:tabBarController];
     
+    // create tab contents
+    ColoredVC *firstColoredVC = [[ColoredVC alloc] initWithTitlePrefix:@"First"];
+    ColoredVC *secondColoredVC = [[ColoredVC alloc] initWithTitlePrefix:@"Second"];
+    
     // create tabs
-    UINavigationController *firstNavigationController =[[UINavigationController alloc] initWithRootViewController:[[ColoredVC alloc] initWithTitlePrefix:@"First"]];
-    UINavigationController *secondNavigationController =[[UINavigationController alloc] initWithRootViewController:[[ColoredVC alloc] initWithTitlePrefix:@"Second"]];
+    UINavigationController *firstNavigationController =[[UINavigationController alloc]
+        initWithRootViewController:firstColoredVC];
+    UINavigationController *secondNavigationController =[[UINavigationController alloc]
+        initWithRootViewController:secondColoredVC];
     InformationVC *informationVC = [[InformationVC alloc] init];
     
-    // create tab bar items
-    [firstNavigationController setTabBarItem:[[UITabBarItem alloc] initWithTitle:@"Color 1" image:nil tag:0]];
-    [secondNavigationController setTabBarItem:[[UITabBarItem alloc] initWithTitle:@"Color 2" image:nil tag:1]];
-    [informationVC setTabBarItem:[[UITabBarItem alloc] initWithTitle:@"Info" image:nil tag:2]];
+    // set tab bar titles
+    firstNavigationController.tabBarItem.title = @"Color 1";
+    secondNavigationController.tabBarItem.title = @"Color 2";
+    informationVC.tabBarItem.title = @"Info";
     
+    // make bars not translucent
     firstNavigationController.navigationBar.translucent = NO;
     secondNavigationController.navigationBar.translucent = NO;
+    tabBarController.tabBar.translucent = NO;
     
     // assign tabs to tab bar
     NSArray *tabBarViewControllers = @[
         firstNavigationController,
         secondNavigationController,
         informationVC
-        ];
+    ];
     
-    [tabBarController setViewControllers:tabBarViewControllers animated:YES];
+    [tabBarController setViewControllers:tabBarViewControllers];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
     return YES;
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
 @end
