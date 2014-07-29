@@ -21,6 +21,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0h4-zC-KPu">
                     <rect key="frame" x="0.0" y="0.0" width="578" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.9960784912109375" green="0.99215692281723022" blue="0.99215692281723022" alpha="0.40000000000000002" colorSpace="deviceRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="ADq-9V-I39"/>
                     </constraints>
@@ -73,6 +74,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                     </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="SqC-0T-Y8e" firstAttribute="leading" secondItem="fNg-5B-SIg" secondAttribute="leading" constant="10" id="7kr-lO-8z1"/>
                         <constraint firstAttribute="centerX" secondItem="kmI-pU-bFS" secondAttribute="centerX" id="8eT-bt-9G0"/>
