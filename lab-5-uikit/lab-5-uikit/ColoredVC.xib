@@ -12,17 +12,17 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="578" height="605"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0h4-zC-KPu">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <rect key="frame" x="0.0" y="0.0" width="578" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="ADq-9V-I39"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                    <state key="normal" title="Next">
+                    <state key="normal" title="Next page">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -30,29 +30,29 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fNg-5B-SIg">
-                    <rect key="frame" x="30" y="60" width="260" height="458"/>
+                    <rect key="frame" x="30" y="60" width="518" height="535"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="128" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="SqC-0T-Y8e">
-                            <rect key="frame" x="8" y="45" width="244" height="31"/>
+                            <rect key="frame" x="8" y="45" width="502" height="31"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="minimumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="thumbTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </slider>
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="128" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="RCh-pQ-cer">
-                            <rect key="frame" x="8" y="75" width="244" height="31"/>
+                            <rect key="frame" x="8" y="75" width="502" height="31"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="minimumTrackTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="thumbTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </slider>
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="128" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Rdi-Ya-9WN">
-                            <rect key="frame" x="8" y="105" width="244" height="31"/>
+                            <rect key="frame" x="8" y="105" width="502" height="31"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="thumbTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </slider>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kmI-pU-bFS">
-                            <rect key="frame" x="55" y="10" width="150" height="30"/>
+                            <rect key="frame" x="184" y="10" width="150" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="150" id="cyD-En-Civ"/>
@@ -85,11 +85,11 @@
                 <constraint firstItem="0h4-zC-KPu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Nqp-v4-wAE"/>
                 <constraint firstAttribute="trailing" secondItem="0h4-zC-KPu" secondAttribute="trailing" id="S85-l4-FZV"/>
                 <constraint firstAttribute="trailing" secondItem="fNg-5B-SIg" secondAttribute="trailing" constant="30" id="Zik-iG-oxG"/>
-                <constraint firstAttribute="bottom" secondItem="fNg-5B-SIg" secondAttribute="bottom" constant="50" id="a91-oC-6gX"/>
+                <constraint firstAttribute="bottom" secondItem="fNg-5B-SIg" secondAttribute="bottom" constant="10" id="a91-oC-6gX"/>
                 <constraint firstItem="0h4-zC-KPu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="j9U-jb-eBT"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
 </document>
