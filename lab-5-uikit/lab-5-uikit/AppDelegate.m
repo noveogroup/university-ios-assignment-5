@@ -30,6 +30,9 @@
     [secondNavigationController setTabBarItem:[[UITabBarItem alloc] initWithTitle:@"Color 2" image:nil tag:1]];
     [informationVC setTabBarItem:[[UITabBarItem alloc] initWithTitle:@"Info" image:nil tag:2]];
     
+    firstNavigationController.navigationBar.translucent = NO;
+    secondNavigationController.navigationBar.translucent = NO;
+    
     // assign tabs to tab bar
     NSArray *tabBarViewControllers = @[
         firstNavigationController,
