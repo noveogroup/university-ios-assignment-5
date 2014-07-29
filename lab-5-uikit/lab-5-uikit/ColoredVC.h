@@ -10,6 +10,10 @@
 
 @interface ColoredVC : UIViewController
 
+@property (nonatomic) int depth;
 @property (strong, nonatomic) IBOutlet UIButton *nextButton;
+
+- (instancetype)initWithTitlePrefix:(NSString *)titlePrefix;
+- (instancetype)initWithTitlePrefix:(NSString *)titlePrefix andDepth:(unsigned int)depth;
 
 @end

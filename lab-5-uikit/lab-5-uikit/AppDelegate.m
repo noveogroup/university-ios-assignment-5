@@ -21,8 +21,8 @@
     [self.window setRootViewController:tabBarController];
     
     // create tabs
-    UINavigationController *firstNavigationController =[[UINavigationController alloc] initWithRootViewController:[[ColoredVC alloc] init]];
-    UINavigationController *secondNavigationController =[[UINavigationController alloc] initWithRootViewController:[[ColoredVC alloc] init]];
+    UINavigationController *firstNavigationController =[[UINavigationController alloc] initWithRootViewController:[[ColoredVC alloc] initWithTitlePrefix:@"First"]];
+    UINavigationController *secondNavigationController =[[UINavigationController alloc] initWithRootViewController:[[ColoredVC alloc] initWithTitlePrefix:@"Second"]];
     InformationVC *informationVC = [[InformationVC alloc] init];
     
     // create tab bar items

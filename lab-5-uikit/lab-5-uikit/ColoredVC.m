@@ -10,6 +10,8 @@
 
 @interface ColoredVC ()
 
+@property (nonatomic, copy) NSString *titlePrefix;
+
 @end
 
 @implementation ColoredVC
@@ -23,10 +25,30 @@
     return self;
 }
 
+- (instancetype)initWithTitlePrefix:(NSString *)titlePrefix {
+    self = [super init];
+    
+    _depth = 0;
+    _titlePrefix = [NSString stringWithString:titlePrefix];
+
+    return self;
+}
+
+- (instancetype)initWithTitlePrefix:(NSString *)titlePrefix andDepth:(unsigned int)depth {
+    self = [super init];
+    
+    _depth = depth;
+    _titlePrefix = [NSString stringWithString:titlePrefix];
+
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    [self setTitle:[NSString stringWithFormat:@"%@ %i", self.titlePrefix, self.depth]];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,7 +58,7 @@
 }
 
 - (IBAction)nextButtonTap:(UIButton *)sender {
-    ColoredVC *nextScreenVC = [[ColoredVC alloc] init];
+    ColoredVC *nextScreenVC = [[ColoredVC alloc] initWithTitlePrefix:self.titlePrefix andDepth:(self.depth+1)];
     [self.navigationController pushViewController:nextScreenVC animated:YES];
 }
 
