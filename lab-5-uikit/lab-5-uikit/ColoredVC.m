@@ -8,37 +8,26 @@
 
 #import "ColoredVC.h"
 
+
 @interface ColoredVC ()
-
 @property (nonatomic, copy) NSString *titlePrefix;
-
+@property (strong, nonatomic) IBOutlet UIButton *nextButton;
 @end
+
 
 @implementation ColoredVC
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
+- (instancetype)initWithTitlePrefix:(NSString *)titlePrefix andDepth:(unsigned int)depth {
+    self = [self initWithNibName:NSStringFromClass([self class]) bundle:[NSBundle mainBundle]];
+    
+    _depth = depth;
+    _titlePrefix = [NSString stringWithString:titlePrefix];
+
     return self;
 }
 
 - (instancetype)initWithTitlePrefix:(NSString *)titlePrefix {
-    self = [super init];
-    
-    _depth = 0;
-    _titlePrefix = [NSString stringWithString:titlePrefix];
-
-    return self;
-}
-
-- (instancetype)initWithTitlePrefix:(NSString *)titlePrefix andDepth:(unsigned int)depth {
-    self = [super init];
-    
-    _depth = depth;
-    _titlePrefix = [NSString stringWithString:titlePrefix];
+    self = [self initWithTitlePrefix:titlePrefix andDepth:0];
 
     return self;
 }
@@ -49,12 +38,6 @@
     
     [self setTitle:[NSString stringWithFormat:@"%@ %i", self.titlePrefix, self.depth]];
     
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)nextButtonTap:(UIButton *)sender {
