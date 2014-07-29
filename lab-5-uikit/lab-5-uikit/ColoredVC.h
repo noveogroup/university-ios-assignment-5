@@ -10,4 +10,6 @@
 
 @interface ColoredVC : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIButton *nextButton;
+
 @end

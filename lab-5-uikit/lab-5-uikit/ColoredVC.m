@@ -35,4 +35,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)nextButtonTap:(UIButton *)sender {
+    ColoredVC *nextScreenVC = [[ColoredVC alloc] init];
+    [self.navigationController pushViewController:nextScreenVC animated:YES];
+}
+
 @end
