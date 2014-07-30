@@ -68,6 +68,33 @@
             bundle:self.bundle depth:self.depth + 1 name:self.name] animated:YES];
 }
 
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range
+        replacementString:(NSString *)string
+{
+    //allow backspace
+    if ([string length] == 0) {
+        return YES;
+    }
+
+    NSString *result = [textField.text stringByReplacingCharactersInRange:range
+            withString:[string uppercaseString]];
+
+    NSError *error = nil;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"^[0-9 A-F]{0,6}"
+            options:NSRegularExpressionCaseInsensitive error:&error];
+
+    if (regex != nil) {
+        NSTextCheckingResult *checkResult = [regex firstMatchInString:result options:0
+                range:NSMakeRange(1, [result length] - 1)];
+
+        if (checkResult.range.length == [result length] - 1 && [result characterAtIndex:0] == '#') {
+            textField.text = result;
+        }
+    }
+
+    return NO;
+}
+
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -84,24 +111,8 @@
 
 - (IBAction)sliderChanged:(UISlider *)sender
 {
-	CGFloat red;
-	CGFloat green;
-	CGFloat blue;
-	CGFloat alpha;
-
-	[self.view.backgroundColor getRed:&red green:&green blue:&blue alpha:&alpha];
-
-    if (sender == self.redSlider) {
-        red = sender.value;
-    }
-    else if (sender == self.greenSlider) {
-        green = sender.value;
-    }
-    else if (sender == self.blueSlider) {
-        blue = sender.value;
-    }
-
-	[self setColorWithRed:red green:green blue:blue alpha:alpha];
+	[self setColorWithRed:self.redSlider.value green:self.greenSlider.value blue:self.blueSlider.value
+            alpha:1];
 }
 
 - (void) setColorWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha
