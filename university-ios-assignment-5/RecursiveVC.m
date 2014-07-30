@@ -31,8 +31,7 @@
 {
     self = [self initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 
-    if (self)
-	{
+    if (self) {
 		self.bundle = nibBundleOrNil;
 		self.nib = nibNameOrNil;
 		self.depth = depth;

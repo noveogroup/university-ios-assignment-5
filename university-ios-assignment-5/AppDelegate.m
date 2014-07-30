@@ -17,17 +17,18 @@
     
     UINavigationController *first = [[UINavigationController alloc]
             initWithRootViewController:[[RecursiveVC alloc]
-                    initWithNibName:@"View" bundle:[NSBundle mainBundle] name:@"First"]];
+                    initWithNibName:@"RecursiveVC" bundle:[NSBundle mainBundle] name:@"First"]];
 
     first.navigationBar.translucent = NO;
 
 	UINavigationController *second = [[UINavigationController alloc]
-            initWithRootViewController:[[RecursiveVC alloc] initWithNibName:@"View"
+            initWithRootViewController:[[RecursiveVC alloc] initWithNibName:@"RecursiveVC"
                     bundle:[NSBundle mainBundle] name:@"Second"]];
 
 	second.navigationBar.translucent = NO;
 
-    UIViewController *third = [[UserShortVC alloc] init];
+    UIViewController *third = [[UserShortVC alloc]
+            initWithNibName:@"UserShortVC" bundle:[NSBundle mainBundle]];
 
 	rootController.viewControllers = @[first, second, third];
 

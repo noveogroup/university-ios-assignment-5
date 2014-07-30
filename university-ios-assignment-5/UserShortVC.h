@@ -2,5 +2,4 @@
 
 @interface UserShortVC : UIViewController
 
-
 @end

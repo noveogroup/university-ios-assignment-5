@@ -4,8 +4,7 @@
 
 + (NSString *)RGBStringWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue;
 + (BOOL)getRed:(CGFloat *)red green:(CGFloat *)green blue:(CGFloat *)blue
-        fromHEXString:(NSString
-        *)string;
+        fromHEXString:(NSString *)string;
 + (UIColor *)getColorByHEXString:(NSString *)string;
 
 @end
