@@ -1,6 +1,7 @@
 #import "AppDelegate.h"
 
 #import "RecursiveVC.h"
+#import "UserShortVC.h"
 
 @implementation AppDelegate
 
@@ -26,12 +27,13 @@
 
 	second.navigationBar.translucent = NO;
 
-    UIViewController *third = [[UIViewController alloc] init];
+    UIViewController *third = [[UserShortVC alloc] init];
 
 	rootController.viewControllers = @[first, second, third];
 
     first.tabBarItem.title = @"First";
     second.tabBarItem.title = @"Second";
+    third.tabBarItem.title = @"Third";
 
     self.window.rootViewController = rootController;
     
