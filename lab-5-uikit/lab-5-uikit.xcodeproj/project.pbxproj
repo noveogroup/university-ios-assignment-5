@@ -22,6 +22,7 @@
 		84A3A8B3198770B3003594C7 /* ColoredVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A3A8B1198770B3003594C7 /* ColoredVC.m */; };
 		84A3A8B4198770B3003594C7 /* ColoredVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A3A8B2198770B3003594C7 /* ColoredVC.xib */; };
 		84A3A8B7198771D2003594C7 /* InformationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A3A8B6198771D2003594C7 /* InformationVC.m */; };
+		84A3A8BB1988E9EB003594C7 /* UIColor+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A3A8BA1988E9EB003594C7 /* UIColor+HexColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		84A3A8B2198770B3003594C7 /* ColoredVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColoredVC.xib; sourceTree = "<group>"; };
 		84A3A8B5198771D2003594C7 /* InformationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationVC.h; sourceTree = "<group>"; };
 		84A3A8B6198771D2003594C7 /* InformationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationVC.m; sourceTree = "<group>"; };
+		84A3A8B91988E9EB003594C7 /* UIColor+HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexColor.h"; sourceTree = "<group>"; };
+		84A3A8BA1988E9EB003594C7 /* UIColor+HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 				84A3A8B2198770B3003594C7 /* ColoredVC.xib */,
 				84A3A8B5198771D2003594C7 /* InformationVC.h */,
 				84A3A8B6198771D2003594C7 /* InformationVC.m */,
+				84A3A8B91988E9EB003594C7 /* UIColor+HexColor.h */,
+				84A3A8BA1988E9EB003594C7 /* UIColor+HexColor.m */,
 			);
 			path = "lab-5-uikit";
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 			files = (
 				84A3A89219876C6B003594C7 /* AppDelegate.m in Sources */,
 				84A3A8B7198771D2003594C7 /* InformationVC.m in Sources */,
+				84A3A8BB1988E9EB003594C7 /* UIColor+HexColor.m in Sources */,
 				84A3A88E19876C6B003594C7 /* main.m in Sources */,
 				84A3A8B3198770B3003594C7 /* ColoredVC.m in Sources */,
 			);
@@ -455,6 +461,7 @@
 				84A3A8AC19876C6B003594C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84A3A8AD19876C6B003594C7 /* Build configuration list for PBXNativeTarget "lab-5-uikitTests" */ = {
 			isa = XCConfigurationList;
@@ -463,6 +470,7 @@
 				84A3A8AF19876C6B003594C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

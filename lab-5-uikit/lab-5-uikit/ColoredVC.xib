@@ -73,7 +73,7 @@
                                 <constraint firstAttribute="width" constant="150" id="cyD-En-Civ"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             <connections>
                                 <outlet property="delegate" destination="-1" id="LgU-r5-NSG"/>
                             </connections>

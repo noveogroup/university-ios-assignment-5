@@ -7,7 +7,7 @@
 //
 
 #import "ColoredVC.h"
-
+#import "UIColor+HexColor.h"
 
 @interface ColoredVC ()
 
@@ -17,7 +17,7 @@
 // 0 - Red, 1 - Green, 2 - Blue
 @property (strong, nonatomic) IBOutletCollection(UISlider) NSArray *colorSliders;
 
-- (BOOL)validateInputWithString:(NSString *)inputString;
+- (NSString *)completeToHexString:(NSString *)string;
 
 @end
 
@@ -71,10 +71,32 @@ CGFloat colorValues[3];
         blue:colorValues[2]
         alpha:1
     ];
+    
+    // create hex-string representation of background color
+    NSMutableString *resultColorString = [[NSMutableString alloc] init];
+    
+    for (int i = 0; i < 3; i++) {
+        int channelValue = lroundf(colorValues[i] * 255);
+        [resultColorString appendFormat:@"%02x", channelValue];
+    }
+    
+    self.colorTextInput.text = resultColorString;
 }
 
-- (BOOL)validateInputWithString:(NSString *)inputString {
-    return true;
+// complete too short (< 6 characters) string with zeros
+// to length = 6
+- (NSString *)completeToHexString:(NSString *)string {
+    if ([string length] < 6) {
+        NSMutableString *fixedString = [NSMutableString stringWithString:string];
+        
+        while ([fixedString length] < 6) {
+            [fixedString appendString:@"0"];
+        }
+        
+        return [NSString stringWithString:fixedString];
+    }
+    
+    return string;
 }
 
 // text field deleagte
@@ -103,12 +125,35 @@ CGFloat colorValues[3];
         error:&error];
     
     if (error) {
-        NSLog(@"regexp error %@", error);
+        NSLog(@"HEX color validarion regexp error:\n %@", error);
     }
 
-    NSTextCheckingResult *match = [regex firstMatchInString:newString options:0 range:NSMakeRange(0, [newString length])];
+    NSTextCheckingResult *match = [regex
+        firstMatchInString:newString
+        options:0
+        range:NSMakeRange(0, [newString length])];
 
     return match.range.length == [newString length];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    if ([textField.text length] < 6) {
+        textField.text = [self completeToHexString:textField.text];
+    }
+    
+    UIColor *newColor = [UIColor colorWithHexString:textField.text];
+    self.view.backgroundColor = newColor;
+    
+    CGFloat red = 0;
+    CGFloat green = 0;
+    CGFloat blue = 0;
+    CGFloat alpha = 0;
+    
+    [newColor getRed:&red green:&green blue:&blue alpha:&alpha];
+    
+    [(UISlider *)self.colorSliders[0] setValue:red];
+    [(UISlider *)self.colorSliders[1] setValue:green];
+    [(UISlider *)self.colorSliders[2] setValue:blue];
 }
 
 @end
