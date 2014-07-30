@@ -5,8 +5,9 @@
 
 + (NSString *)RGBStringWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue
 {
-    return [NSString stringWithFormat:@"#%02x%02x%02x", (unsigned int) round(red * 255),
-                    (unsigned int) round(green * 255), (unsigned int) round(blue * 255)];
+    return [[NSString stringWithFormat:@"#%02x%02x%02x", (unsigned int) round(red * 255),
+                    (unsigned int) round(green * 255), (unsigned int) round(blue * 255)]
+            uppercaseString];
 }
 
 + (BOOL)getRed:(CGFloat *)red green:(CGFloat *)green blue:(CGFloat *)blue
