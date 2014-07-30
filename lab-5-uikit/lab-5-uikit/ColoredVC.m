@@ -13,9 +13,11 @@
 
 @property (nonatomic, copy) NSString *titlePrefix;
 @property (strong, nonatomic) IBOutlet UIButton *nextButton;
-
+@property (strong, nonatomic) IBOutlet UITextField *colorTextInput;
 // 0 - Red, 1 - Green, 2 - Blue
 @property (strong, nonatomic) IBOutletCollection(UISlider) NSArray *colorSliders;
+
+- (BOOL)validateInputWithString:(NSString *)inputString;
 
 @end
 
@@ -69,6 +71,44 @@ CGFloat colorValues[3];
         blue:colorValues[2]
         alpha:1
     ];
+}
+
+- (BOOL)validateInputWithString:(NSString *)inputString {
+    return true;
+}
+
+// text field deleagte
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    
+    return YES;
+}
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
+    return YES;
+}
+
+- (BOOL)textField:(UITextField *)textField
+    shouldChangeCharactersInRange:(NSRange)range
+    replacementString:(NSString *)string {
+    
+    NSMutableString *newString = [NSMutableString stringWithString:textField.text];
+    [newString replaceCharactersInRange:range withString:string];
+    
+    NSString * const fullStringRegExp = @"^[0-9A-F]{0,6}";
+    NSError *error = NULL;
+    NSRegularExpression *regex = [NSRegularExpression
+        regularExpressionWithPattern:fullStringRegExp
+        options:NSRegularExpressionCaseInsensitive
+        error:&error];
+    
+    if (error) {
+        NSLog(@"regexp error %@", error);
+    }
+
+    NSTextCheckingResult *match = [regex firstMatchInString:newString options:0 range:NSMakeRange(0, [newString length])];
+
+    return match.range.length == [newString length];
 }
 
 @end

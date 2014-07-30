@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ColoredVC : UIViewController
+@interface ColoredVC : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic) int depth;
 
