@@ -21,7 +21,7 @@
 		84D44E7519864470007E9357 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84D44E7319864470007E9357 /* InfoPlist.strings */; };
 		84D44E7719864470007E9357 /* university_ios_assignment_5Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D44E7619864470007E9357 /* university_ios_assignment_5Tests.m */; };
 		84D44E8C19865888007E9357 /* RecursiveVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D44E8B19865888007E9357 /* RecursiveVC.m */; };
-		84D44E8E19865DF8007E9357 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D44E8D19865DF8007E9357 /* View.xib */; };
+		84D44E8E19865DF8007E9357 /* RecursiveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D44E8D19865DF8007E9357 /* RecursiveView.xib */; };
 		84F98D391987969D00655726 /* UserShortVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F98D371987969D00655726 /* UserShortVC.m */; };
 		84F98D3A1987969D00655726 /* UserShortVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F98D381987969D00655726 /* UserShortVC.xib */; };
 		84F98D3C19879CDF00655726 /* Localizeable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84F98D3B19879CDF00655726 /* Localizeable.strings */; };
@@ -58,7 +58,7 @@
 		84D44E7619864470007E9357 /* university_ios_assignment_5Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = university_ios_assignment_5Tests.m; sourceTree = "<group>"; };
 		84D44E8A19865888007E9357 /* RecursiveVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecursiveVC.h; sourceTree = "<group>"; };
 		84D44E8B19865888007E9357 /* RecursiveVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecursiveVC.m; sourceTree = "<group>"; };
-		84D44E8D19865DF8007E9357 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		84D44E8D19865DF8007E9357 /* RecursiveView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecursiveView.xib; sourceTree = "<group>"; };
 		84F98D361987969D00655726 /* UserShortVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserShortVC.h; sourceTree = "<group>"; };
 		84F98D371987969D00655726 /* UserShortVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserShortVC.m; sourceTree = "<group>"; };
 		84F98D381987969D00655726 /* UserShortVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserShortVC.xib; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 				84D44E6119864470007E9357 /* AppDelegate.m */,
 				84D44E6319864470007E9357 /* Images.xcassets */,
 				84D44E5819864470007E9357 /* Supporting Files */,
-				84D44E8D19865DF8007E9357 /* View.xib */,
+				84D44E8D19865DF8007E9357 /* RecursiveView.xib */,
 				84D44E8A19865888007E9357 /* RecursiveVC.h */,
 				84D44E8B19865888007E9357 /* RecursiveVC.m */,
 				84F98D361987969D00655726 /* UserShortVC.h */,
@@ -246,7 +246,7 @@
 				84F98D3A1987969D00655726 /* UserShortVC.xib in Resources */,
 				84F98D3C19879CDF00655726 /* Localizeable.strings in Resources */,
 				84D44E5C19864470007E9357 /* InfoPlist.strings in Resources */,
-				84D44E8E19865DF8007E9357 /* View.xib in Resources */,
+				84D44E8E19865DF8007E9357 /* RecursiveView.xib in Resources */,
 				84D44E6419864470007E9357 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
