@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		842466411988FA0D00FB164E /* me-on-stage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 842466401988FA0D00FB164E /* me-on-stage.jpg */; };
 		842466451988FE9F00FB164E /* InformationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 842466431988FE9F00FB164E /* InformationVC.m */; };
-		842466461988FE9F00FB164E /* InformationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842466441988FE9F00FB164E /* InformationVC.xib */; };
+		84688902198A237D005BC906 /* InformationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84688904198A237D005BC906 /* InformationVC.xib */; };
+		84688905198A258B005BC906 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84688907198A258B005BC906 /* Localizable.strings */; };
+		8468890B198A2ADF005BC906 /* ModalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84688909198A2ADF005BC906 /* ModalVC.m */; };
 		84A3A88219876C6B003594C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A3A88119876C6B003594C7 /* Foundation.framework */; };
 		84A3A88419876C6B003594C7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A3A88319876C6B003594C7 /* CoreGraphics.framework */; };
 		84A3A88619876C6B003594C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A3A88519876C6B003594C7 /* UIKit.framework */; };
@@ -41,7 +43,11 @@
 		842466401988FA0D00FB164E /* me-on-stage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "me-on-stage.jpg"; path = "../../../../Downloads/photo/me-on-stage.jpg"; sourceTree = "<group>"; };
 		842466421988FE9F00FB164E /* InformationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationVC.h; sourceTree = "<group>"; };
 		842466431988FE9F00FB164E /* InformationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationVC.m; sourceTree = "<group>"; };
-		842466441988FE9F00FB164E /* InformationVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationVC.xib; sourceTree = "<group>"; };
+		84688903198A237D005BC906 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/InformationVC.xib; sourceTree = "<group>"; };
+		84688906198A258B005BC906 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		84688908198A2ADF005BC906 /* ModalVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalVC.h; sourceTree = "<group>"; };
+		84688909198A2ADF005BC906 /* ModalVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalVC.m; sourceTree = "<group>"; };
+		8468890D198A3AF8005BC906 /* ModalVCDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModalVCDelegate.h; sourceTree = "<group>"; };
 		84A3A87E19876C6B003594C7 /* lab-5-uikit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lab-5-uikit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A3A88119876C6B003594C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84A3A88319876C6B003594C7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -132,9 +138,12 @@
 				84A3A8B2198770B3003594C7 /* ColoredVC.xib */,
 				84A3A8B91988E9EB003594C7 /* UIColor+HexColor.h */,
 				84A3A8BA1988E9EB003594C7 /* UIColor+HexColor.m */,
+				8468890D198A3AF8005BC906 /* ModalVCDelegate.h */,
 				842466421988FE9F00FB164E /* InformationVC.h */,
 				842466431988FE9F00FB164E /* InformationVC.m */,
-				842466441988FE9F00FB164E /* InformationVC.xib */,
+				84688904198A237D005BC906 /* InformationVC.xib */,
+				84688908198A2ADF005BC906 /* ModalVC.h */,
+				84688909198A2ADF005BC906 /* ModalVC.m */,
 			);
 			path = "lab-5-uikit";
 			sourceTree = "<group>";
@@ -142,6 +151,7 @@
 		84A3A88819876C6B003594C7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				84688907198A258B005BC906 /* Localizable.strings */,
 				84A3A88919876C6B003594C7 /* lab-5-uikit-Info.plist */,
 				84A3A88A19876C6B003594C7 /* InfoPlist.strings */,
 				84A3A88D19876C6B003594C7 /* main.m */,
@@ -244,7 +254,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A3A88C19876C6B003594C7 /* InfoPlist.strings in Resources */,
-				842466461988FE9F00FB164E /* InformationVC.xib in Resources */,
+				84688905198A258B005BC906 /* Localizable.strings in Resources */,
+				84688902198A237D005BC906 /* InformationVC.xib in Resources */,
 				842466411988FA0D00FB164E /* me-on-stage.jpg in Resources */,
 				84A3A8B4198770B3003594C7 /* ColoredVC.xib in Resources */,
 				84A3A89419876C6B003594C7 /* Images.xcassets in Resources */,
@@ -266,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8468890B198A2ADF005BC906 /* ModalVC.m in Sources */,
 				84A3A89219876C6B003594C7 /* AppDelegate.m in Sources */,
 				84A3A8BB1988E9EB003594C7 /* UIColor+HexColor.m in Sources */,
 				84A3A88E19876C6B003594C7 /* main.m in Sources */,
@@ -293,6 +305,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		84688904198A237D005BC906 /* InformationVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84688903198A237D005BC906 /* en */,
+			);
+			name = InformationVC.xib;
+			sourceTree = "<group>";
+		};
+		84688907198A258B005BC906 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84688906198A258B005BC906 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		84A3A88A19876C6B003594C7 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

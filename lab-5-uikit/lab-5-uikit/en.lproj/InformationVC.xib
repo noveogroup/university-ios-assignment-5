@@ -28,17 +28,23 @@
                     <rect key="frame" x="0.0" y="528" width="160" height="40"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <color key="backgroundColor" white="0.89661268250000004" alpha="1" colorSpace="calibratedWhite"/>
-                    <state key="normal" title="Подробнее так">
+                    <state key="normal" title="Alert">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="alertButtonTap:" destination="-1" eventType="touchUpInside" id="RB2-ok-YVk"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CXC-On-HJA">
                     <rect key="frame" x="160" y="528" width="160" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
                     <color key="backgroundColor" white="0.89661268250000004" alpha="1" colorSpace="calibratedWhite"/>
-                    <state key="normal" title="Подробнее сяк">
+                    <state key="normal" title="ModalVC">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="modalButtonTap:" destination="-1" eventType="touchUpInside" id="eD7-jh-4Sd"/>
+                    </connections>
                 </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" id="Btm-lh-cqy">
                     <rect key="frame" x="10" y="178" width="300" height="275"/>
