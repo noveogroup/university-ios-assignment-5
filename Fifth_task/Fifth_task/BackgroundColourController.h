@@ -10,10 +10,10 @@
 
 
 @interface BackgroundColourController : UIViewController
-@property (strong, nonatomic) IBOutlet UITextField *textField;
-@property (strong, nonatomic) IBOutlet UISlider *redSlider;
-@property (strong, nonatomic) IBOutlet UISlider *greenSlider;
-@property (strong, nonatomic) IBOutlet UISlider *blueSlider;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UISlider *redSlider;
+@property (weak, nonatomic) IBOutlet UISlider *greenSlider;
+@property (weak, nonatomic) IBOutlet UISlider *blueSlider;
 @property (weak, nonatomic) IBOutlet UIButton *nextLevelButton;
 - (IBAction)nextLevelButtonTap:(id)sender;
 - (IBAction)sliderValueChanged:(id)sender;

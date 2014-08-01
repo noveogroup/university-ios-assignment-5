@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface AuthorViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UIImageView *imageView;
-@property (strong, nonatomic) IBOutlet UITextView *textView;
-@property (strong, nonatomic) IBOutlet UIButton *alertButton;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UIButton *alertButton;
 - (IBAction)showAlert:(id)sender;
 
 @end
