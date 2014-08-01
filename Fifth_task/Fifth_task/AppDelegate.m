@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "BackgroundColourController.h"
 #import "AuthorViewController.h"
-#import "MainViewController.h"
 
 @implementation AppDelegate
 
@@ -19,21 +18,21 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor brownColor];
     
-    BackgroundColourController *bcc1 = [[BackgroundColourController alloc]initWithName:(NSString*)@"first" andLevel:0];
-    BackgroundColourController *bcc2 = [[BackgroundColourController alloc]initWithName:(NSString*)@"second" andLevel:0];
+    BackgroundColourController *bcc1 = [[BackgroundColourController alloc]init];
+    BackgroundColourController *bcc2 = [[BackgroundColourController alloc]init];
     
     UINavigationController* nc1 = [[UINavigationController alloc]initWithRootViewController:bcc1];
-    nc1.tabBarItem.title = @"First";
+    nc1.title = @"First";
     UINavigationController* nc2 = [[UINavigationController alloc]initWithRootViewController:bcc2];
-    nc2.tabBarItem.title = @"Second";
+    nc2.title = @"Second";
     
     AuthorViewController* avc = [[AuthorViewController alloc]init];
     avc.tabBarItem.title = @"Author";
     
-    MainViewController* mvc = [[MainViewController alloc]init];
-    [mvc setViewControllers: @[nc1, nc2, avc]];
+    UITabBarController* tbc = [[UITabBarController alloc]init];
+    [tbc setViewControllers: @[nc1, nc2, avc]];
     
-    self.window.rootViewController = mvc;
+    self.window.rootViewController = tbc;
     
     [self.window makeKeyAndVisible];
     return YES;

@@ -19,7 +19,6 @@
 		84BC3061198652FC00223001 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BC3049198652FB00223001 /* UIKit.framework */; };
 		84BC3069198652FC00223001 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84BC3067198652FC00223001 /* InfoPlist.strings */; };
 		84BC306B198652FC00223001 /* Fifth_taskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BC306A198652FC00223001 /* Fifth_taskTests.m */; };
-		84BC307C1986670700223001 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BC307B1986670700223001 /* MainViewController.m */; };
 		84BC308519875ECA00223001 /* BackgroundColourController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BC308319875ECA00223001 /* BackgroundColourController.m */; };
 		84BC308619875ECA00223001 /* BackgroundColourController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84BC308419875ECA00223001 /* BackgroundColourController.xib */; };
 		84BC30CA1987941900223001 /* AuthorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BC30C81987941900223001 /* AuthorViewController.m */; };
@@ -54,8 +53,6 @@
 		84BC3066198652FC00223001 /* Fifth_taskTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Fifth_taskTests-Info.plist"; sourceTree = "<group>"; };
 		84BC3068198652FC00223001 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84BC306A198652FC00223001 /* Fifth_taskTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Fifth_taskTests.m; sourceTree = "<group>"; };
-		84BC307A1986670700223001 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		84BC307B1986670700223001 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		84BC308219875ECA00223001 /* BackgroundColourController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundColourController.h; sourceTree = "<group>"; };
 		84BC308319875ECA00223001 /* BackgroundColourController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundColourController.m; sourceTree = "<group>"; };
 		84BC308419875ECA00223001 /* BackgroundColourController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackgroundColourController.xib; sourceTree = "<group>"; };
@@ -138,8 +135,6 @@
 				84BC304E198652FB00223001 /* InfoPlist.strings */,
 				84BC3051198652FC00223001 /* main.m */,
 				84BC3053198652FC00223001 /* Fifth_task-Prefix.pch */,
-				84BC307A1986670700223001 /* MainViewController.h */,
-				84BC307B1986670700223001 /* MainViewController.m */,
 				84BC308219875ECA00223001 /* BackgroundColourController.h */,
 				84BC308319875ECA00223001 /* BackgroundColourController.m */,
 				84BC308419875ECA00223001 /* BackgroundColourController.xib */,
@@ -269,7 +264,6 @@
 				84BC3056198652FC00223001 /* AppDelegate.m in Sources */,
 				84BC308519875ECA00223001 /* BackgroundColourController.m in Sources */,
 				84BC3052198652FC00223001 /* main.m in Sources */,
-				84BC307C1986670700223001 /* MainViewController.m in Sources */,
 				84BC30CA1987941900223001 /* AuthorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

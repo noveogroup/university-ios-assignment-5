@@ -6,9 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthorViewController">
             <connections>
-                <outlet property="alertButton" destination="cbf-db-ew5" id="KRC-UA-h4m"/>
-                <outlet property="imageView" destination="sHf-hA-uC5" id="xf9-fG-uq9"/>
-                <outlet property="textView" destination="PHi-EC-Oh1" id="j3r-Hp-SYo"/>
+                <outlet property="alertButton" destination="cbf-db-ew5" id="Rbt-Ha-LjN"/>
+                <outlet property="imageView" destination="sHf-hA-uC5" id="98e-fX-J61"/>
+                <outlet property="textView" destination="PHi-EC-Oh1" id="c21-6d-g93"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,7 +22,7 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="PHi-EC-Oh1">
-                    <rect key="frame" x="40" y="282.00000117130054" width="241" height="172"/>
+                    <rect key="frame" x="40" y="282.00000251029826" width="241" height="172"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -38,7 +38,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="showAlert:" destination="-1" eventType="touchUpInside" id="kMt-aQ-W7Z"/>
+                        <action selector="showAlert:" destination="-1" eventType="touchUpInside" id="mFa-2q-qCV"/>
                     </connections>
                 </button>
             </subviews>

@@ -30,9 +30,10 @@
     self.view.backgroundColor = [UIColor brownColor];
     
     
-    _imageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     
-    _textView.backgroundColor = [UIColor greenColor];    
+    self.textView.backgroundColor = [UIColor greenColor];
+    self.textView.editable = NO;
     
 }
 
@@ -43,7 +44,10 @@
 }
 
 - (IBAction)showAlert:(id)sender {
-    UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"Message" message:@"You clicked on alert button" delegate:nil cancelButtonTitle:@"I'm fine" otherButtonTitles:nil, nil];
+    UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"Message"
+                                                   message:@"You clicked on alert button"
+                                                  delegate:nil cancelButtonTitle:@"I'm fine"
+                                         otherButtonTitles:nil, nil];
     [alert show];
 }
 @end
