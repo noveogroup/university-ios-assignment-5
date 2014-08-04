@@ -91,6 +91,11 @@
 
         if (checkResult.range.length == [result length] - 1 && [result characterAtIndex:0] == '#') {
             textField.text = result;
+
+            UITextPosition *start = [field positionFromPosition:[field beginningOfDocument]
+                    offset:range.location + [string length]];
+
+            [field setSelectedTextRange:[field textRangeFromPosition:start toPosition:start]];
         }
         else {
             [self shakeTextField:textField];
