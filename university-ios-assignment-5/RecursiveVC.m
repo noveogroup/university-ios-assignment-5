@@ -89,21 +89,31 @@
         if (checkResult.range.length == [result length] - 1 && [result characterAtIndex:0] == '#') {
             textField.text = result;
         }
+        else {
+            [self shakeTextField:textField];
+        }
+    }
+    else {
+        [self shakeTextField:textField];
     }
 
     return NO;
 }
 
-
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    UIColor *newColor = [UIColor getColorByHEXString:textField.text];
+    CGFloat red;
+    CGFloat green;
+    CGFloat blue;
 
-    if (newColor != nil) {
-        self.view.backgroundColor = newColor;
+    if ([UIColor getRed:&red green:&green blue:&blue fromHEXString:textField.text]) {
+        [self setColorWithRed:red green:green blue:blue alpha:1];
+
+        [self.view endEditing:YES];
     }
-
-	[self.view endEditing:YES];
+    else {
+        [self shakeTextField:textField];
+    }
 
 	return NO;
 }
@@ -123,6 +133,43 @@
 	[self.blueSlider setValue:blue animated:YES];
 
     self.field.text = [UIColor RGBStringWithRed:red green:green blue:blue];
+}
+
+- (void)shakeTextField:(UITextField *)textField
+{
+    [UIView animateWithDuration:0.1 delay:0
+            options:UIViewAnimationOptionCurveEaseIn
+            animations:^{
+        CGRect frame = textField.frame;
+
+        frame.origin.x -= 10;
+
+        textField.frame = frame;
+    }
+            completion:^(BOOL flag){
+
+        [UIView animateWithDuration:0.2 delay:0
+                options:UIViewAnimationOptionCurveEaseIn
+                animations:^{
+            CGRect frame = textField.frame;
+
+            frame.origin.x += 20;
+
+            textField.frame = frame;
+        }
+                completion:^(BOOL flag2){
+            [UIView animateWithDuration:0.1 delay:0
+                    options:UIViewAnimationOptionCurveEaseIn
+                    animations:^{
+                CGRect frame = textField.frame;
+
+                frame.origin.x -= 10;
+
+                textField.frame = frame;
+            }
+                    completion:^(BOOL flag3){}];
+        }];
+    }];
 }
 
 @end
