@@ -81,25 +81,13 @@
     NSString *result = [textField.text stringByReplacingCharactersInRange:range
             withString:[string uppercaseString]];
 
-    NSError *error = nil;
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"^[0-9 A-F]{0,6}"
-            options:NSRegularExpressionCaseInsensitive error:&error];
+    if ([UIColor isValidHEXString:result]) {
+        textField.text = result;
 
-    if (regex != nil) {
-        NSTextCheckingResult *checkResult = [regex firstMatchInString:result options:0
-                range:NSMakeRange(1, [result length] - 1)];
+        UITextPosition *start = [field positionFromPosition:[field beginningOfDocument]
+                offset:range.location + [string length]];
 
-        if (checkResult.range.length == [result length] - 1 && [result characterAtIndex:0] == '#') {
-            textField.text = result;
-
-            UITextPosition *start = [field positionFromPosition:[field beginningOfDocument]
-                    offset:range.location + [string length]];
-
-            [field setSelectedTextRange:[field textRangeFromPosition:start toPosition:start]];
-        }
-        else {
-            [self shakeTextField:textField];
-        }
+        [field setSelectedTextRange:[field textRangeFromPosition:start toPosition:start]];
     }
     else {
         [self shakeTextField:textField];

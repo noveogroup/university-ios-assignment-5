@@ -66,4 +66,22 @@
     }
 }
 
++ (BOOL)isValidHEXString:(NSString *)string
+{
+    NSError *error = nil;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"^[0-9 A-F]{0,6}"
+            options:NSRegularExpressionCaseInsensitive error:&error];
+
+    if (regex != nil) {
+        NSTextCheckingResult *checkResult = [regex firstMatchInString:string options:0
+                range:NSMakeRange(1, [string length] - 1)];
+
+        return checkResult.range.length == [string length] - 1 && [string characterAtIndex:0] ==
+                '#';
+    }
+    else {
+        return NO;
+    }
+}
+
 @end

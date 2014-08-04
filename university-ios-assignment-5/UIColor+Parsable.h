@@ -6,5 +6,7 @@
 + (BOOL)getRed:(CGFloat *)red green:(CGFloat *)green blue:(CGFloat *)blue
         fromHEXString:(NSString *)string;
 + (UIColor *)getColorByHEXString:(NSString *)string;
++ (BOOL)isValidHEXString:(NSString *)string;
+
 
 @end
