@@ -8,6 +8,8 @@
 @property (nonatomic) int depth;
 @property (nonatomic, strong) NSString *name;
 
+@property (nonatomic, strong) IBOutlet UITextField *field;
+
 @property (nonatomic, strong) IBOutlet UISlider *redSlider;
 @property (nonatomic, strong) IBOutlet UISlider *greenSlider;
 @property (nonatomic, strong) IBOutlet UISlider *blueSlider;
@@ -46,6 +48,7 @@
     [super viewDidLoad];
 
     self.navigationItem.title = [NSString stringWithFormat:@"%@: %d", self.name, self.depth];
+    self.field.placeholder = @"#RRGGBB";
 
     [self initControls];
 }
