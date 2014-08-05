@@ -32,7 +32,7 @@
 {
     [super viewDidLoad];
     
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     // my photo
     UIImage *photoImage = [UIImage imageNamed:@"me-on-stage.jpg"];
