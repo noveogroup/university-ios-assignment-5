@@ -2,7 +2,7 @@
 
 @interface ModalVC ()
 
-@property IBOutlet UIScrollView *scrollView;
+//@property IBOutlet UIScrollView *scrollView;
 @property IBOutlet UITextView *textView;
 
 @end
@@ -23,12 +23,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    CGRect frame = self.textView.frame;
-    frame.size.height = self.textView.contentSize.height;
-    self.textView.frame = frame;
-
-    [self.scrollView setContentSize:[self.textView contentSize]];
 }
 
 - (IBAction)dismiss:(UIButton *)sender
