@@ -37,39 +37,7 @@
 
 @interface UIColor (Hexidecimal)
 
-// PROBLEM WITH THIS METHOD
+// Get UIColor from NSString
 + (UIColor *)colorWithStringRGB:(NSString *)rgb;
 
-@end
-
-
-@implementation UIColor (Hexidecimal)
-
-// PROBLEM WITH THIS METHOD
-+ (UIColor *)colorWithHexRGB:(NSString *)rgb
-{
-    CGFloat red = 0.f, green = 0.f, blue = 0.f;
-    
-    if ([rgb length] == 6)
-    {
-        NSUInteger summ = 0;
-        NSScanner *scanner = [NSScanner scannerWithString:rgb];
-        
-        if ([scanner scanHexInt:&summ] == YES)
-        {
-            blue = (float)((summ % 256) / 256);
-            summ /= 256;
-            
-            green = (float)((summ % 256) / 256);
-            summ /= 256;
-            
-            red = (float)((summ % 256) / 256);
-            
-            return [UIColor colorWithRed:red green:green blue:blue alpha:1.f];
-        }
-    }
-    
-    return nil;
-}
-
-@end
+@end	

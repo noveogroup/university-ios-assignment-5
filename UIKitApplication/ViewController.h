@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InformationVCDelegate.h"
 
-@interface ViewController : UIViewController //<UITextFieldDelegate>
+@interface ViewController : UIViewController
+
+@property id<InformationVCDelegate> delegate;
 
 @end

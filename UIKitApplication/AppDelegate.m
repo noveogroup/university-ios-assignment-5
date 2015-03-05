@@ -10,6 +10,7 @@
 
 #import "ViewController.h"
 #import "BackgroundViewController.h"
+#import "InformationViewController.h"
 
 @implementation AppDelegate
 
@@ -17,11 +18,14 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    self.window.backgroundColor = [UIColor colorWithRed:51.f/255.f green:153.f/255.f
-                                                   blue:255.f/255.f alpha:1.f];
+    self.window.backgroundColor = [UIColor colorWithRed:51.f/255.f
+                                                  green:153.f/255.f
+                                                   blue:255.f/255.f
+                                                  alpha:1.f];
     
     BackgroundViewController *backgroungVC1 = [[BackgroundViewController alloc] init];
     BackgroundViewController *backgroungVC2 = [[BackgroundViewController alloc] init];
+    InformationViewController *informationVC = [[InformationViewController alloc] init];
     
     UINavigationController *navController1 = [[UINavigationController alloc] initWithRootViewController:backgroungVC1];
     navController1.title = @"First";
@@ -29,8 +33,11 @@
     UINavigationController *navController2 = [[UINavigationController alloc] initWithRootViewController:backgroungVC2];
     navController2.title = @"Second";
     
+    UINavigationController *navController3 = [[UINavigationController alloc] initWithRootViewController:informationVC];
+    navController3.title = @"Third";
+    
     UITabBarController *tbController = [[UITabBarController alloc] init];
-    [tbController setViewControllers:@[navController1, navController2]];
+    [tbController setViewControllers:@[navController1, navController2, navController3]];
     
     self.window.rootViewController = tbController;
     [self.window makeKeyAndVisible];
