@@ -18,10 +18,12 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    self.window.backgroundColor = [UIColor colorWithRed:51.f/255.f
-                                                  green:153.f/255.f
-                                                   blue:255.f/255.f
-                                                  alpha:1.f];
+    UIColor *bgColor = [UIColor colorWithRed:51.f/255.f
+                                       green:153.f/255.f
+                                        blue:255.f/255.f
+                                       alpha:1.f];
+    
+    self.window.backgroundColor = bgColor;
     
     BackgroundViewController *backgroungVC1 = [[BackgroundViewController alloc] init];
     BackgroundViewController *backgroungVC2 = [[BackgroundViewController alloc] init];

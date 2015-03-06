@@ -12,7 +12,6 @@
 
 @protocol InformationVCDelegate <NSObject>
 
-@required
 - (void)infoViewFinished:(InformationViewController *)infoVC;
 
 @end

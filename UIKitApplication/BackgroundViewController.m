@@ -14,27 +14,18 @@
 
 @implementation BackgroundViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    
-    if (self)
-    {
-    }
-    
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
     // Set start background color.
-    self.view.backgroundColor = [UIColor colorWithRed:153.f/255.f
-                                                green:102.f/255.f
-                                                 blue:255.f/255.f
-                                                alpha:1.f];
-    
+    UIColor *bgColor = [UIColor colorWithRed:153.f/255.f
+                                        green:102.f/255.f
+                                         blue:255.f/255.f
+                                        alpha:1.f];
+
+    self.view.backgroundColor = bgColor;
+                        
     // Set keyboard type to numberpad for each text field.
     [self.redTextField setKeyboardType:UIKeyboardTypeNumberPad];
     [self.greenTextField setKeyboardType:UIKeyboardTypeNumberPad];
@@ -45,30 +36,14 @@
     [self.greenTextField setText:[NSString stringWithFormat:@"%.0f", (255.f * self.greenSlider.value)]];
     [self.blueTextField setText:[NSString stringWithFormat:@"%.0f", (255.f * self.blueSlider.value)]];
     
-    /*
-    // Listen for keyboard appearances and disappearances.
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardDidShow:)
-                                                 name:UIKeyboardDidShowNotification
-                                               object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardDidHide:)
-                                                 name:UIKeyboardDidHideNotification
-                                               object:nil];
-     */
-    
     if (self.navigationController)
     {
         // Get level of nesting and set it to label.
         NSUInteger index = [self.navigationController.viewControllers indexOfObject:self];
+        
+        // THIS METHOD CAN WORK UNCORRECTLY
         self.navigationItem.title = [NSString stringWithFormat:@"%@: %d", self.navigationController.title, index];
     }
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)sender
@@ -119,16 +94,7 @@
         [self.navigationController pushViewController:backgroundVC animated:YES];
     }
 }
-/*
-- (void)keyboardDidShow: (NSNotification *) notif
-{
-    // Do something here
-}
 
-- (void)keyboardDidHide: (NSNotification *) notif{
-    // Do something here
-}
-*/
 - (IBAction)textFieldValueChanged:(id)sender
 {
     // Set the background based on the values of textFields.
@@ -169,9 +135,9 @@
         
         if ([scanner scanHexInt:&baseColor] == YES)
         {
-            red = ((baseColor & 0xFF0000) >> 16) / 255.0f;
-            green = ((baseColor & 0x00FF00) >> 8) / 255.0f;
-            blue = (baseColor & 0x0000FF) / 255.0f;
+            red = (CGFloat)((baseColor & 0xFF0000) >> 16) / 255.0f;
+            green = (CGFloat)((baseColor & 0x00FF00) >> 8) / 255.0f;
+            blue = (CGFloat)(baseColor & 0x0000FF) / 255.0f;
             
             return [UIColor colorWithRed:red green:green blue:blue alpha:1.f];
         }

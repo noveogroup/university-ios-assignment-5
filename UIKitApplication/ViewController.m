@@ -19,26 +19,18 @@
 
 @implementation ViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    
-    if (self)
-    {
-    }
-    
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	
     // Set start background color.
-    self.view.backgroundColor = [UIColor colorWithRed:153.f/255.f
-                                                green:102.f/255.f
-                                                 blue:255.f/255.f
-                                                alpha:1.f];
+    
+    UIColor *bgColor = [UIColor colorWithRed:153.f/255.f
+                                       green:102.f/255.f
+                                        blue:255.f/255.f
+                                       alpha:1.f];
+    
+    self.view.backgroundColor = bgColor;
     
     // Set my name and surname to label.
     self.name = [[UILabel alloc] init];
@@ -123,11 +115,6 @@
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
     [self adjustForOrientation:toInterfaceOrientation];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
 }
 
 @end
