@@ -39,14 +39,15 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
+// For opportunity to return back.
 - (void)infoViewFinished:(InformationViewController *)infoVC
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+// Got to new activity with user information.
 - (IBAction)fullInfoButtonTap:(id)sender
 {
     ViewController *viewController = [[ViewController alloc] init];
@@ -55,11 +56,11 @@
     [self presentViewController:viewController animated:YES completion: nil];
 }
 
+// Show alert dialog with user information.
 - (IBAction)aboutButtonTap:(id)sender
 {
-    NSString *description = @"Full name: Ivan Bukshev\n\nAge: 19\n\nCity: Novosibirsk\n\nUniversity: NSU\n\nDepartment: IT\n\n\n\n\n\nAnd...\nThat's all.";
-    
-    UIAlertView *descrInfo = [[UIAlertView alloc] initWithTitle:@"Ivan Bukshev"
+    NSString *description = @"Full name: Ivan Bukshev\nAge: 19\n\nCity: Novosibirsk\nUniversity: NSU\nDepartment: IT";
+    UIAlertView *descrInfo = [[UIAlertView alloc] initWithTitle:@"User Information"
                                                         message:description
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"

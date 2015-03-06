@@ -14,4 +14,7 @@
 - (IBAction)fullInfoButtonTap:(id)sender;
 - (IBAction)aboutButtonTap:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIButton *aboutButton;
+@property (weak, nonatomic) IBOutlet UIButton *fullInfoButton;
+
 @end

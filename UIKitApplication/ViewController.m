@@ -97,26 +97,30 @@
     if (UIInterfaceOrientationIsLandscape(interfaceOrientation))
     {
         self.name.frame = CGRectMake(0, 0, screenRect.size.height, 100);
-        self.scrollView.frame = CGRectMake(0, 110, screenRect.size.height, screenRect.size.width-110);
+        self.scrollView.frame = CGRectMake(0, 110, screenRect.size.height, screenRect.size.width-130);
+        self.description.frame = CGRectMake(0, 140, screenRect.size.height, screenRect.size.width-140);
         self.dismissButton.frame = CGRectMake(0, 220, (screenRect.size.width/2), 50);
         
-        self.description.center = [self.scrollView convertPoint:self.scrollView.center fromView:self.scrollView.superview];
-        self.dismissButton.center = [self.scrollView convertPoint:self.scrollView.center fromView:self.scrollView.superview];
+        CGPoint descrPoint = CGPointMake(self.scrollView.center.x, self.scrollView.center.y-100);
+        CGPoint buttonPoint = CGPointMake(self.scrollView.center.x, self.scrollView.center.y-100);
+        self.description.center = descrPoint;
+        self.dismissButton.center = buttonPoint;
     }
     else
     {
         self.name.frame = CGRectMake(0, 0, screenRect.size.width, 100);
-        self.scrollView.frame = CGRectMake(0, 110, screenRect.size.width, screenRect.size.height-270);
+        self.scrollView.frame = CGRectMake(0, 110, screenRect.size.width, screenRect.size.height-130);
+        self.description.frame = CGRectMake(0, 140, screenRect.size.width, screenRect.size.height-140);
         self.dismissButton.frame = CGRectMake(20, 320, (screenRect.size.width/2), 50);
 
-        
-        self.description.center = [self.scrollView convertPoint:self.scrollView.center fromView:self.scrollView.superview];
-        self.dismissButton.center = [self.scrollView convertPoint:self.scrollView.center fromView:self.scrollView.superview];
+        CGPoint descrPoint = CGPointMake(self.scrollView.center.x, self.scrollView.center.y-135);
+        CGPoint buttonPoint = CGPointMake(self.scrollView.center.x, self.scrollView.center.y-180);
+        self.description.center = descrPoint;
+        self.dismissButton.center = buttonPoint;
     }
 }
 
-- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
-                                         duration:(NSTimeInterval)duration
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
     [self adjustForOrientation:toInterfaceOrientation];
 }
