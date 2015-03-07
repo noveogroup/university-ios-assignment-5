@@ -7,6 +7,7 @@
 //
 
 #import "BackgroundViewController.h"
+#import "UIColor+Extensions.h"
 
 @interface BackgroundViewController ()
 
@@ -19,12 +20,7 @@
     [super viewDidLoad];
 
     // Set start background color.
-    UIColor *bgColor = [UIColor colorWithRed:153.f/255.f
-                                        green:102.f/255.f
-                                         blue:255.f/255.f
-                                        alpha:1.f];
-
-    self.view.backgroundColor = bgColor;
+    self.view.backgroundColor = [UIColor safestVioletColor];
                         
     // Set keyboard type to numberpad for each text field.
     [self.redTextField setKeyboardType:UIKeyboardTypeNumberPad];
@@ -41,7 +37,7 @@
         // Get level of nesting and set it to label.
         NSUInteger index = [self.navigationController.viewControllers indexOfObject:self];
         
-        // THIS METHOD CAN WORK UNCORRECTLY
+        // THIS METHOD CAN WORK UNCORRECTLY!
         self.navigationItem.title = [NSString stringWithFormat:@"%@: %d", self.navigationController.title, index];
     }
 }

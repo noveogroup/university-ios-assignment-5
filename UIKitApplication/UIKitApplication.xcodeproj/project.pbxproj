@@ -11,6 +11,7 @@
 		A0B89B801AA63BA1006A4ADE /* BackgroundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0B89B7E1AA63BA1006A4ADE /* BackgroundViewController.xib */; };
 		A0BDC3871AA7953600FBAFC7 /* InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BDC3851AA7953600FBAFC7 /* InformationViewController.m */; };
 		A0BDC3881AA7953600FBAFC7 /* InformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0BDC3861AA7953600FBAFC7 /* InformationViewController.xib */; };
+		A0C9D3EF1AAB5CC50003BE54 /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C9D3EE1AAB5CC50003BE54 /* UIColor+Extensions.m */; };
 		A0E603751AA5D13B006A9C32 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E603741AA5D13B006A9C32 /* UIKit.framework */; };
 		A0E603771AA5D13B006A9C32 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E603761AA5D13B006A9C32 /* Foundation.framework */; };
 		A0E603791AA5D13B006A9C32 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E603781AA5D13B006A9C32 /* CoreGraphics.framework */; };
@@ -32,6 +33,8 @@
 		A0BDC3851AA7953600FBAFC7 /* InformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationViewController.m; sourceTree = "<group>"; };
 		A0BDC3861AA7953600FBAFC7 /* InformationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationViewController.xib; sourceTree = "<group>"; };
 		A0BDC3891AA7957900FBAFC7 /* InformationVCDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InformationVCDelegate.h; sourceTree = "<group>"; };
+		A0C9D3ED1AAB5CC50003BE54 /* UIColor+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extensions.h"; sourceTree = "<group>"; };
+		A0C9D3EE1AAB5CC50003BE54 /* UIColor+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extensions.m"; sourceTree = "<group>"; };
 		A0E603711AA5D13A006A9C32 /* UIKitApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0E603741AA5D13B006A9C32 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A0E603761AA5D13B006A9C32 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -107,6 +110,8 @@
 				A0BDC3851AA7953600FBAFC7 /* InformationViewController.m */,
 				A0BDC3861AA7953600FBAFC7 /* InformationViewController.xib */,
 				A0BDC3891AA7957900FBAFC7 /* InformationVCDelegate.h */,
+				A0C9D3ED1AAB5CC50003BE54 /* UIColor+Extensions.h */,
+				A0C9D3EE1AAB5CC50003BE54 /* UIColor+Extensions.m */,
 			);
 			path = UIKitApplication;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 				A0E6038E1AA5D13B006A9C32 /* ViewController.m in Sources */,
 				A0B89B7F1AA63BA1006A4ADE /* BackgroundViewController.m in Sources */,
 				A0BDC3871AA7953600FBAFC7 /* InformationViewController.m in Sources */,
+				A0C9D3EF1AAB5CC50003BE54 /* UIColor+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

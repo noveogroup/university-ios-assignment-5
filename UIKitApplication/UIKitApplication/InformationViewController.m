@@ -7,6 +7,7 @@
 //
 
 #import "InformationViewController.h"
+#import "UIColor+Extensions.h"
 
 @interface InformationViewController ()
 
@@ -19,10 +20,7 @@
     [super viewDidLoad];
     
     // Set start background color.
-    UIColor *bgColor = [UIColor colorWithRed:153.f/255.f
-                                       green:102.f/255.f
-                                        blue:255.f/255.f
-                                       alpha:1.f];
+    UIColor *bgColor = [UIColor safestVioletColor];
     
     self.view.backgroundColor = bgColor;
 }

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIColor+Extensions.h"
 
 @interface ViewController ()
 
@@ -23,14 +24,8 @@
 {
     [super viewDidLoad];
 	
-    // Set start background color.
-    
-    UIColor *bgColor = [UIColor colorWithRed:153.f/255.f
-                                       green:102.f/255.f
-                                        blue:255.f/255.f
-                                       alpha:1.f];
-    
-    self.view.backgroundColor = bgColor;
+    // Set start background color.  
+    self.view.backgroundColor = [UIColor safestVioletColor];
     
     // Set my name and surname to label.
     self.name = [[UILabel alloc] init];
@@ -45,7 +40,6 @@
     // Create label with info, which will loated in scroll view.
     self.description = [[UILabel alloc] init];
     self.description.text = @"Full name: Ivan Bukshev\n\nAge: 19\nCity: Novosibirsk\nUniversity: NSU\nDepartment: IT\nGroup: 12203";
-    //self.description.lineBreakMode = UILineBreakModeCharacterWrap;
     self.description.numberOfLines = 0;
     self.description.textAlignment = NSTextAlignmentCenter;
     [self.description sizeToFit];
@@ -73,10 +67,7 @@
 {
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     
-    UIColor *colorBG = [UIColor colorWithRed:51.f/255.f
-                                       green:51.f/255.f
-                                        blue:102.f/255.f
-                                       alpha:1.f];
+    UIColor *colorBG = [UIColor safestIndigoColor];
     
     // Set backgroung color to each view and set text color.
     self.name.backgroundColor = colorBG;
