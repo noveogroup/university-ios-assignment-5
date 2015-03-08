@@ -1,24 +1,50 @@
 #import "ColorPickerVC.h"
 
 
+static NSString *const BACK_BUTTON_TEXT = @"Back";
+
+
 @interface ColorPickerVC ()
 
+// UI elements
 @property (strong, nonatomic) UIButton *nextVCButton;
 @property (strong, nonatomic) UITextField *colorField;
 @property (strong, nonatomic) UISlider *redSlider;
 @property (strong, nonatomic) UISlider *greenSlider;
 @property (strong, nonatomic) UISlider *blueSlider;
 
+// Other properties
+@property (assign, nonatomic) NSInteger drillLevel;
+
 @end
 
 
 @implementation ColorPickerVC
+
+- (instancetype)init {
+    self = [super init];
+    if (self != nil) {
+        _drillLevel = 1;
+    }
+    return self;
+}
+
+- (instancetype)initWithDrillLevel:(NSInteger)drillLevel {
+    self = [self init];
+    if (self != nil) {
+        _drillLevel = drillLevel;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     // Initialize elements of the view
     [self initializeElements];
+    
+    // Initialize actions of elements
+    [self initializeActions];
     
     self.view.backgroundColor = [UIColor whiteColor];
 }
@@ -94,6 +120,26 @@
     self.blueSlider = [[UISlider alloc] initWithFrame: blueSliderRect];
     [self.view addSubview:self.blueSlider];
     
+}
+
+- (void)initializeActions {
+    [self.nextVCButton addTarget:self
+                          action:@selector(nextVCButtonTapped:)
+                forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)nextVCButtonTapped:(UIButton *)sender {
+    NSInteger nextDrillLevel = self.drillLevel + 1;
+    UIViewController *nextVC = [[[self class] alloc] initWithDrillLevel:nextDrillLevel];
+    nextVC.title = [NSString stringWithFormat:@"%@ - level %ld",
+                    self.navigationController.title,
+                    (long)nextDrillLevel];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:BACK_BUTTON_TEXT
+                                                                   style:UIBarButtonItemStylePlain
+                                                                  target:nil
+                                                                  action:nil];
+    self.navigationItem.backBarButtonItem = backButton;
+    [self.navigationController pushViewController:nextVC animated:YES];
 }
 
 @end
