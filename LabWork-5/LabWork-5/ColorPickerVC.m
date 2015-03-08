@@ -43,6 +43,9 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
     // Initialize elements of the view
     [self initializeElements];
     
+    // Initialize autoresizing masks
+    [self initializeAutoresizingMasks];
+    
     // Initialize actions of elements
     [self initializeActions];
     
@@ -65,6 +68,7 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
     self.nextVCButton.titleLabel.textAlignment = NSTextAlignmentCenter;
     [self.nextVCButton setTitle:@"Push to\nnext VC" forState:UIControlStateNormal];
     self.nextVCButton.backgroundColor = [UIColor blackColor];
+    [self updateNextVCbuttonPosition];
     [self.view addSubview:self.nextVCButton];
     
     // Initialize color text field
@@ -141,5 +145,38 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
     self.navigationItem.backBarButtonItem = backButton;
     [self.navigationController pushViewController:nextVC animated:YES];
 }
+
+- (void)updateNextVCbuttonPosition {
+    UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+    if (UIInterfaceOrientationIsPortrait(interfaceOrientation)) {
+        self.nextVCButton.center = (CGPoint){self.nextVCButton.center.x, 160};
+    }
+    else {
+        self.nextVCButton.center = (CGPoint){self.nextVCButton.center.x, 90};
+    }
+}
+
+- (void)viewWillLayoutSubviews {
+    [self updateNextVCbuttonPosition];
+}
+
+- (void)initializeAutoresizingMasks {
+    [self.nextVCButton setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin
+                                         | UIViewAutoresizingFlexibleRightMargin];
+    [self.colorField setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin
+                                       | UIViewAutoresizingFlexibleBottomMargin
+                                       | UIViewAutoresizingFlexibleWidth];
+    [self.redSlider setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin
+                                      | UIViewAutoresizingFlexibleBottomMargin
+                                      | UIViewAutoresizingFlexibleWidth];
+    [self.greenSlider setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin
+                                        | UIViewAutoresizingFlexibleBottomMargin
+                                        | UIViewAutoresizingFlexibleWidth];
+    [self.blueSlider setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin
+                                       | UIViewAutoresizingFlexibleBottomMargin
+                                       | UIViewAutoresizingFlexibleWidth];
+}
+
+
 
 @end
