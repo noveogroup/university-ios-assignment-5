@@ -85,6 +85,7 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
     self.colorField.textAlignment = NSTextAlignmentCenter;
     self.colorField.borderStyle = UITextBorderStyleRoundedRect;
     self.colorField.placeholder = @"######";
+    self.colorField.returnKeyType = UIReturnKeyDone;
     [self.view addSubview:self.colorField];
     
     
@@ -130,6 +131,12 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
     [self.nextVCButton addTarget:self
                           action:@selector(nextVCButtonTapped:)
                 forControlEvents:UIControlEventTouchUpInside];
+    [self.colorField addTarget:self
+                        action:@selector(colorValueChanged:)
+              forControlEvents:UIControlEventEditingChanged];
+    [self.colorField addTarget:self
+                        action:@selector(colorValueEntered:)
+              forControlEvents:UIControlEventEditingDidEndOnExit];
 }
 
 - (void)nextVCButtonTapped:(UIButton *)sender {
@@ -177,6 +184,22 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
                                        | UIViewAutoresizingFlexibleWidth];
 }
 
+- (void)colorValueChanged:(UITextField *)sender {
+    NSString *hexColorString = sender.text;
+    self.view.backgroundColor = [[self class] colorFromHexString:hexColorString];
+}
 
++ (UIColor *)colorFromHexString:(NSString *)hexString {
+    NSUInteger baseValue;
+    [[NSScanner scannerWithString:hexString] scanHexInt:&baseValue];
+    float red = ((baseValue >> 16) & 0xFF)/255.0f;
+    float green = ((baseValue >> 8) & 0xFF)/255.0f;
+    float blue = ((baseValue >> 0) & 0xFF)/255.0f;
+    return [UIColor colorWithRed:red green:green blue:blue alpha:1.0f];
+}
+
+- (void)colorValueEntered:(UITextField *)sender {
+    [sender resignFirstResponder];
+}
 
 @end
