@@ -49,7 +49,8 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
     // Initialize actions of elements
     [self initializeActions];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    // Initialize default background color
+    [self updateBackgroundColor:[UIColor whiteColor]];
 }
 
 - (void)initializeElements {
@@ -91,14 +92,15 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
     
     // Initialize color sliders
     NSInteger sliderMargin = 70;
+    NSInteger sliderHeight = 30;
     
     // Initialize red slider
     yPosIndex = 6;
     CGRect redSliderRect = {
         sliderMargin,
-        self.view.bounds.size.height / 10 * yPosIndex,
+        (self.view.bounds.size.height - sliderHeight) / 10 * yPosIndex,
         self.view.bounds.size.width - sliderMargin * 2,
-        0
+        sliderHeight
     };
     self.redSlider = [[UISlider alloc] initWithFrame: redSliderRect];
     [self.view addSubview:self.redSlider];
@@ -107,9 +109,9 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
     yPosIndex = 7;
     CGRect greenSliderRect = {
         sliderMargin,
-        self.view.bounds.size.height / 10 * yPosIndex,
+        (self.view.bounds.size.height - sliderHeight) / 10 * yPosIndex,
         self.view.bounds.size.width - sliderMargin * 2,
-        0
+        sliderHeight
     };
     self.greenSlider = [[UISlider alloc] initWithFrame: greenSliderRect];
     [self.view addSubview:self.greenSlider];
@@ -118,13 +120,12 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
     yPosIndex = 8;
     CGRect blueSliderRect = {
         sliderMargin,
-        self.view.bounds.size.height / 10 * yPosIndex,
+        (self.view.bounds.size.height - sliderHeight) / 10 * yPosIndex,
         self.view.bounds.size.width - sliderMargin * 2,
-        0
+        sliderHeight
     };
     self.blueSlider = [[UISlider alloc] initWithFrame: blueSliderRect];
     [self.view addSubview:self.blueSlider];
-    
 }
 
 - (void)initializeActions {
@@ -137,6 +138,15 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
     [self.colorField addTarget:self
                         action:@selector(colorValueEntered:)
               forControlEvents:UIControlEventEditingDidEndOnExit];
+    [self.redSlider addTarget:self
+                       action:@selector(colorSliderValueChanged:)
+             forControlEvents:UIControlEventValueChanged];
+    [self.greenSlider addTarget:self
+                         action:@selector(colorSliderValueChanged:)
+               forControlEvents:UIControlEventValueChanged];
+    [self.blueSlider addTarget:self
+                        action:@selector(colorSliderValueChanged:)
+              forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)nextVCButtonTapped:(UIButton *)sender {
@@ -186,20 +196,53 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
 
 - (void)colorValueChanged:(UITextField *)sender {
     NSString *hexColorString = sender.text;
-    self.view.backgroundColor = [[self class] colorFromHexString:hexColorString];
-}
-
-+ (UIColor *)colorFromHexString:(NSString *)hexString {
-    NSUInteger baseValue;
-    [[NSScanner scannerWithString:hexString] scanHexInt:&baseValue];
+    unsigned baseValue;
+    [[NSScanner scannerWithString:hexColorString] scanHexInt:&baseValue];
     float red = ((baseValue >> 16) & 0xFF)/255.0f;
     float green = ((baseValue >> 8) & 0xFF)/255.0f;
     float blue = ((baseValue >> 0) & 0xFF)/255.0f;
-    return [UIColor colorWithRed:red green:green blue:blue alpha:1.0f];
+    [self updateSlidersWithRed:red green:green blue:blue];
+    UIColor *newColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0f];
+    self.view.backgroundColor = newColor;
+}
+
+- (void)updateSlidersWithRed:(float)redValue green:(float)greenValue blue:(float)blueValue {
+    self.redSlider.value = redValue;
+    self.greenSlider.value = greenValue;
+    self.blueSlider.value = blueValue;
 }
 
 - (void)colorValueEntered:(UITextField *)sender {
     [sender resignFirstResponder];
+}
+
+- (void)colorSliderValueChanged:(UITextField *)sender {
+    float red = self.redSlider.value;
+    float green = self.greenSlider.value;
+    float blue = self.blueSlider.value;
+    [self updateHexColorValueWithRed:red green:green blue:blue];
+    UIColor *newColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0f];
+    self.view.backgroundColor = newColor;
+}
+
+- (void)updateHexColorValueWithRed:(float)redValue green:(float)greenValue blue:(float)blueValue {
+    self.redSlider.value = redValue;
+    self.greenSlider.value = greenValue;
+    self.blueSlider.value = blueValue;
+    NSString *hexColorString = [NSString stringWithFormat:@"%02X%02X%02X",
+                                (int)(redValue * 255),
+                                (int)(greenValue * 255),
+                                (int)(blueValue * 255)];
+    self.colorField.text = hexColorString;
+}
+
+// Updates background color and values of color sliders and color text field
+- (void)updateBackgroundColor:(UIColor *)color {
+    self.view.backgroundColor = color;
+    CGFloat red, green, blue, alpha;
+    [self.view.backgroundColor getRed:&red green:&green blue:&blue alpha:&alpha];
+    [self updateSlidersWithRed:red green:green blue:blue];
+    [self updateHexColorValueWithRed:red green:green blue:blue];
 }
 
 @end
