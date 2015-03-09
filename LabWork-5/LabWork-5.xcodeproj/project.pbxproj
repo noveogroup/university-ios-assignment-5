@@ -192,6 +192,7 @@
 				TargetAttributes = {
 					B5C35F861AA9E558008023C4 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = WL2U6TR99S;
 					};
 					B5C35F9F1AA9E558008023C4 = {
 						CreatedOnToolsVersion = 6.1;

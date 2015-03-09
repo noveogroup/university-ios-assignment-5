@@ -200,14 +200,8 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
 }
 
 - (void)updateNextVCbuttonPosition {
-    UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication]
-                                                   statusBarOrientation];
-    if (UIInterfaceOrientationIsPortrait(interfaceOrientation)) {
-        self.nextVCButton.center = (CGPoint){self.nextVCButton.center.x, 160};
-    }
-    else {
-        self.nextVCButton.center = (CGPoint){self.nextVCButton.center.x, 90};
-    }
+    self.nextVCButton.center = (CGPoint){self.nextVCButton.center.x,
+                                         self.view.bounds.size.height / 7 * 2};
 }
 
 - (void)viewWillLayoutSubviews {
