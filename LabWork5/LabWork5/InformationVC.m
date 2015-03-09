@@ -1,6 +1,7 @@
 
 
 #import "InformationVC.h"
+#import "AuthorVC.h"
 
 const CGFloat INDENT = 30;
 const CGFloat HEIGHT = 30;
@@ -56,7 +57,8 @@ const CGFloat HEIGHT = 30;
 
 - (void)aboutButtonTapped
 {
-    
+    AuthorVC *modalVC = [[AuthorVC alloc]init];
+    [self presentViewController:modalVC animated:YES completion:nil];
 }
 
 @end

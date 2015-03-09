@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A82DB5051AADB97700606768 /* InformationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A82DB5041AADB97700606768 /* InformationVC.m */; };
+		A82DB5091AADBCB600606768 /* AuthorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A82DB5071AADBCB600606768 /* AuthorVC.m */; };
+		A82DB50A1AADBCB600606768 /* AuthorVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A82DB5081AADBCB600606768 /* AuthorVC.xib */; };
+		A82DB50E1AADBE2800606768 /* AvaAlintor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A82DB50D1AADBE2800606768 /* AvaAlintor.jpg */; };
 		A8C821971AADACA2005BB5D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C821961AADACA2005BB5D1 /* main.m */; };
 		A8C8219A1AADACA2005BB5D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C821991AADACA2005BB5D1 /* AppDelegate.m */; };
 		A8C821A21AADACA2005BB5D1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C821A11AADACA2005BB5D1 /* Images.xcassets */; };
@@ -30,6 +33,10 @@
 /* Begin PBXFileReference section */
 		A82DB5031AADB97700606768 /* InformationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationVC.h; sourceTree = "<group>"; };
 		A82DB5041AADB97700606768 /* InformationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationVC.m; sourceTree = "<group>"; };
+		A82DB5061AADBCB600606768 /* AuthorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorVC.h; sourceTree = "<group>"; };
+		A82DB5071AADBCB600606768 /* AuthorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorVC.m; sourceTree = "<group>"; };
+		A82DB5081AADBCB600606768 /* AuthorVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthorVC.xib; sourceTree = "<group>"; };
+		A82DB50D1AADBE2800606768 /* AvaAlintor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AvaAlintor.jpg; sourceTree = "<group>"; };
 		A8C821911AADACA1005BB5D1 /* LabWork5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LabWork5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C821951AADACA2005BB5D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8C821961AADACA2005BB5D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -63,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A82DB50C1AADBDFC00606768 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A82DB50D1AADBE2800606768 /* AvaAlintor.jpg */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		A8C821881AADACA1005BB5D1 = {
 			isa = PBXGroup;
 			children = (
@@ -91,8 +106,12 @@
 				A8C821BC1AADAEFC005BB5D1 /* ColorVC.xib */,
 				A82DB5031AADB97700606768 /* InformationVC.h */,
 				A82DB5041AADB97700606768 /* InformationVC.m */,
+				A82DB5061AADBCB600606768 /* AuthorVC.h */,
+				A82DB5071AADBCB600606768 /* AuthorVC.m */,
+				A82DB5081AADBCB600606768 /* AuthorVC.xib */,
 				A8C821A11AADACA2005BB5D1 /* Images.xcassets */,
 				A8C821A31AADACA2005BB5D1 /* LaunchScreen.xib */,
+				A82DB50C1AADBDFC00606768 /* Resources */,
 				A8C821941AADACA2005BB5D1 /* Supporting Files */,
 			);
 			path = LabWork5;
@@ -204,7 +223,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A82DB50E1AADBE2800606768 /* AvaAlintor.jpg in Resources */,
 				A8C821A51AADACA2005BB5D1 /* LaunchScreen.xib in Resources */,
+				A82DB50A1AADBCB600606768 /* AuthorVC.xib in Resources */,
 				A8C821A21AADACA2005BB5D1 /* Images.xcassets in Resources */,
 				A8C821BE1AADAEFC005BB5D1 /* ColorVC.xib in Resources */,
 			);
@@ -224,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A82DB5091AADBCB600606768 /* AuthorVC.m in Sources */,
 				A8C8219A1AADACA2005BB5D1 /* AppDelegate.m in Sources */,
 				A82DB5051AADB97700606768 /* InformationVC.m in Sources */,
 				A8C821BD1AADAEFC005BB5D1 /* ColorVC.m in Sources */,

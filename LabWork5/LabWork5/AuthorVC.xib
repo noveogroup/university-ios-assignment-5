@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthorVC">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alexandr" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2Z-ja-tBW">
+                    <rect key="frame" x="153" y="59" width="77" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="km9-pR-4z3">
+                    <rect key="frame" x="40" y="136" width="234" height="393"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <mutableString key="text">Студент 4 курса НГТУ факультета Автоматики и Вычислительной Техники.  
+
+Факультет автоматики и вычислительной техники (АВТФ) - один из самых крупных факультетов в вузе. С 1994 г. он размещается в новом здании и является единственным факультетом, занимающим отдельный учебный корпус (7).
+Совершенствованию учебного процесса и повышению качества подготовки специалистов на факультете уделяют особое внимание. Факультет имеет договоры о совместной работе с зарубежными вузами, фирмами Германии, Швейцарии, Польши, Китая, стран СНГ.
+Обучающиеся на факультете автоматики и вычислительной техники получают фундаментальные знания и практическую подготовку в различных областях науки и техники, связанных с обработкой информации, теорией управления, конструированием различных приборов и устройств.
+Поступая на один из лучших по техническому оснащению факультет НГТУ, Вы выбираете специальность, связанную с вычислительной техникой, современным программным обеспечением, а, следовательно, облегчаете себе трудоустройство после окончания вуза. 
+
+Миссия университета заключается в подготовке конкурентоспособных кадров для высокотехнологичных отраслей экономики России, в проведении фундаментальных и прикладных научных исследований мирового уровня, в трансфере результатов интеллектуальной деятельности и интеграции в мировое научно-образовательное пространство.
+ 
+Основная информация
+ 
+Университет был учрежден 19 августа 1950 г. как Новосибирский электротехнический институт. В 1992 г. он был переименован в Новосибирский государственный технический университет (НГТУ).
+НГТУ переименован в Федеральное государственное бюджетное образовательное учреждение высшего профессионального образования «Новосибирский государственный технический университет» в соответствии с Федеральным законом от 8 мая 2010 г. № 83-ФЗ и приказом Министерства образования и науки Российской Федерации Ф № 1786 от 25 мая 2011 г. 
+В настоящий момент НГТУ является одним из крупнейших вузов региона: в университете обучается более 14 000 студентов; работает более 1 500 преподавателей; осуществляется подготовка по 79 направлениям (бакалавриат и магистратура) и 5 специальностям высшего профессионального образования – физико-математическим, техническим, экономическим и гуманитарным, а также по 8 специальностям и направлениям среднего профессионального образования.</mutableString>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ovchinnikov" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqs-7f-CF4">
+                    <rect key="frame" x="153" y="88" width="95" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9eX-RR-NjM">
+                    <rect key="frame" x="143" y="530" width="35" height="30"/>
+                    <state key="normal" title="Back">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="backButtonTapped:" destination="-1" eventType="touchUpInside" id="ADt-fG-xIj"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AvaAlintor.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="NKd-PK-YY3">
+                    <rect key="frame" x="50" y="34" width="87" height="87"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="87" id="YNj-UF-S2G"/>
+                        <constraint firstAttribute="height" constant="87" id="bJe-3e-N8s"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="e2Z-ja-tBW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="59" id="1Vx-VR-zPf"/>
+                <constraint firstAttribute="trailing" secondItem="e2Z-ja-tBW" secondAttribute="trailing" constant="90" id="KGk-SV-4zC"/>
+                <constraint firstItem="9eX-RR-NjM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="143" id="RJl-kx-S17"/>
+                <constraint firstItem="NKd-PK-YY3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="34" id="WLu-7h-sut"/>
+                <constraint firstAttribute="trailing" secondItem="km9-pR-4z3" secondAttribute="trailing" constant="46" id="WpW-V9-Xgl"/>
+                <constraint firstAttribute="bottom" secondItem="9eX-RR-NjM" secondAttribute="bottom" constant="8" id="aZC-zU-Vav"/>
+                <constraint firstItem="e2Z-ja-tBW" firstAttribute="leading" secondItem="NKd-PK-YY3" secondAttribute="trailing" constant="16" id="d39-yc-Vhw"/>
+                <constraint firstItem="km9-pR-4z3" firstAttribute="top" secondItem="NKd-PK-YY3" secondAttribute="bottom" constant="15" id="fZp-D5-e6v"/>
+                <constraint firstItem="9eX-RR-NjM" firstAttribute="top" secondItem="km9-pR-4z3" secondAttribute="bottom" constant="1" id="iAi-jQ-mfa"/>
+                <constraint firstAttribute="trailing" secondItem="9eX-RR-NjM" secondAttribute="trailing" constant="142" id="kZa-rg-zwC"/>
+                <constraint firstItem="tqs-7f-CF4" firstAttribute="top" secondItem="e2Z-ja-tBW" secondAttribute="bottom" constant="8" id="mdu-Yn-wq5"/>
+                <constraint firstItem="NKd-PK-YY3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="v9L-Pp-Cw6"/>
+                <constraint firstItem="tqs-7f-CF4" firstAttribute="leading" secondItem="NKd-PK-YY3" secondAttribute="trailing" constant="16" id="xeH-Yc-SJt"/>
+                <constraint firstItem="km9-pR-4z3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="xke-fd-Kxe"/>
+            </constraints>
+            <point key="canvasLocation" x="565" y="499"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="AvaAlintor.jpg" width="184" height="184"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
