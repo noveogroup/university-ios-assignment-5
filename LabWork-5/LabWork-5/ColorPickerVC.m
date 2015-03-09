@@ -9,6 +9,7 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
 // UI elements
 @property (strong, nonatomic) UIButton *nextVCButton;
 @property (strong, nonatomic) UITextField *colorField;
+@property (strong, nonatomic) UILabel *colorLabel;
 
 // View controllers
 @property (strong, nonatomic) ColorSliderVC *redSliderVC;
@@ -73,7 +74,7 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
     [self updateNextVCbuttonPosition];
     [self.view addSubview:self.nextVCButton];
     
-    // Initialize color text field
+    // Initialize color text field with it's label
     NSInteger fieldMargin = 110;
     NSInteger fieldHeight = 30;
     NSInteger yPosIndex = 5; // Index for calculating "y" position of elements
@@ -89,6 +90,20 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
     self.colorField.placeholder = @"######";
     self.colorField.returnKeyType = UIReturnKeyDone;
     [self.view addSubview:self.colorField];
+    CGRect colorLabelFrame = {
+        10,
+        self.colorField.frame.origin.y,
+        100,
+        fieldHeight
+    };
+    self.colorLabel = [[UILabel alloc] initWithFrame:colorLabelFrame];
+    self.colorLabel.text = @"Hex Color: #";
+    self.colorLabel.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(colorLabelTapped:)];
+    [self.colorLabel addGestureRecognizer:tap];
+    [self.view addSubview:self.colorLabel];
     
     
     // Initialize color sliders with their controllers
@@ -205,6 +220,8 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
     [self.colorField setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin
                                        | UIViewAutoresizingFlexibleBottomMargin
                                        | UIViewAutoresizingFlexibleWidth];
+    [self.colorLabel setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin
+                                       | UIViewAutoresizingFlexibleBottomMargin];
     [self.redSliderVC.view setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin
                                              | UIViewAutoresizingFlexibleBottomMargin
                                              | UIViewAutoresizingFlexibleWidth];
@@ -297,6 +314,10 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
     [UIView animateWithDuration:0.3 animations:^{
         sender.alpha = 1.0;
     }];
+}
+
+- (void)colorLabelTapped:(UILabel *)sender {
+    [self.colorField becomeFirstResponder];
 }
 
 @end
