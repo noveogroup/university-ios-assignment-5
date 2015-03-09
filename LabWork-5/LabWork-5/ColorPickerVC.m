@@ -147,6 +147,15 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
     [self.blueSlider addTarget:self
                         action:@selector(colorSliderValueChanged:)
               forControlEvents:UIControlEventValueChanged];
+    [self.nextVCButton addTarget:self
+                          action:@selector(buttonTouchDownAnimation:)
+                forControlEvents:(UIControlEventTouchDown)];
+    [self.nextVCButton addTarget:self
+                          action:@selector(buttonTouchUpAnimation:)
+                forControlEvents:(UIControlEventTouchUpInside)];
+    [self.nextVCButton addTarget:self
+                          action:@selector(buttonTouchUpAnimation:)
+                forControlEvents:(UIControlEventTouchDragExit)];
 }
 
 - (void)nextVCButtonTapped:(UIButton *)sender {
@@ -243,6 +252,18 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
     [self.view.backgroundColor getRed:&red green:&green blue:&blue alpha:&alpha];
     [self updateSlidersWithRed:red green:green blue:blue];
     [self updateHexColorValueWithRed:red green:green blue:blue];
+}
+
+- (void)buttonTouchDownAnimation:(UIButton *)sender {
+    [UIView animateWithDuration:0.3 animations:^{
+        sender.alpha = 0.5;
+    }];
+}
+
+- (void)buttonTouchUpAnimation:(UIButton *)sender {
+    [UIView animateWithDuration:0.3 animations:^{
+        sender.alpha = 1.0;
+    }];
 }
 
 @end
