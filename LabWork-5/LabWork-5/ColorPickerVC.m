@@ -222,6 +222,11 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
 
 - (void)colorValueEntered:(UITextField *)sender {
     [sender resignFirstResponder];
+    
+    // Fill color field by valid hex value got from background color
+    CGFloat red, green, blue, alpha;
+    [self.view.backgroundColor getRed:&red green:&green blue:&blue alpha:&alpha];
+    [self updateHexColorValueWithRed:red green:green blue:blue];
 }
 
 - (void)colorSliderValueChanged:(UITextField *)sender {
