@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B52CCF0F1AAD797900E7828A /* ColorSliderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B52CCF0D1AAD797900E7828A /* ColorSliderVC.m */; };
 		B52CCF101AAD797900E7828A /* ColorSliderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B52CCF0E1AAD797900E7828A /* ColorSliderVC.xib */; };
+		B52CCF141AADA45D00E7828A /* AboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B52CCF121AADA45D00E7828A /* AboutVC.m */; };
+		B52CCF151AADA45D00E7828A /* AboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B52CCF131AADA45D00E7828A /* AboutVC.xib */; };
 		B5C35F8D1AA9E558008023C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C35F8C1AA9E558008023C4 /* main.m */; };
 		B5C35F901AA9E558008023C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C35F8F1AA9E558008023C4 /* AppDelegate.m */; };
 		B5C35F931AA9E558008023C4 /* ColorPickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C35F921AA9E558008023C4 /* ColorPickerVC.m */; };
@@ -31,6 +33,9 @@
 		B52CCF0C1AAD797900E7828A /* ColorSliderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorSliderVC.h; sourceTree = "<group>"; };
 		B52CCF0D1AAD797900E7828A /* ColorSliderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSliderVC.m; sourceTree = "<group>"; };
 		B52CCF0E1AAD797900E7828A /* ColorSliderVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorSliderVC.xib; sourceTree = "<group>"; };
+		B52CCF111AADA45D00E7828A /* AboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutVC.h; sourceTree = "<group>"; };
+		B52CCF121AADA45D00E7828A /* AboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutVC.m; sourceTree = "<group>"; };
+		B52CCF131AADA45D00E7828A /* AboutVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutVC.xib; sourceTree = "<group>"; };
 		B5C35F871AA9E558008023C4 /* LabWork-5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LabWork-5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C35F8B1AA9E558008023C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5C35F8C1AA9E558008023C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,6 +96,9 @@
 				B52CCF0C1AAD797900E7828A /* ColorSliderVC.h */,
 				B52CCF0D1AAD797900E7828A /* ColorSliderVC.m */,
 				B52CCF0E1AAD797900E7828A /* ColorSliderVC.xib */,
+				B52CCF111AADA45D00E7828A /* AboutVC.h */,
+				B52CCF121AADA45D00E7828A /* AboutVC.m */,
+				B52CCF131AADA45D00E7828A /* AboutVC.xib */,
 				B5C35F971AA9E558008023C4 /* Images.xcassets */,
 				B5C35F991AA9E558008023C4 /* LaunchScreen.xib */,
 				B5C35F8A1AA9E558008023C4 /* Supporting Files */,
@@ -204,6 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B52CCF151AADA45D00E7828A /* AboutVC.xib in Resources */,
 				B5C35F9B1AA9E558008023C4 /* LaunchScreen.xib in Resources */,
 				B52CCF101AAD797900E7828A /* ColorSliderVC.xib in Resources */,
 				B5C35F981AA9E558008023C4 /* Images.xcassets in Resources */,
@@ -225,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5C35F931AA9E558008023C4 /* ColorPickerVC.m in Sources */,
+				B52CCF141AADA45D00E7828A /* AboutVC.m in Sources */,
 				B52CCF0F1AAD797900E7828A /* ColorSliderVC.m in Sources */,
 				B5C35F901AA9E558008023C4 /* AppDelegate.m in Sources */,
 				B5C35F8D1AA9E558008023C4 /* main.m in Sources */,

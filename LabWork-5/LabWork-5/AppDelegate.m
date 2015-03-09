@@ -1,5 +1,6 @@
 #import "AppDelegate.h"
 #import "ColorPickerVC.h"
+#import "AboutVC.h"
 
 
 @interface AppDelegate ()
@@ -29,9 +30,14 @@
                                    initWithRootViewController:secondTabVC];
     secondTabNC.title = secondTabVC.title = secondTabName;
     
+    // Initialize third tab content
+    NSString *thirdTabName = @"Third Tab";
+    UIViewController *thirdTabVC = [[AboutVC alloc] init];
+    thirdTabVC.title = thirdTabName;
+    
     // Initialize tab bar controller and insert the created controllers to it
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    tabBarController.viewControllers = @[firstTabNC, secondTabNC];
+    tabBarController.viewControllers = @[firstTabNC, secondTabNC, thirdTabVC];
     
     // Set the tab bar controller as root view controller and make it visible
     self.window.rootViewController = tabBarController;
