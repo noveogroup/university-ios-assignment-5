@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A82DB5051AADB97700606768 /* InformationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A82DB5041AADB97700606768 /* InformationVC.m */; };
 		A8C821971AADACA2005BB5D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C821961AADACA2005BB5D1 /* main.m */; };
 		A8C8219A1AADACA2005BB5D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C821991AADACA2005BB5D1 /* AppDelegate.m */; };
 		A8C821A21AADACA2005BB5D1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C821A11AADACA2005BB5D1 /* Images.xcassets */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A82DB5031AADB97700606768 /* InformationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationVC.h; sourceTree = "<group>"; };
+		A82DB5041AADB97700606768 /* InformationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationVC.m; sourceTree = "<group>"; };
 		A8C821911AADACA1005BB5D1 /* LabWork5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LabWork5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C821951AADACA2005BB5D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8C821961AADACA2005BB5D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -86,6 +89,8 @@
 				A8C821BA1AADAEFC005BB5D1 /* ColorVC.h */,
 				A8C821BB1AADAEFC005BB5D1 /* ColorVC.m */,
 				A8C821BC1AADAEFC005BB5D1 /* ColorVC.xib */,
+				A82DB5031AADB97700606768 /* InformationVC.h */,
+				A82DB5041AADB97700606768 /* InformationVC.m */,
 				A8C821A11AADACA2005BB5D1 /* Images.xcassets */,
 				A8C821A31AADACA2005BB5D1 /* LaunchScreen.xib */,
 				A8C821941AADACA2005BB5D1 /* Supporting Files */,
@@ -220,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8C8219A1AADACA2005BB5D1 /* AppDelegate.m in Sources */,
+				A82DB5051AADB97700606768 /* InformationVC.m in Sources */,
 				A8C821BD1AADAEFC005BB5D1 /* ColorVC.m in Sources */,
 				A8C821971AADACA2005BB5D1 /* main.m in Sources */,
 			);
