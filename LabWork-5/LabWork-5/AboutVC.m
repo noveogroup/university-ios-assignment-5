@@ -23,7 +23,10 @@
 }
 
 - (IBAction)moreInfoButtonTapped:(UIButton *)sender {
-    // TODO: Implement this
+    AuthorDetailsVC *modalVC = [[AuthorDetailsVC alloc]
+                                initWithNibName:NSStringFromClass([AuthorDetailsVC class])
+                                         bundle:[NSBundle mainBundle]];
+    [self presentViewController:modalVC animated:YES completion:nil];
 }
 
 @end
