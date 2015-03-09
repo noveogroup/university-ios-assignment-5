@@ -19,12 +19,12 @@
     UINavigationController *navControllerSecond = [[UINavigationController alloc] initWithRootViewController:[[ColoredVC alloc] init]];
     navControllerSecond.title = @"SecondController";
     
-    AutorInfoVC *autorController = [[AutorInfoVC alloc] init];//initWithNibName:@"AutorInfoVC" bundle:[NSBundle mainBundle]];
+    AutorInfoVC *autorController = [[AutorInfoVC alloc] init];
     autorController.title = @"AutorController";
     
     // Add VC into tabBarController
     [tabBarController setViewControllers:@[navControllerFirst, navControllerSecond, autorController]
-                                animated:true];
+                                animated:TRUE];
     
     
     

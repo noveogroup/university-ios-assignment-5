@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE123D971AAB2D9800C23CE0 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE123D961AAB2D9800C23CE0 /* Launch Screen.xib */; };
+		CE1DD78A1AADD3920031D6E3 /* AutorInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1DD7891AADD3920031D6E3 /* AutorInfoVC.xib */; };
+		CE1DD78D1AADDF9A0031D6E3 /* FullInformationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1DD78C1AADDF9A0031D6E3 /* FullInformationVC.m */; };
+		CE1DD7911AADE3A30031D6E3 /* Jackie_Chan_Cannes_2012.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE1DD7901AADE3A30031D6E3 /* Jackie_Chan_Cannes_2012.jpg */; };
+		CE1DD7931AADE40A0031D6E3 /* FullInformationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1DD7921AADE40A0031D6E3 /* FullInformationVC.xib */; };
 		CE69C3C21AA4C11600D855BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE69C3C11AA4C11600D855BC /* main.m */; };
 		CE69C3C51AA4C11600D855BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE69C3C41AA4C11600D855BC /* AppDelegate.m */; };
 		CE69C3E71AA4CA5C00D855BC /* ColoredVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CE69C3E61AA4CA5C00D855BC /* ColoredVC.m */; };
@@ -15,7 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CE123D961AAB2D9800C23CE0 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		CE1DD7891AADD3920031D6E3 /* AutorInfoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AutorInfoVC.xib; path = ../AutorInfoVC.xib; sourceTree = "<group>"; };
+		CE1DD78B1AADDF9A0031D6E3 /* FullInformationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullInformationVC.h; sourceTree = "<group>"; };
+		CE1DD78C1AADDF9A0031D6E3 /* FullInformationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullInformationVC.m; sourceTree = "<group>"; };
+		CE1DD7901AADE3A30031D6E3 /* Jackie_Chan_Cannes_2012.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Jackie_Chan_Cannes_2012.jpg; path = ../../../../Downloads/Jackie_Chan_Cannes_2012.jpg; sourceTree = "<group>"; };
+		CE1DD7921AADE40A0031D6E3 /* FullInformationVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FullInformationVC.xib; path = ../FullInformationVC.xib; sourceTree = "<group>"; };
 		CE69C3BC1AA4C11600D855BC /* Lab5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE69C3C01AA4C11600D855BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE69C3C11AA4C11600D855BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -57,13 +64,17 @@
 		CE69C3BE1AA4C11600D855BC /* Lab5 */ = {
 			isa = PBXGroup;
 			children = (
+				CE1DD7901AADE3A30031D6E3 /* Jackie_Chan_Cannes_2012.jpg */,
 				CE69C3C31AA4C11600D855BC /* AppDelegate.h */,
 				CE69C3C41AA4C11600D855BC /* AppDelegate.m */,
 				CE69C3E51AA4CA5C00D855BC /* ColoredVC.h */,
 				CE69C3E61AA4CA5C00D855BC /* ColoredVC.m */,
 				CE69C3E81AA4CB7200D855BC /* AutorInfoVC.h */,
 				CE69C3E91AA4CB7200D855BC /* AutorInfoVC.m */,
-				CE123D961AAB2D9800C23CE0 /* Launch Screen.xib */,
+				CE1DD7891AADD3920031D6E3 /* AutorInfoVC.xib */,
+				CE1DD78B1AADDF9A0031D6E3 /* FullInformationVC.h */,
+				CE1DD78C1AADDF9A0031D6E3 /* FullInformationVC.m */,
+				CE1DD7921AADE40A0031D6E3 /* FullInformationVC.xib */,
 				CE69C3BF1AA4C11600D855BC /* Supporting Files */,
 			);
 			path = Lab5;
@@ -135,7 +146,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE123D971AAB2D9800C23CE0 /* Launch Screen.xib in Resources */,
+				CE1DD78A1AADD3920031D6E3 /* AutorInfoVC.xib in Resources */,
+				CE1DD7911AADE3A30031D6E3 /* Jackie_Chan_Cannes_2012.jpg in Resources */,
+				CE1DD7931AADE40A0031D6E3 /* FullInformationVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE69C3EA1AA4CB7200D855BC /* AutorInfoVC.m in Sources */,
+				CE1DD78D1AADDF9A0031D6E3 /* FullInformationVC.m in Sources */,
 				CE69C3C51AA4C11600D855BC /* AppDelegate.m in Sources */,
 				CE69C3C21AA4C11600D855BC /* main.m in Sources */,
 				CE69C3E71AA4CA5C00D855BC /* ColoredVC.m in Sources */,
