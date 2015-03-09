@@ -50,7 +50,7 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
     [self initializeActions];
     
     // Initialize default background color
-    [self updateBackgroundColor:[UIColor whiteColor]];
+    [self updateBackgroundColorAndControls:[UIColor whiteColor]];
 }
 
 - (void)initializeElements {
@@ -68,7 +68,6 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
     self.nextVCButton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.nextVCButton.titleLabel.textAlignment = NSTextAlignmentCenter;
     [self.nextVCButton setTitle:@"Push to\nnext VC" forState:UIControlStateNormal];
-    self.nextVCButton.backgroundColor = [UIColor blackColor];
     [self updateNextVCbuttonPosition];
     [self.view addSubview:self.nextVCButton];
     
@@ -212,7 +211,7 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
     float blue = ((baseValue >> 0) & 0xFF)/255.0f;
     [self updateSlidersWithRed:red green:green blue:blue];
     UIColor *newColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0f];
-    self.view.backgroundColor = newColor;
+    [self updateBackgroundColors: newColor];
 }
 
 - (void)updateSlidersWithRed:(float)redValue green:(float)greenValue blue:(float)blueValue {
@@ -231,7 +230,7 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
     float blue = self.blueSlider.value;
     [self updateHexColorValueWithRed:red green:green blue:blue];
     UIColor *newColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0f];
-    self.view.backgroundColor = newColor;
+    [self updateBackgroundColors: newColor];
 }
 
 - (void)updateHexColorValueWithRed:(float)redValue green:(float)greenValue blue:(float)blueValue {
@@ -246,12 +245,23 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
 }
 
 // Updates background color and values of color sliders and color text field
-- (void)updateBackgroundColor:(UIColor *)color {
-    self.view.backgroundColor = color;
+- (void)updateBackgroundColorAndControls:(UIColor *)color {
+    [self updateBackgroundColors:color];
     CGFloat red, green, blue, alpha;
     [self.view.backgroundColor getRed:&red green:&green blue:&blue alpha:&alpha];
     [self updateSlidersWithRed:red green:green blue:blue];
     [self updateHexColorValueWithRed:red green:green blue:blue];
+}
+
+- (void)updateBackgroundColors:(UIColor *)color {
+    self.view.backgroundColor = color;
+    self.nextVCButton.backgroundColor = [[self class] invertColor:color];
+}
+
++ (UIColor *)invertColor:(UIColor *)color {
+    CGFloat red, green, blue, alpha;
+    [color getRed:&red green:&green blue:&blue alpha:&alpha];
+    return [UIColor colorWithRed:1.-red green:1.-green blue:1.-blue alpha:alpha];
 }
 
 - (void)buttonTouchDownAnimation:(UIButton *)sender {
