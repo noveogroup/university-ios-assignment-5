@@ -9,9 +9,11 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
 // UI elements
 @property (strong, nonatomic) UIButton *nextVCButton;
 @property (strong, nonatomic) UITextField *colorField;
-@property (strong, nonatomic) UISlider *redSlider;
-@property (strong, nonatomic) UISlider *greenSlider;
-@property (strong, nonatomic) UISlider *blueSlider;
+
+// View controllers
+@property (strong, nonatomic) ColorSliderVC *redSliderVC;
+@property (strong, nonatomic) ColorSliderVC *greenSliderVC;
+@property (strong, nonatomic) ColorSliderVC *blueSliderVC;
 
 // Other properties
 @property (assign, nonatomic) NSInteger drillLevel;
@@ -56,13 +58,13 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
 - (void)initializeElements {
     // Initialize nextVC button
     NSInteger buttonRadius = 50;
-    CGRect nextVCButtonRect = {
+    CGRect nextVCButtonFrame = {
         self.view.bounds.size.width / 2 - buttonRadius,
         110,
         buttonRadius * 2,
         buttonRadius * 2
     };
-    self.nextVCButton = [[UIButton alloc] initWithFrame:nextVCButtonRect];
+    self.nextVCButton = [[UIButton alloc] initWithFrame:nextVCButtonFrame];
     self.nextVCButton.layer.masksToBounds = YES;
     self.nextVCButton.layer.cornerRadius = buttonRadius;
     self.nextVCButton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
@@ -74,14 +76,14 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
     // Initialize color text field
     NSInteger fieldMargin = 110;
     NSInteger fieldHeight = 30;
-    NSInteger yPosIndex = 5;
-    CGRect colorFieldRect = {
+    NSInteger yPosIndex = 5; // Index for calculating "y" position of elements
+    CGRect colorFieldFrame = {
         fieldMargin,
         (self.view.bounds.size.height - fieldHeight) / 10 * yPosIndex,
         self.view.bounds.size.width - fieldMargin * 2,
         fieldHeight
     };
-    self.colorField = [[UITextField alloc] initWithFrame: colorFieldRect];
+    self.colorField = [[UITextField alloc] initWithFrame: colorFieldFrame];
     self.colorField.textAlignment = NSTextAlignmentCenter;
     self.colorField.borderStyle = UITextBorderStyleRoundedRect;
     self.colorField.placeholder = @"######";
@@ -89,42 +91,53 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
     [self.view addSubview:self.colorField];
     
     
-    // Initialize color sliders
-    NSInteger sliderMargin = 70;
+    // Initialize color sliders with their controllers
     NSInteger sliderHeight = 30;
     
-    // Initialize red slider
+    // Initialize red slider with it's controller
+    self.redSliderVC = [[ColorSliderVC alloc]
+                        initWithNibName:NSStringFromClass([ColorSliderVC class])
+                                 bundle:[NSBundle mainBundle]];
     yPosIndex = 6;
-    CGRect redSliderRect = {
-        sliderMargin,
+    CGRect redSliderFrame = {
+        0,
         (self.view.bounds.size.height - sliderHeight) / 10 * yPosIndex,
-        self.view.bounds.size.width - sliderMargin * 2,
+        self.view.bounds.size.width,
         sliderHeight
     };
-    self.redSlider = [[UISlider alloc] initWithFrame: redSliderRect];
-    [self.view addSubview:self.redSlider];
+    self.redSliderVC.view.frame = redSliderFrame;
+    self.redSliderVC.label.text = @"Red:";
+    [self.view addSubview:self.redSliderVC.view];
     
-    // Initialize green slider
+    // Initialize green slider with it's controller
+     self.greenSliderVC = [[ColorSliderVC alloc]
+                           initWithNibName:NSStringFromClass([ColorSliderVC class])
+                                    bundle:[NSBundle mainBundle]];
     yPosIndex = 7;
-    CGRect greenSliderRect = {
-        sliderMargin,
+    CGRect greenSliderFrame = {
+        0,
         (self.view.bounds.size.height - sliderHeight) / 10 * yPosIndex,
-        self.view.bounds.size.width - sliderMargin * 2,
+        self.view.bounds.size.width,
         sliderHeight
     };
-    self.greenSlider = [[UISlider alloc] initWithFrame: greenSliderRect];
-    [self.view addSubview:self.greenSlider];
+    self.greenSliderVC.view.frame = greenSliderFrame;
+    self.greenSliderVC.label.text = @"Green:";
+    [self.view addSubview:self.greenSliderVC.view];
     
-    // Initialize blue slider
+    // Initialize blue slider with it's controller
+    self.blueSliderVC = [[ColorSliderVC alloc]
+                         initWithNibName:NSStringFromClass([ColorSliderVC class])
+                                  bundle:[NSBundle mainBundle]];
     yPosIndex = 8;
-    CGRect blueSliderRect = {
-        sliderMargin,
+    CGRect blueSliderFrame = {
+        0,
         (self.view.bounds.size.height - sliderHeight) / 10 * yPosIndex,
-        self.view.bounds.size.width - sliderMargin * 2,
+        self.view.bounds.size.width,
         sliderHeight
     };
-    self.blueSlider = [[UISlider alloc] initWithFrame: blueSliderRect];
-    [self.view addSubview:self.blueSlider];
+    self.blueSliderVC.view.frame = blueSliderFrame;
+    self.blueSliderVC.label.text = @"Blue:";
+    [self.view addSubview:self.blueSliderVC.view];
 }
 
 - (void)initializeActions {
@@ -137,13 +150,13 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
     [self.colorField addTarget:self
                         action:@selector(colorValueEntered:)
               forControlEvents:UIControlEventEditingDidEndOnExit];
-    [self.redSlider addTarget:self
+    [self.redSliderVC.slider addTarget:self
                        action:@selector(colorSliderValueChanged:)
              forControlEvents:UIControlEventValueChanged];
-    [self.greenSlider addTarget:self
+    [self.greenSliderVC.slider addTarget:self
                          action:@selector(colorSliderValueChanged:)
                forControlEvents:UIControlEventValueChanged];
-    [self.blueSlider addTarget:self
+    [self.blueSliderVC.slider addTarget:self
                         action:@selector(colorSliderValueChanged:)
               forControlEvents:UIControlEventValueChanged];
     [self.nextVCButton addTarget:self
@@ -172,7 +185,8 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
 }
 
 - (void)updateNextVCbuttonPosition {
-    UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+    UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication]
+                                                   statusBarOrientation];
     if (UIInterfaceOrientationIsPortrait(interfaceOrientation)) {
         self.nextVCButton.center = (CGPoint){self.nextVCButton.center.x, 160};
     }
@@ -191,15 +205,15 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
     [self.colorField setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin
                                        | UIViewAutoresizingFlexibleBottomMargin
                                        | UIViewAutoresizingFlexibleWidth];
-    [self.redSlider setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin
-                                      | UIViewAutoresizingFlexibleBottomMargin
-                                      | UIViewAutoresizingFlexibleWidth];
-    [self.greenSlider setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin
-                                        | UIViewAutoresizingFlexibleBottomMargin
-                                        | UIViewAutoresizingFlexibleWidth];
-    [self.blueSlider setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin
-                                       | UIViewAutoresizingFlexibleBottomMargin
-                                       | UIViewAutoresizingFlexibleWidth];
+    [self.redSliderVC.view setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin
+                                             | UIViewAutoresizingFlexibleBottomMargin
+                                             | UIViewAutoresizingFlexibleWidth];
+    [self.greenSliderVC.view setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin
+                                               | UIViewAutoresizingFlexibleBottomMargin
+                                               | UIViewAutoresizingFlexibleWidth];
+    [self.blueSliderVC.view setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin
+                                              | UIViewAutoresizingFlexibleBottomMargin
+                                              | UIViewAutoresizingFlexibleWidth];
 }
 
 - (void)colorValueChanged:(UITextField *)sender {
@@ -214,10 +228,14 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
     [self updateBackgroundColors: newColor];
 }
 
+// Update sliders' values and their output labels
 - (void)updateSlidersWithRed:(float)redValue green:(float)greenValue blue:(float)blueValue {
-    self.redSlider.value = redValue;
-    self.greenSlider.value = greenValue;
-    self.blueSlider.value = blueValue;
+    self.redSliderVC.slider.value = redValue;
+    self.greenSliderVC.slider.value = greenValue;
+    self.blueSliderVC.slider.value = blueValue;
+    [self.redSliderVC updateOutputLabel];
+    [self.greenSliderVC updateOutputLabel];
+    [self.blueSliderVC updateOutputLabel];
 }
 
 - (void)colorValueEntered:(UITextField *)sender {
@@ -229,19 +247,19 @@ static NSString *const BACK_BUTTON_TEXT = @"Back";
     [self updateHexColorValueWithRed:red green:green blue:blue];
 }
 
-- (void)colorSliderValueChanged:(UITextField *)sender {
-    float red = self.redSlider.value;
-    float green = self.greenSlider.value;
-    float blue = self.blueSlider.value;
+- (void)colorSliderValueChanged:(UISlider *)sender {
+    float red = self.redSliderVC.slider.value;
+    float green = self.greenSliderVC.slider.value;
+    float blue = self.blueSliderVC.slider.value;
     [self updateHexColorValueWithRed:red green:green blue:blue];
     UIColor *newColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0f];
     [self updateBackgroundColors: newColor];
 }
 
 - (void)updateHexColorValueWithRed:(float)redValue green:(float)greenValue blue:(float)blueValue {
-    self.redSlider.value = redValue;
-    self.greenSlider.value = greenValue;
-    self.blueSlider.value = blueValue;
+    self.redSliderVC.slider.value = redValue;
+    self.greenSliderVC.slider.value = greenValue;
+    self.blueSliderVC.slider.value = blueValue;
     NSString *hexColorString = [NSString stringWithFormat:@"%02X%02X%02X",
                                 (int)(redValue * 255),
                                 (int)(greenValue * 255),
