@@ -18,6 +18,7 @@
 		A8C821B11AADACA2005BB5D1 /* LabWork5Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C821B01AADACA2005BB5D1 /* LabWork5Tests.m */; };
 		A8C821BD1AADAEFC005BB5D1 /* ColorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C821BB1AADAEFC005BB5D1 /* ColorVC.m */; };
 		A8C821BE1AADAEFC005BB5D1 /* ColorVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8C821BC1AADAEFC005BB5D1 /* ColorVC.xib */; };
+		A8D757C11AAED36300CC109D /* UIColor+Hexadecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D757C01AAED36300CC109D /* UIColor+Hexadecimal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		A8C821BA1AADAEFC005BB5D1 /* ColorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorVC.h; sourceTree = "<group>"; };
 		A8C821BB1AADAEFC005BB5D1 /* ColorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorVC.m; sourceTree = "<group>"; };
 		A8C821BC1AADAEFC005BB5D1 /* ColorVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorVC.xib; sourceTree = "<group>"; };
+		A8D757BF1AAED36300CC109D /* UIColor+Hexadecimal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hexadecimal.h"; sourceTree = "<group>"; };
+		A8D757C01AAED36300CC109D /* UIColor+Hexadecimal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hexadecimal.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 				A82DB5061AADBCB600606768 /* AuthorVC.h */,
 				A82DB5071AADBCB600606768 /* AuthorVC.m */,
 				A82DB5081AADBCB600606768 /* AuthorVC.xib */,
+				A8D757BF1AAED36300CC109D /* UIColor+Hexadecimal.h */,
+				A8D757C01AAED36300CC109D /* UIColor+Hexadecimal.m */,
 				A8C821A11AADACA2005BB5D1 /* Images.xcassets */,
 				A8C821A31AADACA2005BB5D1 /* LaunchScreen.xib */,
 				A82DB50C1AADBDFC00606768 /* Resources */,
@@ -246,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A82DB5091AADBCB600606768 /* AuthorVC.m in Sources */,
+				A8D757C11AAED36300CC109D /* UIColor+Hexadecimal.m in Sources */,
 				A8C8219A1AADACA2005BB5D1 /* AppDelegate.m in Sources */,
 				A82DB5051AADB97700606768 /* InformationVC.m in Sources */,
 				A8C821BD1AADAEFC005BB5D1 /* ColorVC.m in Sources */,

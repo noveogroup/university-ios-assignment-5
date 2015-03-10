@@ -24,11 +24,11 @@ const CGFloat HEIGHT = 30;
     self.nameTitle.text = @"LabWork 5";
     self.nameTitle.textAlignment = NSTextAlignmentCenter;
     
-    self.versionButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    self.versionButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [self.versionButton setTitle:@"Version" forState:UIControlStateNormal];
     [self.versionButton addTarget:self action:@selector(versionButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     
-    self.aboutButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    self.aboutButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [self.aboutButton setTitle:@"About author" forState:UIControlStateNormal];
     [self.aboutButton addTarget:self action:@selector(aboutButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     
@@ -50,7 +50,7 @@ const CGFloat HEIGHT = 30;
 
 - (void)versionButtonTapped
 {
-    NSString *version = @"Version 1.0";
+    NSString *version = [NSString stringWithFormat:@"Version: %@",[[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey]];
     UIAlertView *versionInfo = [[UIAlertView alloc]initWithTitle:@"Version Information" message:version delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
     [versionInfo show];
 }

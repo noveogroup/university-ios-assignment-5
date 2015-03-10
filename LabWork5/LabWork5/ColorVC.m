@@ -1,8 +1,14 @@
 
 
 #import "ColorVC.h"
+#import "UIColor+Hexadecimal.h"
 
 @interface ColorVC ()
+
+@property (weak, nonatomic) IBOutlet UISlider *redSlider;
+@property (weak, nonatomic) IBOutlet UISlider *greenSlider;
+@property (weak, nonatomic) IBOutlet UISlider *blueSlider;
+@property (weak, nonatomic) IBOutlet UITextField *colorTextField;
 
 @end
 
@@ -17,13 +23,12 @@
     UIBarButtonItem *next = [[UIBarButtonItem alloc]initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:@selector(nextButtonTapped)];
     self.navigationItem.rightBarButtonItem = next;
     
-    [self setBackgroundColorWithRed:[self.redSlider value] green:[self.greenSlider value] blue:[self.blueSlider value]];
     
     [self.redSlider addTarget:self action:@selector(sliderValueChanged) forControlEvents:UIControlEventValueChanged];
     [self.greenSlider addTarget:self action:@selector(sliderValueChanged) forControlEvents:UIControlEventValueChanged];
     [self.blueSlider addTarget:self action:@selector(sliderValueChanged) forControlEvents:UIControlEventValueChanged];
     
-    self.colorTextField.text = [self hexStringForColor:self.view.backgroundColor];
+    [self sliderValueChanged];
 
 }
 
@@ -41,18 +46,12 @@
 - (void)sliderValueChanged
 {
     [self setBackgroundColorWithRed:[self.redSlider value] green:[self.greenSlider value] blue:[self.blueSlider value]];
-    self.colorTextField.text = [self hexStringForColor:self.view.backgroundColor];
-}
-
-- (NSString *)hexStringForColor:(UIColor *)color
-{
-    const CGFloat *components = CGColorGetComponents(color.CGColor);
-    CGFloat r = components[0];
-    CGFloat g = components[1];
-    CGFloat b = components[2];
-    NSString *hexString=[NSString stringWithFormat:@"%02X%02X%02X", (int)(r * 255), (int)(g * 255), (int)(b * 255)];
-    return hexString;
+    self.colorTextField.text = [self.view.backgroundColor hexColorString];
 }
 
 
+
+
+- (IBAction)dsfsdg:(id)sender {
+}
 @end
