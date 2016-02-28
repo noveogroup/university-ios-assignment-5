@@ -11,13 +11,6 @@ NSString* kThirdViewControllerID = @"ThirdViewController";
 
 @implementation ThirdViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-}
-
-
 #pragma mark - Actions
 - (IBAction)showAllertAction:(id)sender
 {

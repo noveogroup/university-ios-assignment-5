@@ -6,6 +6,5 @@ extern NSString* kDetailViewControllerID;
 
 @interface DetailViewController : UIViewController
 
-- (IBAction)closeDetailVCAction:(id)sender;
 
 @end

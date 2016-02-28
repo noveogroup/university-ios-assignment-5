@@ -10,11 +10,6 @@ NSString* kFirstViewControllerID = @"FirstViewController";
 
 @implementation FirstViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];

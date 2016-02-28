@@ -10,20 +10,9 @@ NSString* kDetailViewControllerID = @"DetailViewController";
 
 @implementation DetailViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-- (void) viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-}
-
 #pragma mark - navigation
-- (IBAction)closeDetailVCAction:(id)sender {
+- (IBAction)closeDetailVCAction:(id)sender
+{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
