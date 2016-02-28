@@ -15,6 +15,9 @@
     view.backgroundColor = [UIColor greenColor];
     view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self.view addSubview:view];
+    
+    
+
 
 }
 

@@ -14,6 +14,10 @@
 		84D9896D1C822C4A008744BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D9896B1C822C4A008744BA /* LaunchScreen.storyboard */; };
 		84D989761C822DE0008744BA /* AboutAuthorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D989751C822DE0008744BA /* AboutAuthorVC.m */; };
 		84D989791C830276008744BA /* ColorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D989781C830276008744BA /* ColorVC.m */; };
+		84D989A51C83182A008744BA /* AboutAuthorVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D989A41C83182A008744BA /* AboutAuthorVC.xib */; };
+		84D989A71C8318EF008744BA /* photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84D989A61C8318EF008744BA /* photo.jpg */; };
+		84D989AB1C8329A1008744BA /* MoreInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D989AA1C8329A1008744BA /* MoreInfoVC.m */; };
+		84D989AD1C8329C3008744BA /* MoreInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D989AC1C8329C3008744BA /* MoreInfoVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,11 @@
 		84D989751C822DE0008744BA /* AboutAuthorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutAuthorVC.m; sourceTree = "<group>"; };
 		84D989771C830276008744BA /* ColorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorVC.h; sourceTree = "<group>"; };
 		84D989781C830276008744BA /* ColorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorVC.m; sourceTree = "<group>"; };
+		84D989A41C83182A008744BA /* AboutAuthorVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutAuthorVC.xib; sourceTree = "<group>"; };
+		84D989A61C8318EF008744BA /* photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo.jpg; path = Images/photo.jpg; sourceTree = "<group>"; };
+		84D989A91C8329A1008744BA /* MoreInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreInfoVC.h; sourceTree = "<group>"; };
+		84D989AA1C8329A1008744BA /* MoreInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreInfoVC.m; sourceTree = "<group>"; };
+		84D989AC1C8329C3008744BA /* MoreInfoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreInfoVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +70,13 @@
 		84D9895C1C822C4A008744BA /* ColorScreen */ = {
 			isa = PBXGroup;
 			children = (
+				84D989A81C8318F3008744BA /* Images */,
 				84D989741C822DE0008744BA /* AboutAuthorVC.h */,
 				84D989751C822DE0008744BA /* AboutAuthorVC.m */,
+				84D989A41C83182A008744BA /* AboutAuthorVC.xib */,
+				84D989A91C8329A1008744BA /* MoreInfoVC.h */,
+				84D989AA1C8329A1008744BA /* MoreInfoVC.m */,
+				84D989AC1C8329C3008744BA /* MoreInfoVC.xib */,
 				84D989771C830276008744BA /* ColorVC.h */,
 				84D989781C830276008744BA /* ColorVC.m */,
 				84D989601C822C4A008744BA /* AppDelegate.h */,
@@ -82,6 +96,14 @@
 				84D9895E1C822C4A008744BA /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84D989A81C8318F3008744BA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				84D989A61C8318EF008744BA /* photo.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +165,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D9896D1C822C4A008744BA /* LaunchScreen.storyboard in Resources */,
+				84D989A51C83182A008744BA /* AboutAuthorVC.xib in Resources */,
+				84D989A71C8318EF008744BA /* photo.jpg in Resources */,
 				84D9896A1C822C4A008744BA /* Assets.xcassets in Resources */,
 				84D989681C822C4A008744BA /* Main.storyboard in Resources */,
+				84D989AD1C8329C3008744BA /* MoreInfoVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +182,7 @@
 			files = (
 				84D989791C830276008744BA /* ColorVC.m in Sources */,
 				84D989621C822C4A008744BA /* AppDelegate.m in Sources */,
+				84D989AB1C8329A1008744BA /* MoreInfoVC.m in Sources */,
 				84D989761C822DE0008744BA /* AboutAuthorVC.m in Sources */,
 				84D9895F1C822C4A008744BA /* main.m in Sources */,
 			);

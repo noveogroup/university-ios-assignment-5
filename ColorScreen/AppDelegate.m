@@ -37,13 +37,18 @@
     
     
     AboutAuthorVC *aboutVC = [[AboutAuthorVC alloc] init];
-    aboutVC.title = @"Tab 3";
-    
+    aboutVC.title = @"About";
+
     
     NSArray *controllers = @[navControllerVC1, navControllerVC2, aboutVC];
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     [tabBarController setViewControllers:controllers animated:YES];
     
+        
+    
+    
+    
+
     
     self.window.rootViewController = tabBarController;
  
