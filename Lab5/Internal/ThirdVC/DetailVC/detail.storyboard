@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -39,14 +38,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="bdt-Rz-RRf" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="914"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="326"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" verticalCompressionResistancePriority="250" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jg5-Ui-uTi">
-                                                <rect key="frame" x="8" y="216" width="584" height="690"/>
+                                                <rect key="frame" x="8" y="216" width="584" height="102"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="GVe-qk-Ndj"/>
                                                 </constraints>
-                                                <string key="text">Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label LabelLabel Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label LabelLabel Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label LabelLabel Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label LabelLabel Label Label Label Label</string>
+                                                <string key="text">Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label bel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Laabel Label LabelLabel Label Label Label Label</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -72,7 +71,7 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottomMargin" secondItem="bdt-Rz-RRf" secondAttribute="bottom" id="FK5-zX-oSK"/>
+                                    <constraint firstAttribute="bottom" secondItem="bdt-Rz-RRf" secondAttribute="bottom" id="C4A-pw-i7a"/>
                                     <constraint firstItem="bdt-Rz-RRf" firstAttribute="leading" secondItem="tTh-Yn-RbS" secondAttribute="leading" id="ZHh-6s-tlL"/>
                                     <constraint firstAttribute="trailing" secondItem="bdt-Rz-RRf" secondAttribute="trailing" id="g6j-El-RNG"/>
                                     <constraint firstItem="bdt-Rz-RRf" firstAttribute="width" secondItem="tTh-Yn-RbS" secondAttribute="width" id="uEa-XB-9fP"/>
