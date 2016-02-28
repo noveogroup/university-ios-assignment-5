@@ -14,10 +14,7 @@ NSString* kThirdViewControllerID = @"ThirdViewController";
 #pragma mark - Actions
 - (IBAction)showAllertAction:(id)sender
 {
-    CGRect bounds = self.view.bounds;
     UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"title" message:@"message" delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
-    alert.frame = CGRectMake(bounds.size.width/4, bounds.size.height/4, bounds.size.width/2, bounds.size.height/2);
-    
     [alert show];
 }
 
