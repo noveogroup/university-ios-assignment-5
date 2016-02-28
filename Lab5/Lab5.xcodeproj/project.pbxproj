@@ -12,7 +12,7 @@
 		31137EF31C8304F80066E4FD /* third.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31137EF21C8304F80066E4FD /* third.storyboard */; };
 		31137EF61C8305120066E4FD /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31137EF51C8305120066E4FD /* ThirdViewController.m */; };
 		31137EF91C830C660066E4FD /* detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31137EF81C830C660066E4FD /* detail.storyboard */; };
-		31137EFC1C830C730066E4FD /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31137EFB1C830C730066E4FD /* DetailViewController.m */; };
+		31137EFF1C83183E0066E4FD /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31137EFD1C83183E0066E4FD /* DetailViewController.m */; };
 		31A1154F1C817DE2008588D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A1154B1C817DE2008588D4 /* AppDelegate.m */; };
 		31A115501C817DE2008588D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A1154C1C817DE2008588D4 /* main.m */; };
 		31A115591C817DF1008588D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31A115521C817DF1008588D4 /* Assets.xcassets */; };
@@ -29,8 +29,8 @@
 		31137EF41C8305120066E4FD /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThirdViewController.h; path = Internal/ThirdVC/ThirdViewController.h; sourceTree = "<group>"; };
 		31137EF51C8305120066E4FD /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThirdViewController.m; path = Internal/ThirdVC/ThirdViewController.m; sourceTree = "<group>"; };
 		31137EF81C830C660066E4FD /* detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = detail.storyboard; path = Internal/ThirdVC/DetailVC/detail.storyboard; sourceTree = "<group>"; };
-		31137EFA1C830C730066E4FD /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		31137EFB1C830C730066E4FD /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		31137EFD1C83183E0066E4FD /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = Internal/ThirdVC/DetailVC/DetailViewController.m; sourceTree = "<group>"; };
+		31137EFE1C83183E0066E4FD /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = Internal/ThirdVC/DetailVC/DetailViewController.h; sourceTree = "<group>"; };
 		31A1152E1C817D01008588D4 /* Lab5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31A1154A1C817DE2008588D4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Internal/AppDelegate.h; sourceTree = "<group>"; };
 		31A1154B1C817DE2008588D4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Internal/AppDelegate.m; sourceTree = "<group>"; };
@@ -68,8 +68,8 @@
 			isa = PBXGroup;
 			children = (
 				31137EF81C830C660066E4FD /* detail.storyboard */,
-				31137EFA1C830C730066E4FD /* DetailViewController.h */,
-				31137EFB1C830C730066E4FD /* DetailViewController.m */,
+				31137EFE1C83183E0066E4FD /* DetailViewController.h */,
+				31137EFD1C83183E0066E4FD /* DetailViewController.m */,
 			);
 			name = DetailVC;
 			sourceTree = "<group>";
@@ -220,7 +220,7 @@
 				31A115501C817DE2008588D4 /* main.m in Sources */,
 				31137EEE1C8304990066E4FD /* FirstViewController.m in Sources */,
 				31A1154F1C817DE2008588D4 /* AppDelegate.m in Sources */,
-				31137EFC1C830C730066E4FD /* DetailViewController.m in Sources */,
+				31137EFF1C83183E0066E4FD /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
