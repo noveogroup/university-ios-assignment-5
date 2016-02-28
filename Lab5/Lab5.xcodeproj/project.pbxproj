@@ -18,7 +18,6 @@
 		31A115591C817DF1008588D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31A115521C817DF1008588D4 /* Assets.xcassets */; };
 		31A1155A1C817DF1008588D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31A115541C817DF1008588D4 /* LaunchScreen.storyboard */; };
 		31A1155C1C817DF1008588D4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31A115581C817DF1008588D4 /* Info.plist */; };
-		31A115621C818015008588D4 /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A115611C818015008588D4 /* MainTabBarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +37,6 @@
 		31A115521C817DF1008588D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		31A115551C817DF1008588D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31A115581C817DF1008588D4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
-		31A115601C818015008588D4 /* MainTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainTabBarViewController.h; path = Internal/MainTabBarVC/MainTabBarViewController.h; sourceTree = "<group>"; };
-		31A115611C818015008588D4 /* MainTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainTabBarViewController.m; path = Internal/MainTabBarVC/MainTabBarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +93,6 @@
 			children = (
 				31137EEA1C8303AD0066E4FD /* ThirdVC */,
 				31A115631C81859C008588D4 /* FirstVC */,
-				31A1155D1C817F23008588D4 /* MainTabBarVC */,
 				31A1154A1C817DE2008588D4 /* AppDelegate.h */,
 				31A1154B1C817DE2008588D4 /* AppDelegate.m */,
 				31A1154C1C817DE2008588D4 /* main.m */,
@@ -121,15 +117,6 @@
 			);
 			name = Base.lproj;
 			path = Resources/Base.lproj;
-			sourceTree = "<group>";
-		};
-		31A1155D1C817F23008588D4 /* MainTabBarVC */ = {
-			isa = PBXGroup;
-			children = (
-				31A115601C818015008588D4 /* MainTabBarViewController.h */,
-				31A115611C818015008588D4 /* MainTabBarViewController.m */,
-			);
-			name = MainTabBarVC;
 			sourceTree = "<group>";
 		};
 		31A115631C81859C008588D4 /* FirstVC */ = {
@@ -215,7 +202,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31A115621C818015008588D4 /* MainTabBarViewController.m in Sources */,
 				31137EF61C8305120066E4FD /* ThirdViewController.m in Sources */,
 				31A115501C817DE2008588D4 /* main.m in Sources */,
 				31137EEE1C8304990066E4FD /* FirstViewController.m in Sources */,

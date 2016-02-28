@@ -4,10 +4,6 @@
 NSString* kDetailStoryboardName = @"detail";
 NSString* kDetailViewControllerID = @"DetailViewController";
 
-@interface DetailViewController ()
-
-@end
-
 @implementation DetailViewController
 
 #pragma mark - navigation

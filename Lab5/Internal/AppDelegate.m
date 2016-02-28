@@ -1,11 +1,12 @@
 
 #import "AppDelegate.h"
 
-#import "MainTabBarViewController.h"
+#import "FirstViewController.h"
+#import "ThirdViewController.h"
 
 @interface AppDelegate ()
 
-@property (nonatomic, strong) MainTabBarViewController *tabBarController;
+@property (nonatomic, strong) UITabBarController *tabBarController;
 
 @end
 
@@ -14,7 +15,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    self.tabBarController = [[MainTabBarViewController alloc] init];
+    self.tabBarController = [[UITabBarController alloc] init];
     
     UIStoryboard* firstStoryboard = [UIStoryboard storyboardWithName:kFirstStoryboardName bundle:nil];
     UINavigationController* nav1 = [firstStoryboard instantiateViewControllerWithIdentifier:kFirstViewControllerID];

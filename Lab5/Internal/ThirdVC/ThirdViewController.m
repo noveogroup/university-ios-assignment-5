@@ -5,10 +5,6 @@
 NSString* kThirdStoryboardName = @"third";
 NSString* kThirdViewControllerID = @"ThirdViewController";
 
-@interface ThirdViewController ()
-
-@end
-
 @implementation ThirdViewController
 
 #pragma mark - Actions
@@ -24,4 +20,5 @@ NSString* kThirdViewControllerID = @"ThirdViewController";
     UIViewController* VC = [detailStoryboard instantiateViewControllerWithIdentifier:kDetailViewControllerID];
     [self presentViewController:VC animated:YES completion:nil];
 }
+
 @end

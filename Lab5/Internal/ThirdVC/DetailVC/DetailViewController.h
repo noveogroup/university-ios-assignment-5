@@ -6,5 +6,4 @@ extern NSString* kDetailViewControllerID;
 
 @interface DetailViewController : UIViewController
 
-
 @end
