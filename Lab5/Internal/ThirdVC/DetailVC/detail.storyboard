@@ -45,9 +45,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="GVe-qk-Ndj"/>
                                                 </constraints>
-                                                <string key="text">Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label LabelLabel Label Label Label Label</string>
+                                                <mutableString key="text">Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label LabelLabel Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label LabelLabel Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label LabelLabel Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label LabelLabel Label Label Label Label</mutableString>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W45-L7-TvR">
@@ -73,6 +73,7 @@
                                 <constraints>
                                     <constraint firstItem="bdt-Rz-RRf" firstAttribute="leading" secondItem="tTh-Yn-RbS" secondAttribute="leading" id="ZHh-6s-tlL"/>
                                     <constraint firstAttribute="trailing" secondItem="bdt-Rz-RRf" secondAttribute="trailing" id="g6j-El-RNG"/>
+                                    <constraint firstItem="bdt-Rz-RRf" firstAttribute="width" secondItem="tTh-Yn-RbS" secondAttribute="width" id="uEa-XB-9fP"/>
                                     <constraint firstItem="bdt-Rz-RRf" firstAttribute="top" secondItem="tTh-Yn-RbS" secondAttribute="top" id="zAS-hN-joC"/>
                                 </constraints>
                             </scrollView>
@@ -81,9 +82,17 @@
                         <constraints>
                             <constraint firstItem="ZzI-U9-CPa" firstAttribute="top" secondItem="tTh-Yn-RbS" secondAttribute="bottom" id="2jj-3G-OP1"/>
                             <constraint firstItem="tTh-Yn-RbS" firstAttribute="top" secondItem="PGE-Vy-vqD" secondAttribute="bottom" id="WYy-e8-TbF"/>
+                            <constraint firstItem="bdt-Rz-RRf" firstAttribute="height" secondItem="LfG-hf-mkN" secondAttribute="height" id="Y3t-3W-RWA"/>
                             <constraint firstItem="tTh-Yn-RbS" firstAttribute="leading" secondItem="LfG-hf-mkN" secondAttribute="leading" id="ZE1-fS-Tl9"/>
+                            <constraint firstItem="bdt-Rz-RRf" firstAttribute="width" secondItem="LfG-hf-mkN" secondAttribute="width" id="kQQ-77-K19"/>
                             <constraint firstAttribute="trailing" secondItem="tTh-Yn-RbS" secondAttribute="trailing" id="yzQ-9O-wp9"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Y3t-3W-RWA"/>
+                                <exclude reference="kQQ-77-K19"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="mkK-xP-H6X">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="Doe-Ar-e8L">
