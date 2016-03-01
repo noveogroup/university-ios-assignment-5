@@ -31,16 +31,36 @@
 
 - (IBAction)actionViewAlert:(UIButton *)sender {
     
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Warning!"
-                                                                   message:@"Alert message."
-                                                            preferredStyle:UIAlertControllerStyleAlert];
+    NSString *title = @"Warning";
+    NSString *alertMessage = @"Alert message";
+    NSString *cancelButton = @"Cancel";
     
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel"
-                                                           style:UIAlertActionStyleCancel handler:nil];
+    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_7_1) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
+                                                            message:alertMessage
+                                                           delegate:self
+                                                  cancelButtonTitle:cancelButton
+                                                  otherButtonTitles:nil];
+        [alertView show];
+        
+        
+    } else {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title
+                                                                                 message:alertMessage
+                                                                          preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:cancelButton
+                                                               style:UIAlertActionStyleCancel handler:nil];
+        
+        [alertController addAction:cancelAction];
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
     
-    [alertController addAction:cancelAction];
     
-    [self presentViewController:alertController animated:YES completion:nil];
+    
+
+    
+    
 
 }
 @end

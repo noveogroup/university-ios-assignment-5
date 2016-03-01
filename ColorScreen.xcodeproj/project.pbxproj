@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		84D9895F1C822C4A008744BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D9895E1C822C4A008744BA /* main.m */; };
 		84D989621C822C4A008744BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D989611C822C4A008744BA /* AppDelegate.m */; };
-		84D989681C822C4A008744BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D989661C822C4A008744BA /* Main.storyboard */; };
 		84D9896A1C822C4A008744BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D989691C822C4A008744BA /* Assets.xcassets */; };
 		84D9896D1C822C4A008744BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D9896B1C822C4A008744BA /* LaunchScreen.storyboard */; };
 		84D989761C822DE0008744BA /* AboutAuthorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D989751C822DE0008744BA /* AboutAuthorVC.m */; };
@@ -18,6 +17,11 @@
 		84D989A71C8318EF008744BA /* photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84D989A61C8318EF008744BA /* photo.jpg */; };
 		84D989AB1C8329A1008744BA /* MoreInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D989AA1C8329A1008744BA /* MoreInfoVC.m */; };
 		84D989AD1C8329C3008744BA /* MoreInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D989AC1C8329C3008744BA /* MoreInfoVC.xib */; };
+		84D989B11C84B77A008744BA /* InputHEXColorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D989AF1C84B77A008744BA /* InputHEXColorVC.m */; };
+		84D989B21C84B77A008744BA /* InputHEXColorVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D989B01C84B77A008744BA /* InputHEXColorVC.xib */; };
+		84D989B61C84C7DB008744BA /* SliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D989B41C84C7DB008744BA /* SliderViewController.m */; };
+		84D989B71C84C7DB008744BA /* SliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D989B51C84C7DB008744BA /* SliderViewController.xib */; };
+		84D989BF1C85F272008744BA /* UIColor+HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D989BE1C85F272008744BA /* UIColor+HexColors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +29,6 @@
 		84D9895E1C822C4A008744BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84D989601C822C4A008744BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84D989611C822C4A008744BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		84D989671C822C4A008744BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84D989691C822C4A008744BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84D9896C1C822C4A008744BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84D9896E1C822C4A008744BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,6 +41,14 @@
 		84D989A91C8329A1008744BA /* MoreInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreInfoVC.h; sourceTree = "<group>"; };
 		84D989AA1C8329A1008744BA /* MoreInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreInfoVC.m; sourceTree = "<group>"; };
 		84D989AC1C8329C3008744BA /* MoreInfoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreInfoVC.xib; sourceTree = "<group>"; };
+		84D989AE1C84B77A008744BA /* InputHEXColorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputHEXColorVC.h; sourceTree = "<group>"; };
+		84D989AF1C84B77A008744BA /* InputHEXColorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputHEXColorVC.m; sourceTree = "<group>"; };
+		84D989B01C84B77A008744BA /* InputHEXColorVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputHEXColorVC.xib; sourceTree = "<group>"; };
+		84D989B31C84C7DB008744BA /* SliderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderViewController.h; sourceTree = "<group>"; };
+		84D989B41C84C7DB008744BA /* SliderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderViewController.m; sourceTree = "<group>"; };
+		84D989B51C84C7DB008744BA /* SliderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderViewController.xib; sourceTree = "<group>"; };
+		84D989BD1C85F271008744BA /* UIColor+HexColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+HexColors.h"; path = "Category/UIColor+HexColors.h"; sourceTree = "<group>"; };
+		84D989BE1C85F272008744BA /* UIColor+HexColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HexColors.m"; path = "Category/UIColor+HexColors.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,14 +85,20 @@
 				84D989741C822DE0008744BA /* AboutAuthorVC.h */,
 				84D989751C822DE0008744BA /* AboutAuthorVC.m */,
 				84D989A41C83182A008744BA /* AboutAuthorVC.xib */,
+				84D989AE1C84B77A008744BA /* InputHEXColorVC.h */,
+				84D989AF1C84B77A008744BA /* InputHEXColorVC.m */,
+				84D989B01C84B77A008744BA /* InputHEXColorVC.xib */,
+				84D989B31C84C7DB008744BA /* SliderViewController.h */,
+				84D989B41C84C7DB008744BA /* SliderViewController.m */,
+				84D989B51C84C7DB008744BA /* SliderViewController.xib */,
 				84D989A91C8329A1008744BA /* MoreInfoVC.h */,
 				84D989AA1C8329A1008744BA /* MoreInfoVC.m */,
 				84D989AC1C8329C3008744BA /* MoreInfoVC.xib */,
 				84D989771C830276008744BA /* ColorVC.h */,
 				84D989781C830276008744BA /* ColorVC.m */,
+				84D989C01C85F27D008744BA /* Categories */,
 				84D989601C822C4A008744BA /* AppDelegate.h */,
 				84D989611C822C4A008744BA /* AppDelegate.m */,
-				84D989661C822C4A008744BA /* Main.storyboard */,
 				84D989691C822C4A008744BA /* Assets.xcassets */,
 				84D9896B1C822C4A008744BA /* LaunchScreen.storyboard */,
 				84D9896E1C822C4A008744BA /* Info.plist */,
@@ -104,6 +121,15 @@
 				84D989A61C8318EF008744BA /* photo.jpg */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		84D989C01C85F27D008744BA /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				84D989BD1C85F271008744BA /* UIColor+HexColors.h */,
+				84D989BE1C85F272008744BA /* UIColor+HexColors.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,10 +191,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D9896D1C822C4A008744BA /* LaunchScreen.storyboard in Resources */,
+				84D989B21C84B77A008744BA /* InputHEXColorVC.xib in Resources */,
 				84D989A51C83182A008744BA /* AboutAuthorVC.xib in Resources */,
 				84D989A71C8318EF008744BA /* photo.jpg in Resources */,
 				84D9896A1C822C4A008744BA /* Assets.xcassets in Resources */,
-				84D989681C822C4A008744BA /* Main.storyboard in Resources */,
+				84D989B71C84C7DB008744BA /* SliderViewController.xib in Resources */,
 				84D989AD1C8329C3008744BA /* MoreInfoVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,8 +208,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D989791C830276008744BA /* ColorVC.m in Sources */,
+				84D989BF1C85F272008744BA /* UIColor+HexColors.m in Sources */,
+				84D989B61C84C7DB008744BA /* SliderViewController.m in Sources */,
 				84D989621C822C4A008744BA /* AppDelegate.m in Sources */,
 				84D989AB1C8329A1008744BA /* MoreInfoVC.m in Sources */,
+				84D989B11C84B77A008744BA /* InputHEXColorVC.m in Sources */,
 				84D989761C822DE0008744BA /* AboutAuthorVC.m in Sources */,
 				84D9895F1C822C4A008744BA /* main.m in Sources */,
 			);
@@ -191,14 +221,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		84D989661C822C4A008744BA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				84D989671C822C4A008744BA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		84D9896B1C822C4A008744BA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

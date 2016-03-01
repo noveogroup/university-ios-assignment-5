@@ -11,7 +11,7 @@
 #import "ColorVC.h"
 
 @interface AppDelegate ()
-
+@property (strong, nonatomic) UITabBarController *tabController;
 @end
 
 @implementation AppDelegate
@@ -39,19 +39,14 @@
     AboutAuthorVC *aboutVC = [[AboutAuthorVC alloc] init];
     aboutVC.title = @"About";
 
-    
     NSArray *controllers = @[navControllerVC1, navControllerVC2, aboutVC];
-    UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    [tabBarController setViewControllers:controllers animated:YES];
+    self.tabController = [[UITabBarController alloc] init];
+    [self.tabController setViewControllers:controllers animated:YES];
     
-        
-    
-    
-    
-
-    
-    self.window.rootViewController = tabBarController;
- 
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = self.tabController;
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
