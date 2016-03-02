@@ -22,8 +22,8 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="GP9-Q4-qV6">
-                    <rect key="frame" x="109" y="0.0" width="160" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="GP9-Q4-qV6">
+                    <rect key="frame" x="119" y="0.0" width="160" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="160" id="zUs-XA-63D"/>
                     </constraints>
@@ -39,7 +39,7 @@
                 <constraint firstItem="JSC-53-i2T" firstAttribute="centerY" secondItem="GP9-Q4-qV6" secondAttribute="centerY" id="ohP-60-efY"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="331.5" y="229"/>
+            <point key="canvasLocation" x="435" y="437"/>
         </view>
     </objects>
 </document>

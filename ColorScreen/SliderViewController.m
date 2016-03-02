@@ -1,22 +1,9 @@
-//
-//  SliderViewController.m
-//  ColorScreen
-//
-//  Created by Vik on 01.03.16.
-//  Copyright © 2016 Viktor Erfilov. All rights reserved.
-//
 
 #import "SliderViewController.h"
+#import "UIColor+HexColors.h"
+
 
 @interface SliderViewController ()
-@property (strong, nonatomic) IBOutlet UILabel *labelRedValue;
-@property (strong, nonatomic) IBOutlet UILabel *labelGreenValue;
-@property (strong, nonatomic) IBOutlet UILabel *labelBlueValue;
-
-- (IBAction)redSlider:(UISlider *)sender;
-- (IBAction)greenSlider:(UISlider *)sender;
-- (IBAction)blueSlider:(UISlider *)sender;
-
 
 
 @end
@@ -26,15 +13,48 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+ 
 }
 
+#pragma mark - Methods
 
-- (IBAction)redSlider:(UISlider *)sender {
-}
+//- (void)updateSliderValueWithColor:(UIColor *)color {
+//    CIColor *tempColor = [[CIColor alloc] initWithColor:color];
+//    
+//    float red = tempColor.red;
+//    float green = tempColor.green;
+//    float blue = tempColor.blue;
+//    
+//    self.labelRedValue.text = [NSString stringWithFormat:@"%.f", red * 255];
+//    self.labelGreenValue.text = [NSString stringWithFormat:@"%.f", green * 255];
+//    self.labelBlueValue.text = [NSString stringWithFormat:@"%.f", blue * 255];
+//
+//    self.redSlider.value = red;
+//    self.greenSlider.value = green;
+//    self.blueSlider.value = blue;
+//
+//}
+//
+//- (void)updateBackgroundColor {
+//
+//   UIColor *newColor = [UIColor colorWithRed:self.redSlider.value
+//                                                        green:self.greenSlider.value
+//                                                         blue:self.blueSlider.value
+//                                                        alpha:1];
+//    
+//    newColor = self.colorVC.color;
+//
+//}
 
-- (IBAction)greenSlider:(UISlider *)sender {
-}
+#pragma mark - Actions
 
-- (IBAction)blueSlider:(UISlider *)sender {
-}
+
+
+
+//- (IBAction)actionLabels:(UISlider *)sender {
+//    [self updateBackgroundColor];
+//}
+
+
+
 @end
