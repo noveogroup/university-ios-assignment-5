@@ -1,15 +1,12 @@
 
 #import "DetailViewController.h"
 
-NSString* kDetailStoryboardName = @"detail";
-NSString* kDetailViewControllerID = @"DetailViewController";
-
 @implementation DetailViewController
 
 #pragma mark - navigation
-- (IBAction)closeDetailVCAction:(id)sender
+- (IBAction)closeDetailVCAction
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

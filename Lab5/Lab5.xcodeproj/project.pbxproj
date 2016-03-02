@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		31137EEE1C8304990066E4FD /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31137EEB1C8304990066E4FD /* FirstViewController.m */; };
-		31137EEF1C8304990066E4FD /* first.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31137EEC1C8304990066E4FD /* first.storyboard */; };
-		31137EF31C8304F80066E4FD /* third.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31137EF21C8304F80066E4FD /* third.storyboard */; };
 		31137EF61C8305120066E4FD /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31137EF51C8305120066E4FD /* ThirdViewController.m */; };
-		31137EF91C830C660066E4FD /* detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31137EF81C830C660066E4FD /* detail.storyboard */; };
 		31137EFF1C83183E0066E4FD /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31137EFD1C83183E0066E4FD /* DetailViewController.m */; };
+		315080D41C873E4A00D616D1 /* UIColor+hexStringDecoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 315080D21C873E4A00D616D1 /* UIColor+hexStringDecoding.m */; };
+		315080D61C873E8A00D616D1 /* _png (3).jpg in Resources */ = {isa = PBXBuildFile; fileRef = 315080D51C873E8A00D616D1 /* _png (3).jpg */; };
+		316BC1F31C85CDAF00C9170C /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 316BC1F21C85CDAF00C9170C /* FirstViewController.xib */; };
+		316BC1F51C85D73700C9170C /* third.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 316BC1F41C85D73700C9170C /* third.storyboard */; };
 		31A1154F1C817DE2008588D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A1154B1C817DE2008588D4 /* AppDelegate.m */; };
 		31A115501C817DE2008588D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A1154C1C817DE2008588D4 /* main.m */; };
 		31A115591C817DF1008588D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31A115521C817DF1008588D4 /* Assets.xcassets */; };
@@ -22,14 +23,16 @@
 
 /* Begin PBXFileReference section */
 		31137EEB1C8304990066E4FD /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = Internal/FirstVC/FirstViewController.m; sourceTree = "<group>"; };
-		31137EEC1C8304990066E4FD /* first.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = first.storyboard; path = Internal/FirstVC/first.storyboard; sourceTree = "<group>"; };
 		31137EED1C8304990066E4FD /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = Internal/FirstVC/FirstViewController.h; sourceTree = "<group>"; };
-		31137EF21C8304F80066E4FD /* third.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = third.storyboard; path = Internal/ThirdVC/third.storyboard; sourceTree = "<group>"; };
 		31137EF41C8305120066E4FD /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThirdViewController.h; path = Internal/ThirdVC/ThirdViewController.h; sourceTree = "<group>"; };
 		31137EF51C8305120066E4FD /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThirdViewController.m; path = Internal/ThirdVC/ThirdViewController.m; sourceTree = "<group>"; };
-		31137EF81C830C660066E4FD /* detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = detail.storyboard; path = Internal/ThirdVC/DetailVC/detail.storyboard; sourceTree = "<group>"; };
 		31137EFD1C83183E0066E4FD /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = Internal/ThirdVC/DetailVC/DetailViewController.m; sourceTree = "<group>"; };
 		31137EFE1C83183E0066E4FD /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = Internal/ThirdVC/DetailVC/DetailViewController.h; sourceTree = "<group>"; };
+		315080D21C873E4A00D616D1 /* UIColor+hexStringDecoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+hexStringDecoding.m"; path = "Common/UIColor+hexStringDecoding.m"; sourceTree = "<group>"; };
+		315080D31C873E4A00D616D1 /* UIColor+hexStringDecoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+hexStringDecoding.h"; path = "Common/UIColor+hexStringDecoding.h"; sourceTree = "<group>"; };
+		315080D51C873E8A00D616D1 /* _png (3).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "_png (3).jpg"; path = "Resources/_png (3).jpg"; sourceTree = "<group>"; };
+		316BC1F21C85CDAF00C9170C /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FirstViewController.xib; path = Internal/FirstVC/FirstViewController.xib; sourceTree = "<group>"; };
+		316BC1F41C85D73700C9170C /* third.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = third.storyboard; path = Internal/ThirdVC/third.storyboard; sourceTree = "<group>"; };
 		31A1152E1C817D01008588D4 /* Lab5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31A1154A1C817DE2008588D4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Internal/AppDelegate.h; sourceTree = "<group>"; };
 		31A1154B1C817DE2008588D4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Internal/AppDelegate.m; sourceTree = "<group>"; };
@@ -54,9 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				31137EF71C830C140066E4FD /* DetailVC */,
-				31137EF21C8304F80066E4FD /* third.storyboard */,
 				31137EF41C8305120066E4FD /* ThirdViewController.h */,
 				31137EF51C8305120066E4FD /* ThirdViewController.m */,
+				316BC1F41C85D73700C9170C /* third.storyboard */,
 			);
 			name = ThirdVC;
 			sourceTree = "<group>";
@@ -64,16 +67,25 @@
 		31137EF71C830C140066E4FD /* DetailVC */ = {
 			isa = PBXGroup;
 			children = (
-				31137EF81C830C660066E4FD /* detail.storyboard */,
 				31137EFE1C83183E0066E4FD /* DetailViewController.h */,
 				31137EFD1C83183E0066E4FD /* DetailViewController.m */,
 			);
 			name = DetailVC;
 			sourceTree = "<group>";
 		};
+		315080CE1C86930D00D616D1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				315080D31C873E4A00D616D1 /* UIColor+hexStringDecoding.h */,
+				315080D21C873E4A00D616D1 /* UIColor+hexStringDecoding.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 		31A115251C817D01008588D4 = {
 			isa = PBXGroup;
 			children = (
+				315080CE1C86930D00D616D1 /* Common */,
 				31A115491C817DD3008588D4 /* Resouces */,
 				31A115481C817DC8008588D4 /* Internal */,
 				31A1152F1C817D01008588D4 /* Products */,
@@ -103,6 +115,7 @@
 		31A115491C817DD3008588D4 /* Resouces */ = {
 			isa = PBXGroup;
 			children = (
+				315080D51C873E8A00D616D1 /* _png (3).jpg */,
 				31A115521C817DF1008588D4 /* Assets.xcassets */,
 				31A115531C817DF1008588D4 /* Base.lproj */,
 				31A115581C817DF1008588D4 /* Info.plist */,
@@ -122,9 +135,9 @@
 		31A115631C81859C008588D4 /* FirstVC */ = {
 			isa = PBXGroup;
 			children = (
-				31137EEC1C8304990066E4FD /* first.storyboard */,
 				31137EED1C8304990066E4FD /* FirstViewController.h */,
 				31137EEB1C8304990066E4FD /* FirstViewController.m */,
+				316BC1F21C85CDAF00C9170C /* FirstViewController.xib */,
 			);
 			name = FirstVC;
 			sourceTree = "<group>";
@@ -186,11 +199,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31137EF31C8304F80066E4FD /* third.storyboard in Resources */,
-				31137EEF1C8304990066E4FD /* first.storyboard in Resources */,
+				316BC1F51C85D73700C9170C /* third.storyboard in Resources */,
+				315080D61C873E8A00D616D1 /* _png (3).jpg in Resources */,
 				31A115591C817DF1008588D4 /* Assets.xcassets in Resources */,
-				31137EF91C830C660066E4FD /* detail.storyboard in Resources */,
 				31A1155A1C817DF1008588D4 /* LaunchScreen.storyboard in Resources */,
+				316BC1F31C85CDAF00C9170C /* FirstViewController.xib in Resources */,
 				31A1155C1C817DF1008588D4 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +218,7 @@
 				31137EF61C8305120066E4FD /* ThirdViewController.m in Sources */,
 				31A115501C817DE2008588D4 /* main.m in Sources */,
 				31137EEE1C8304990066E4FD /* FirstViewController.m in Sources */,
+				315080D41C873E4A00D616D1 /* UIColor+hexStringDecoding.m in Sources */,
 				31A1154F1C817DE2008588D4 /* AppDelegate.m in Sources */,
 				31137EFF1C83183E0066E4FD /* DetailViewController.m in Sources */,
 			);

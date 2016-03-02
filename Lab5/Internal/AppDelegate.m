@@ -17,11 +17,12 @@
     
     self.tabBarController = [[UITabBarController alloc] init];
     
-    UIStoryboard* firstStoryboard = [UIStoryboard storyboardWithName:kFirstStoryboardName bundle:nil];
-    UINavigationController* nav1 = [firstStoryboard instantiateViewControllerWithIdentifier:kFirstViewControllerID];
+    FirstViewController *vc1 = [[FirstViewController alloc] init];
+    UINavigationController* nav1 = [[UINavigationController alloc] initWithRootViewController:vc1];
     nav1.title = @"first";
     
-    UINavigationController* nav2 = [firstStoryboard instantiateViewControllerWithIdentifier:kFirstViewControllerID];
+    FirstViewController *vc2 = [[FirstViewController alloc] init];
+    UINavigationController* nav2 = [[UINavigationController alloc] initWithRootViewController:vc2];
     nav2.title = @"second";
     
     UIStoryboard* thirdStoryboard = [UIStoryboard storyboardWithName:kThirdStoryboardName bundle:nil];

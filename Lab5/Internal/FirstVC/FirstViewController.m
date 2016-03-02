@@ -1,18 +1,26 @@
 
 #import "FirstViewController.h"
 
-NSString* kFirstStoryboardName = @"first";
-NSString* kFirstViewControllerID = @"FirstViewController";
+#import "UIColor+hexStringDecoding.h"
 
-@interface FirstViewController ()
+static NSString* const allCharacters = @"0123456789ABCDEF";
+
+@interface FirstViewController () <UITextFieldDelegate>
+
+@property (nonatomic, weak) IBOutlet UITextField *colorTextField;
+@property (nonatomic, weak) IBOutlet UISlider *redSlider;
+@property (nonatomic, weak) IBOutlet UISlider *greenSlider;
+@property (nonatomic, weak) IBOutlet UISlider *blueSlider;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
 
 @end
 
 @implementation FirstViewController
 
-- (void)viewDidAppear:(BOOL)animated
+- (void) viewWillAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
+    [super viewWillAppear:animated];
     
     //set navigation bar number
     NSUInteger VCIndex = [self.navigationController.viewControllers indexOfObject:self] + 1; //first number should be 1
@@ -20,20 +28,25 @@ NSString* kFirstViewControllerID = @"FirstViewController";
     self.navigationItem.title = [NSString stringWithFormat:@"%ld VC's on %ld tab", (unsigned long)VCIndex, (unsigned long)tabBarSectionIndex];
 }
 
-
-#pragma mark - Actions
-- (IBAction)showNextVCAction:(id)sender
+- (void) viewWillLayoutSubviews
 {
-    UIStoryboard* firstStoryboard = [UIStoryboard storyboardWithName:kFirstStoryboardName bundle:nil];
-    UINavigationController* nav1 = [firstStoryboard instantiateViewControllerWithIdentifier:kFirstViewControllerID];
-    FirstViewController* VC = (FirstViewController*)[nav1 topViewController];
-    [self.navigationController pushViewController:VC animated:YES];
+    [super viewWillLayoutSubviews];
+    self.topConstraint.constant = self.navigationController.navigationBar.frame.size.height + self.navigationController.navigationBar.frame.origin.y;
 }
 
-- (IBAction)sliderAction:(id)sender
+
+#pragma mark - Actions
+- (IBAction)showNextVCAction
+{
+    FirstViewController *vc = [[FirstViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)sliderAction
 {
     UIColor* newColor = [UIColor colorWithRed:self.redSlider.value green:self.greenSlider.value blue:self.blueSlider.value alpha:1.f];
     self.view.backgroundColor = newColor;
+    self.colorTextField.placeholder = [newColor hexString];
 }
 
 
@@ -41,97 +54,61 @@ NSString* kFirstViewControllerID = @"FirstViewController";
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-    if (range.location == 0) {
-        if ([string isEqualToString:@"#"]) {
-            return YES;
-        } else {
+    NSString* newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    
+    if (newString.length > 8) {
+        return NO;
+    }
+    
+    if (newString.length >= 1) {
+        if (![[newString substringWithRange:NSMakeRange(0, 1)] isEqualToString:@"#"]) {
             return NO;
         }
     }
-    if (range.location > 6) {
-        if ([string isEqualToString:@"\n"]) {
-            if (range.location == 7) {
-                [self.setColorTextField resignFirstResponder];
-                //set color
-                [self setBackgroundColorWithString:self.setColorTextField.text];
-                self.setColorTextField.placeholder = self.setColorTextField.text;
-                self.setColorTextField.text = @"";
-
-                return NO;
-            } else {
-                [self.setColorTextField resignFirstResponder];
-                //clear text field
-                self.setColorTextField.text = @"";
-                
+    
+    NSCharacterSet* set = [NSCharacterSet characterSetWithCharactersInString:allCharacters];
+    
+    if (newString.length >= 2 && newString.length < 8) {
+        for (int i = 1; i < newString.length; i++) {
+            NSString* character = [newString substringWithRange:NSMakeRange(i, 1)];
+            //input string checking
+            if ([character rangeOfCharacterFromSet:set].length != 1) {
                 return NO;
             }
         }
-        return NO;
-    } else {
-        if ([string isEqualToString:@""]) {// for deleting
-            return YES;
-        }
-        if ([string isEqualToString:@"\n"]) { //for closing
-            [self.setColorTextField resignFirstResponder];
-            self.setColorTextField.text = @"";
-        }
-        //input string checking
-        NSCharacterSet* set = [NSCharacterSet characterSetWithCharactersInString:@"0123456789ABCDEF"];
-        if ([string rangeOfCharacterFromSet:set].length == 1) {
-            return YES;
+    }
+    
+    if (newString.length == 8) {
+        NSString* character = [newString substringWithRange:NSMakeRange(7, 1)];
+        if ([character isEqualToString:@"\n"]) {
+            [self.colorTextField resignFirstResponder];
+            //set color
+            [self setBackgroundColorWithString:self.colorTextField.text];
+            self.colorTextField.placeholder = self.colorTextField.text;
+            self.colorTextField.text = @"";
         } else {
             return NO;
         }
-        
     }
-    
     
     return YES;
 }
 
-- (void) setBackgroundColorWithString:(NSString*) string
+- (void) setBackgroundColorWithString:(NSString *)string
 {
-    //findRedComponent
-    NSString* redHexString = [string substringWithRange:NSMakeRange(1, 2)];
-    NSUInteger redValue = [self getDecValueFromHexString:redHexString];
 
-    //findGreenComponent
-    NSString* greenHexString = [string substringWithRange:NSMakeRange(3, 2)];
-    NSUInteger greenValue = [self getDecValueFromHexString:greenHexString];
-
-    //findBlueComponent
-    NSString* blueHexString = [string substringWithRange:NSMakeRange(5, 2)];
-    NSUInteger blueValue = [self getDecValueFromHexString:blueHexString];
-    
-    UIColor* newColor = [UIColor colorWithRed:(float)redValue/255.f green:(float)greenValue/255.f blue:(float)blueValue/255.f alpha:1.f];
+    UIColor* newColor = [UIColor colorWithHexString:string];
     self.view.backgroundColor = newColor;
     
     //move sliders to new values
-    self.redSlider.value = (float)redValue/255.f;
-    self.greenSlider.value = (float)greenValue/255.f;
-    self.blueSlider.value = (float)blueValue/255.f;
+    CGFloat red = 0.0, green = 0.0, blue = 0.0, alpha =0.0;
+    [newColor getRed:&red green:&green blue:&blue alpha:&alpha];
+    self.redSlider.value = red;
+    self.greenSlider.value = green;
+    self.blueSlider.value = blue;
 
 }
 
-- (NSUInteger) getDecValueFromHexString:(NSString*) string
-{
-    if (string.length != 2) {
-        return 0;
-    } else {
-        
-        NSUInteger value = 0;
-        NSString* allCharacters = @"0123456789ABCDEF";
-
-        for (int i = 0; i < string.length; i++) {
-            NSCharacterSet* setWithCharacter = [NSCharacterSet characterSetWithCharactersInString:[string substringWithRange:NSMakeRange(i, 1)]];
-            NSUInteger decValue = [allCharacters rangeOfCharacterFromSet:setWithCharacter].location;
-            value += decValue * powf(16, string.length - 1 - i);
-
-        }
-        
-        return value;
-    }
-}
 
 
 
