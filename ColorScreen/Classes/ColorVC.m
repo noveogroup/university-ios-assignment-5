@@ -44,30 +44,17 @@ static NSInteger const margin = 30;
     return self;
 }
 
-- (void)viewWillLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    
-    
-    self.nextButton.frame = CGRectMake(CGRectGetMidX(self.view.bounds) - buttonSize.width / 2,
-                              CGRectGetMaxY(self.view.bounds) - self.tabBarController.tabBar.frame.size.height,
-                              buttonSize.width,
-                              buttonSize.height);
-    
 
-    
-
-
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
-    [self addNextButton];
     [self addHEXColorField];
     [self addRGBSliders];
-    
+    [self addNextButton];
+
     self.view.backgroundColor = self.color = [UIColor whiteColor];
 
 
@@ -169,13 +156,12 @@ static NSInteger const margin = 30;
 
 
     
-    
     self.sliderVC.view.frame = CGRectMake(CGRectGetMinX(self.view.bounds),
-                                          CGRectGetMaxY(self.inputHEXColorVC.view.frame) + margin,
-                                          self.sliderVC.view.frame.size.width - margin * 3,
-                                          300);
-    
-    
+                                          CGRectGetMaxY(self.inputHEXColorVC.view.frame),
+                                          self.sliderVC.view.frame.size.width - margin * 2,
+                                          CGRectGetMaxY(self.view.bounds) - self.tabBarController.tabBar.frame.size.height - CGRectGetMaxY(self.inputHEXColorVC.view.frame));
+
+
     
     self.sliderVC.firstView.backgroundColor = self.sliderVC.containerView.backgroundColor = [UIColor clearColor];
     
@@ -191,6 +177,8 @@ static NSInteger const margin = 30;
                                 action:@selector(blueSliderChanged:)
                       forControlEvents:UIControlEventValueChanged];
     
+    
+
     
     
     
@@ -208,9 +196,14 @@ static NSInteger const margin = 30;
     
     self.nextButton = [UIButton buttonWithType:UIButtonTypeCustom];
     
+    self.nextButton.frame = CGRectMake(CGRectGetMidX(self.view.bounds) - buttonSize.width / 2,
+                                       CGRectGetMaxY(self.view.bounds) - self.tabBarController.tabBar.frame.size.height,
+                                       buttonSize.width,
+                                       buttonSize.height);
+    
     [self.nextButton addTarget:self
-               action:@selector(goNextViewControllerFrom:)
-     forControlEvents:UIControlEventTouchUpInside];
+                        action:@selector(goNextViewControllerFrom:)
+              forControlEvents:UIControlEventTouchUpInside];
     
     [self.nextButton setTitle:@"Next" forState:UIControlStateNormal];
     [self.nextButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];

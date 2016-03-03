@@ -7,10 +7,6 @@
 
 @implementation InputHEXColorVC
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-}
 
 
 

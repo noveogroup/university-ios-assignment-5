@@ -1,10 +1,3 @@
-//
-//  AppDelegate.m
-//  ColorScreen
-//
-//  Created by Vik on 28.02.16.
-//  Copyright © 2016 Viktor Erfilov. All rights reserved.
-//
 
 #import "AppDelegate.h"
 #import "AboutAuthorVC.h"

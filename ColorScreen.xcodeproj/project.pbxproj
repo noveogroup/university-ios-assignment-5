@@ -11,17 +11,17 @@
 		84D989621C822C4A008744BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D989611C822C4A008744BA /* AppDelegate.m */; };
 		84D9896A1C822C4A008744BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D989691C822C4A008744BA /* Assets.xcassets */; };
 		84D9896D1C822C4A008744BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D9896B1C822C4A008744BA /* LaunchScreen.storyboard */; };
-		84D989761C822DE0008744BA /* AboutAuthorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D989751C822DE0008744BA /* AboutAuthorVC.m */; };
-		84D989791C830276008744BA /* ColorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D989781C830276008744BA /* ColorVC.m */; };
-		84D989A51C83182A008744BA /* AboutAuthorVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D989A41C83182A008744BA /* AboutAuthorVC.xib */; };
 		84D989A71C8318EF008744BA /* photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84D989A61C8318EF008744BA /* photo.jpg */; };
-		84D989AB1C8329A1008744BA /* MoreInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D989AA1C8329A1008744BA /* MoreInfoVC.m */; };
-		84D989AD1C8329C3008744BA /* MoreInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D989AC1C8329C3008744BA /* MoreInfoVC.xib */; };
-		84D989B11C84B77A008744BA /* InputHEXColorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D989AF1C84B77A008744BA /* InputHEXColorVC.m */; };
-		84D989B21C84B77A008744BA /* InputHEXColorVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D989B01C84B77A008744BA /* InputHEXColorVC.xib */; };
-		84D989B61C84C7DB008744BA /* SliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D989B41C84C7DB008744BA /* SliderViewController.m */; };
-		84D989B71C84C7DB008744BA /* SliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D989B51C84C7DB008744BA /* SliderViewController.xib */; };
 		84D989BF1C85F272008744BA /* UIColor+HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D989BE1C85F272008744BA /* UIColor+HexColors.m */; };
+		84E2339B1C88ABDC006F3B7F /* AboutAuthorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E2338E1C88ABDC006F3B7F /* AboutAuthorVC.m */; };
+		84E2339C1C88ABDC006F3B7F /* AboutAuthorVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E2338F1C88ABDC006F3B7F /* AboutAuthorVC.xib */; };
+		84E2339D1C88ABDC006F3B7F /* ColorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E233911C88ABDC006F3B7F /* ColorVC.m */; };
+		84E2339E1C88ABDC006F3B7F /* InputHEXColorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E233931C88ABDC006F3B7F /* InputHEXColorVC.m */; };
+		84E2339F1C88ABDC006F3B7F /* InputHEXColorVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E233941C88ABDC006F3B7F /* InputHEXColorVC.xib */; };
+		84E233A01C88ABDC006F3B7F /* MoreInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E233961C88ABDC006F3B7F /* MoreInfoVC.m */; };
+		84E233A11C88ABDC006F3B7F /* MoreInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E233971C88ABDC006F3B7F /* MoreInfoVC.xib */; };
+		84E233A21C88ABDC006F3B7F /* SliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E233991C88ABDC006F3B7F /* SliderViewController.m */; };
+		84E233A31C88ABDC006F3B7F /* SliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E2339A1C88ABDC006F3B7F /* SliderViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,23 +32,23 @@
 		84D989691C822C4A008744BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84D9896C1C822C4A008744BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84D9896E1C822C4A008744BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84D989741C822DE0008744BA /* AboutAuthorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutAuthorVC.h; sourceTree = "<group>"; };
-		84D989751C822DE0008744BA /* AboutAuthorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutAuthorVC.m; sourceTree = "<group>"; };
-		84D989771C830276008744BA /* ColorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorVC.h; sourceTree = "<group>"; };
-		84D989781C830276008744BA /* ColorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorVC.m; sourceTree = "<group>"; };
-		84D989A41C83182A008744BA /* AboutAuthorVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutAuthorVC.xib; sourceTree = "<group>"; };
 		84D989A61C8318EF008744BA /* photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo.jpg; path = Images/photo.jpg; sourceTree = "<group>"; };
-		84D989A91C8329A1008744BA /* MoreInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreInfoVC.h; sourceTree = "<group>"; };
-		84D989AA1C8329A1008744BA /* MoreInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreInfoVC.m; sourceTree = "<group>"; };
-		84D989AC1C8329C3008744BA /* MoreInfoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreInfoVC.xib; sourceTree = "<group>"; };
-		84D989AE1C84B77A008744BA /* InputHEXColorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputHEXColorVC.h; sourceTree = "<group>"; };
-		84D989AF1C84B77A008744BA /* InputHEXColorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputHEXColorVC.m; sourceTree = "<group>"; };
-		84D989B01C84B77A008744BA /* InputHEXColorVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputHEXColorVC.xib; sourceTree = "<group>"; };
-		84D989B31C84C7DB008744BA /* SliderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderViewController.h; sourceTree = "<group>"; };
-		84D989B41C84C7DB008744BA /* SliderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderViewController.m; sourceTree = "<group>"; };
-		84D989B51C84C7DB008744BA /* SliderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderViewController.xib; sourceTree = "<group>"; };
 		84D989BD1C85F271008744BA /* UIColor+HexColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+HexColors.h"; path = "Category/UIColor+HexColors.h"; sourceTree = "<group>"; };
 		84D989BE1C85F272008744BA /* UIColor+HexColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HexColors.m"; path = "Category/UIColor+HexColors.m"; sourceTree = "<group>"; };
+		84E2338D1C88ABDC006F3B7F /* AboutAuthorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutAuthorVC.h; path = Classes/AboutAuthorVC.h; sourceTree = "<group>"; };
+		84E2338E1C88ABDC006F3B7F /* AboutAuthorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutAuthorVC.m; path = Classes/AboutAuthorVC.m; sourceTree = "<group>"; };
+		84E2338F1C88ABDC006F3B7F /* AboutAuthorVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AboutAuthorVC.xib; path = Classes/AboutAuthorVC.xib; sourceTree = "<group>"; };
+		84E233901C88ABDC006F3B7F /* ColorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorVC.h; path = Classes/ColorVC.h; sourceTree = "<group>"; };
+		84E233911C88ABDC006F3B7F /* ColorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColorVC.m; path = Classes/ColorVC.m; sourceTree = "<group>"; };
+		84E233921C88ABDC006F3B7F /* InputHEXColorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InputHEXColorVC.h; path = Classes/InputHEXColorVC.h; sourceTree = "<group>"; };
+		84E233931C88ABDC006F3B7F /* InputHEXColorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InputHEXColorVC.m; path = Classes/InputHEXColorVC.m; sourceTree = "<group>"; };
+		84E233941C88ABDC006F3B7F /* InputHEXColorVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InputHEXColorVC.xib; path = Classes/InputHEXColorVC.xib; sourceTree = "<group>"; };
+		84E233951C88ABDC006F3B7F /* MoreInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoreInfoVC.h; path = Classes/MoreInfoVC.h; sourceTree = "<group>"; };
+		84E233961C88ABDC006F3B7F /* MoreInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MoreInfoVC.m; path = Classes/MoreInfoVC.m; sourceTree = "<group>"; };
+		84E233971C88ABDC006F3B7F /* MoreInfoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MoreInfoVC.xib; path = Classes/MoreInfoVC.xib; sourceTree = "<group>"; };
+		84E233981C88ABDC006F3B7F /* SliderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SliderViewController.h; path = Classes/SliderViewController.h; sourceTree = "<group>"; };
+		84E233991C88ABDC006F3B7F /* SliderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SliderViewController.m; path = Classes/SliderViewController.m; sourceTree = "<group>"; };
+		84E2339A1C88ABDC006F3B7F /* SliderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SliderViewController.xib; path = Classes/SliderViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,20 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				84D989A81C8318F3008744BA /* Images */,
-				84D989741C822DE0008744BA /* AboutAuthorVC.h */,
-				84D989751C822DE0008744BA /* AboutAuthorVC.m */,
-				84D989A41C83182A008744BA /* AboutAuthorVC.xib */,
-				84D989AE1C84B77A008744BA /* InputHEXColorVC.h */,
-				84D989AF1C84B77A008744BA /* InputHEXColorVC.m */,
-				84D989B01C84B77A008744BA /* InputHEXColorVC.xib */,
-				84D989B31C84C7DB008744BA /* SliderViewController.h */,
-				84D989B41C84C7DB008744BA /* SliderViewController.m */,
-				84D989B51C84C7DB008744BA /* SliderViewController.xib */,
-				84D989A91C8329A1008744BA /* MoreInfoVC.h */,
-				84D989AA1C8329A1008744BA /* MoreInfoVC.m */,
-				84D989AC1C8329C3008744BA /* MoreInfoVC.xib */,
-				84D989771C830276008744BA /* ColorVC.h */,
-				84D989781C830276008744BA /* ColorVC.m */,
+				84E2338C1C88AB9B006F3B7F /* Classes */,
 				84D989C01C85F27D008744BA /* Categories */,
 				84D989601C822C4A008744BA /* AppDelegate.h */,
 				84D989611C822C4A008744BA /* AppDelegate.m */,
@@ -130,6 +117,27 @@
 				84D989BE1C85F272008744BA /* UIColor+HexColors.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		84E2338C1C88AB9B006F3B7F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				84E2338D1C88ABDC006F3B7F /* AboutAuthorVC.h */,
+				84E2338E1C88ABDC006F3B7F /* AboutAuthorVC.m */,
+				84E2338F1C88ABDC006F3B7F /* AboutAuthorVC.xib */,
+				84E233901C88ABDC006F3B7F /* ColorVC.h */,
+				84E233911C88ABDC006F3B7F /* ColorVC.m */,
+				84E233921C88ABDC006F3B7F /* InputHEXColorVC.h */,
+				84E233931C88ABDC006F3B7F /* InputHEXColorVC.m */,
+				84E233941C88ABDC006F3B7F /* InputHEXColorVC.xib */,
+				84E233951C88ABDC006F3B7F /* MoreInfoVC.h */,
+				84E233961C88ABDC006F3B7F /* MoreInfoVC.m */,
+				84E233971C88ABDC006F3B7F /* MoreInfoVC.xib */,
+				84E233981C88ABDC006F3B7F /* SliderViewController.h */,
+				84E233991C88ABDC006F3B7F /* SliderViewController.m */,
+				84E2339A1C88ABDC006F3B7F /* SliderViewController.xib */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,12 +199,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D9896D1C822C4A008744BA /* LaunchScreen.storyboard in Resources */,
-				84D989B21C84B77A008744BA /* InputHEXColorVC.xib in Resources */,
-				84D989A51C83182A008744BA /* AboutAuthorVC.xib in Resources */,
+				84E233A11C88ABDC006F3B7F /* MoreInfoVC.xib in Resources */,
+				84E2339C1C88ABDC006F3B7F /* AboutAuthorVC.xib in Resources */,
 				84D989A71C8318EF008744BA /* photo.jpg in Resources */,
 				84D9896A1C822C4A008744BA /* Assets.xcassets in Resources */,
-				84D989B71C84C7DB008744BA /* SliderViewController.xib in Resources */,
-				84D989AD1C8329C3008744BA /* MoreInfoVC.xib in Resources */,
+				84E2339F1C88ABDC006F3B7F /* InputHEXColorVC.xib in Resources */,
+				84E233A31C88ABDC006F3B7F /* SliderViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,14 +215,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84D989791C830276008744BA /* ColorVC.m in Sources */,
+				84E233A21C88ABDC006F3B7F /* SliderViewController.m in Sources */,
 				84D989BF1C85F272008744BA /* UIColor+HexColors.m in Sources */,
-				84D989B61C84C7DB008744BA /* SliderViewController.m in Sources */,
 				84D989621C822C4A008744BA /* AppDelegate.m in Sources */,
-				84D989AB1C8329A1008744BA /* MoreInfoVC.m in Sources */,
-				84D989B11C84B77A008744BA /* InputHEXColorVC.m in Sources */,
-				84D989761C822DE0008744BA /* AboutAuthorVC.m in Sources */,
+				84E2339B1C88ABDC006F3B7F /* AboutAuthorVC.m in Sources */,
+				84E2339D1C88ABDC006F3B7F /* ColorVC.m in Sources */,
+				84E2339E1C88ABDC006F3B7F /* InputHEXColorVC.m in Sources */,
 				84D9895F1C822C4A008744BA /* main.m in Sources */,
+				84E233A01C88ABDC006F3B7F /* MoreInfoVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
