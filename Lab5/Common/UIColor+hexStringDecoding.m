@@ -7,25 +7,45 @@ static NSString* const allCharacters = @"0123456789ABCDEF";
 
 + (UIColor *)colorWithHexString:(NSString *)string{
     
-    UIColor* color = [[UIColor alloc] init];
+    NSMutableString* newString = [string mutableCopy];
+    if (string.length < 6) {
+        for (int i = 0; i < 6 - string.length; i++) {
+            [newString appendString:@"F"];
+        }
+    }
+    
     //findRedComponent
-    NSString* redHexString = [string substringWithRange:NSMakeRange(1, 2)];
-    NSUInteger redValue = [color getDecValueFromHexString:redHexString];
+    NSString* redHexString = [newString substringWithRange:NSMakeRange(0, 2)];
+    NSUInteger redValue = [UIColor getDecValueFromHexString:redHexString];
     
     //findGreenComponent
-    NSString* greenHexString = [string substringWithRange:NSMakeRange(3, 2)];
-    NSUInteger greenValue = [color getDecValueFromHexString:greenHexString];
+    NSString* greenHexString = [newString substringWithRange:NSMakeRange(2, 2)];
+    NSUInteger greenValue = [UIColor getDecValueFromHexString:greenHexString];
     
     //findBlueComponent
-    NSString* blueHexString = [string substringWithRange:NSMakeRange(5, 2)];
-    NSUInteger blueValue = [color getDecValueFromHexString:blueHexString];
+    NSString* blueHexString = [newString substringWithRange:NSMakeRange(4, 2)];
+    NSUInteger blueValue = [UIColor getDecValueFromHexString:blueHexString];
     
     UIColor* newColor = [UIColor colorWithRed:(float)redValue/255.f green:(float)greenValue/255.f blue:(float)blueValue/255.f alpha:1.f];
     
     return newColor;
 }
 
-- (NSUInteger) getDecValueFromHexString:(NSString *)string
++ (BOOL) isValidHexSring:(NSString*) string{
+    NSCharacterSet* set = [NSCharacterSet characterSetWithCharactersInString:allCharacters];
+    
+    for (int i = 0; i < string.length; i++) {
+        NSString* character = [string substringWithRange:NSMakeRange(i, 1)];
+        //input string checking
+        if ([character rangeOfCharacterFromSet:set].length != 1) {
+            return NO;
+        }
+    }
+    return YES;
+}
+
+
++ (NSUInteger) getDecValueFromHexString:(NSString *)string
 {
     if (string.length != 2) {
         return 0;

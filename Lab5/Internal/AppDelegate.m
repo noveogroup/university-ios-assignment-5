@@ -26,7 +26,7 @@
     nav2.title = @"second";
     
     UIStoryboard* thirdStoryboard = [UIStoryboard storyboardWithName:kThirdStoryboardName bundle:nil];
-    UINavigationController* nav3 = [thirdStoryboard instantiateViewControllerWithIdentifier:kThirdViewControllerID];
+    UINavigationController* nav3 = [thirdStoryboard instantiateInitialViewController];
     nav3.title = @"third";
     
     NSArray* controllers = [NSArray arrayWithObjects:nav1, nav2, nav3, nil];

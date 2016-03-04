@@ -5,6 +5,8 @@
 
 + (UIColor *)colorWithHexString:(NSString *)string;
 
++ (BOOL) isValidHexSring:(NSString*) string;
+
 - (NSString*)hexString;
 
 @end
