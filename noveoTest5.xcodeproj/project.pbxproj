@@ -13,6 +13,7 @@
 		98E2379D1C929E7C005101F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98E2379B1C929E7C005101F5 /* Main.storyboard */; };
 		98E2379F1C929E7C005101F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98E2379E1C929E7C005101F5 /* Assets.xcassets */; };
 		98E237A21C929E7C005101F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98E237A01C929E7C005101F5 /* LaunchScreen.storyboard */; };
+		98E2385A1C954FFE005101F5 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E238591C954FFE005101F5 /* FirstViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		98E2379E1C929E7C005101F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98E237A11C929E7C005101F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98E237A31C929E7C005101F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98E238581C954FFE005101F5 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		98E238591C954FFE005101F5 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				98E237961C929E7C005101F5 /* AppDelegate.m */,
 				98E237981C929E7C005101F5 /* ViewController.h */,
 				98E237991C929E7C005101F5 /* ViewController.m */,
+				98E238581C954FFE005101F5 /* FirstViewController.h */,
+				98E238591C954FFE005101F5 /* FirstViewController.m */,
 				98E2379B1C929E7C005101F5 /* Main.storyboard */,
 				98E2379E1C929E7C005101F5 /* Assets.xcassets */,
 				98E237A01C929E7C005101F5 /* LaunchScreen.storyboard */,
@@ -153,6 +158,7 @@
 				98E2379A1C929E7C005101F5 /* ViewController.m in Sources */,
 				98E237971C929E7C005101F5 /* AppDelegate.m in Sources */,
 				98E237941C929E7C005101F5 /* main.m in Sources */,
+				98E2385A1C954FFE005101F5 /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +271,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = noveoTest5/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alisadenisova.noveoTest5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,6 +283,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = noveoTest5/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alisadenisova.noveoTest5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -301,6 +309,7 @@
 				98E237A81C929E7C005101F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
