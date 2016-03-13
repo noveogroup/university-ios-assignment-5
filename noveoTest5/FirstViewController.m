@@ -1,5 +1,6 @@
 
 #import "FirstViewController.h"
+#import "UIColor+HexString.h"
 
 @interface FirstViewController ()
 
@@ -38,21 +39,25 @@
      //self.infoLabel.text = [NSString stringWithFormat:@"%1.2f", sender.value];
      [self refreshScreen];
 }
+
+- (IBAction)actionEnabled:(UISwitch *)sender {
+    
+    self.redComponentSlider.enabled = self.greenComponentSlider.enabled = self.blueComponentSlider.enabled = sender.isOn;
+    
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+    double delayInSeconds = 0.4f;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        
+        if ([[UIApplication sharedApplication] isIgnoringInteractionEvents]) {
+            [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+        }
+    });
+
+}
+
 @end
 
-
-
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 // NSLog(@"%0.2f", sender.value);//выведем 2 числа после запятой максимум
 //когда меняется валюе, тогда будет вызван наш метод
@@ -63,3 +68,4 @@
 //если копировать слайдеры то они будут вызывать один и тот же метод акшн
 //создаем 3 пропертис на слайдер и все три слайдера по какому-то измению вызывают метод акшн
 // нам не важно какой придет, мы будем брать значение, которое придет и на основе них будем создавать цвет
+
