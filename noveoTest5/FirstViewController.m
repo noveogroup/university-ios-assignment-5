@@ -11,6 +11,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self refreshScreen];//инициализируем нулями
+    //self.textField.keyboardAppearance
 }
 
 #pragma mark - Private Metods

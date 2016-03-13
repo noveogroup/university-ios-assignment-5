@@ -10,6 +10,8 @@
 #import <Foundation/Foundation.h>
 
 @interface FirstViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+
 
 @property (weak, nonatomic) IBOutlet UISlider *redComponentSlider;
 @property (weak, nonatomic) IBOutlet UISlider *greenComponentSlider;
