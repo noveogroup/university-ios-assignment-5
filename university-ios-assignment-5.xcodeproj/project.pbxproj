@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		586039963857E5246C52FF64 /* ColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5860312D1459B2207375F6EA /* ColorViewController.m */; };
 		841E24B01D34F6080001DCF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 841E24AF1D34F6080001DCF1 /* main.m */; };
 		841E24B31D34F6080001DCF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 841E24B21D34F6080001DCF1 /* AppDelegate.m */; };
 		841E24B61D34F6080001DCF1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841E24B51D34F6080001DCF1 /* MainViewController.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5860312D1459B2207375F6EA /* ColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorViewController.m; sourceTree = "<group>"; };
+		586039FA398D9321217EFE1D /* ColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorViewController.h; sourceTree = "<group>"; };
 		841E24AB1D34F6080001DCF1 /* university-ios-assignment-5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "university-ios-assignment-5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		841E24AF1D34F6080001DCF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		841E24B11D34F6080001DCF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -110,6 +113,8 @@
 				841E24BC1D34F6080001DCF1 /* LaunchScreen.storyboard */,
 				841E24BF1D34F6080001DCF1 /* Info.plist */,
 				841E24AE1D34F6080001DCF1 /* Supporting Files */,
+				586039FA398D9321217EFE1D /* ColorViewController.h */,
+				5860312D1459B2207375F6EA /* ColorViewController.m */,
 			);
 			path = "university-ios-assignment-5";
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 				841E24B61D34F6080001DCF1 /* MainViewController.m in Sources */,
 				841E24B31D34F6080001DCF1 /* AppDelegate.m in Sources */,
 				841E24B01D34F6080001DCF1 /* main.m in Sources */,
+				586039963857E5246C52FF64 /* ColorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
