@@ -4,8 +4,7 @@
 //
 
 #import "ColorViewController.h"
-
-#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#import "UIColor+HexColor.h"
 
 @interface ColorViewController ()
 
@@ -23,31 +22,38 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [self.colorTextField addTarget:self action:@selector(colorTextFieldValuechanged:) forControlEvents:UIControlEventEditingChanged];
+    [self.rColorSlider addTarget:self action:@selector(changeColorBySliders) forControlEvents:UIControlEventValueChanged];
+    [self.gColorSlider addTarget:self action:@selector(changeColorBySliders) forControlEvents:UIControlEventValueChanged];
+    [self.bColorSlider addTarget:self action:@selector(changeColorBySliders) forControlEvents:UIControlEventValueChanged];
+    self.navigationItem.title = [NSString stringWithFormat:@"%@: (%lu)", self.navigationController.tabBarItem.title, self.navigationController.viewControllers.count];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.view.backgroundColor = [UIColor colorWithRed:self.rColorSlider.value green:self.gColorSlider.value blue:self.bColorSlider.value alpha:1];
+    [self changeColorBySliders];
 }
-- (IBAction)rColorValueChanged:(id)sender
-{
-    
-    self.view.backgroundColor = [UIColor colorWithRed:self.rColorSlider.value green:self.gColorSlider.value blue:self.bColorSlider.value alpha:1];
-}
-- (IBAction)gColorValueChanged:(id)sender
-{
-    
-    self.view.backgroundColor = [UIColor colorWithRed:self.rColorSlider.value green:self.gColorSlider.value blue:self.bColorSlider.value alpha:1];
-}
-- (IBAction)bColorValueChanged:(id)sender
-{
-    
-    self.view.backgroundColor = [UIColor colorWithRed:self.rColorSlider.value green:self.gColorSlider.value blue:self.bColorSlider.value alpha:1];
-}
-- (IBAction)colorTextFieldValuechanged:(id)sender {
 
+- (IBAction)colorTextFieldValuechanged:(id)sender {
+    NSCharacterSet* nonHex = [[NSCharacterSet
+                               characterSetWithCharactersInString: @"0123456789ABCDEFabcdef"]
+                              invertedSet];
+    if ([self.colorTextField.text rangeOfCharacterFromSet: nonHex].location == NSNotFound && self.colorTextField.text.length == 6) {
+        UIColor *color =[UIColor colorWithHexString:self.colorTextField.text];
+        self.view.backgroundColor = color;
+        const CGFloat *components = CGColorGetComponents(color.CGColor);
+        self.rColorSlider.value = components[0];
+        self.gColorSlider.value = components[1];
+        self.bColorSlider.value = components[2];
+    }
+}
+
+- (void)changeColorBySliders
+{
+    UIColor *color = [UIColor colorWithRed:self.rColorSlider.value green:self.gColorSlider.value blue:self.bColorSlider.value alpha:1];
+    self.view.backgroundColor = color;
+    self.colorTextField.text = [UIColor hexStringForColor:color];
 }
 
 @end

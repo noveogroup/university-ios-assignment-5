@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		586039963857E5246C52FF64 /* ColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5860312D1459B2207375F6EA /* ColorViewController.m */; };
+		58603FCB2F9040B9350DA80B /* UIColor+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 58603554D7637A0B64FDD7B7 /* UIColor+HexColor.m */; };
 		841E24B01D34F6080001DCF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 841E24AF1D34F6080001DCF1 /* main.m */; };
 		841E24B31D34F6080001DCF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 841E24B21D34F6080001DCF1 /* AppDelegate.m */; };
 		841E24B61D34F6080001DCF1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841E24B51D34F6080001DCF1 /* MainViewController.m */; };
@@ -16,6 +17,8 @@
 		841E24BE1D34F6080001DCF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841E24BC1D34F6080001DCF1 /* LaunchScreen.storyboard */; };
 		841E24C91D34F6090001DCF1 /* university_ios_assignment_5Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 841E24C81D34F6090001DCF1 /* university_ios_assignment_5Tests.m */; };
 		841E24D41D34F6090001DCF1 /* university_ios_assignment_5UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 841E24D31D34F6090001DCF1 /* university_ios_assignment_5UITests.m */; };
+		842650EA1D376AD700C06DDE /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842650E91D376AD700C06DDE /* AboutViewController.m */; };
+		842650ED1D376FFE00C06DDE /* DetailInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842650EC1D376FFE00C06DDE /* DetailInfoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		5860312D1459B2207375F6EA /* ColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorViewController.m; sourceTree = "<group>"; };
+		586032192AF8EC752C89595A /* UIColor+HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexColor.h"; sourceTree = "<group>"; };
+		58603554D7637A0B64FDD7B7 /* UIColor+HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexColor.m"; sourceTree = "<group>"; };
 		586039FA398D9321217EFE1D /* ColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorViewController.h; sourceTree = "<group>"; };
 		841E24AB1D34F6080001DCF1 /* university-ios-assignment-5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "university-ios-assignment-5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		841E24AF1D34F6080001DCF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -54,6 +59,10 @@
 		841E24CF1D34F6090001DCF1 /* university-ios-assignment-5UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "university-ios-assignment-5UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		841E24D31D34F6090001DCF1 /* university_ios_assignment_5UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = university_ios_assignment_5UITests.m; sourceTree = "<group>"; };
 		841E24D51D34F6090001DCF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		842650E81D376AD700C06DDE /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		842650E91D376AD700C06DDE /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		842650EB1D376FFE00C06DDE /* DetailInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailInfoViewController.h; sourceTree = "<group>"; };
+		842650EC1D376FFE00C06DDE /* DetailInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailInfoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +124,12 @@
 				841E24AE1D34F6080001DCF1 /* Supporting Files */,
 				586039FA398D9321217EFE1D /* ColorViewController.h */,
 				5860312D1459B2207375F6EA /* ColorViewController.m */,
+				586032192AF8EC752C89595A /* UIColor+HexColor.h */,
+				58603554D7637A0B64FDD7B7 /* UIColor+HexColor.m */,
+				842650E81D376AD700C06DDE /* AboutViewController.h */,
+				842650E91D376AD700C06DDE /* AboutViewController.m */,
+				842650EB1D376FFE00C06DDE /* DetailInfoViewController.h */,
+				842650EC1D376FFE00C06DDE /* DetailInfoViewController.m */,
 			);
 			path = "university-ios-assignment-5";
 			sourceTree = "<group>";
@@ -275,10 +290,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842650EA1D376AD700C06DDE /* AboutViewController.m in Sources */,
 				841E24B61D34F6080001DCF1 /* MainViewController.m in Sources */,
 				841E24B31D34F6080001DCF1 /* AppDelegate.m in Sources */,
 				841E24B01D34F6080001DCF1 /* main.m in Sources */,
 				586039963857E5246C52FF64 /* ColorViewController.m in Sources */,
+				842650ED1D376FFE00C06DDE /* DetailInfoViewController.m in Sources */,
+				58603FCB2F9040B9350DA80B /* UIColor+HexColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +440,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "university-ios-assignment-5/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tanya.university-ios-assignment-5";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -433,6 +452,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "university-ios-assignment-5/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tanya.university-ios-assignment-5";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -504,6 +524,7 @@
 				841E24DA1D34F6090001DCF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		841E24DB1D34F6090001DCF1 /* Build configuration list for PBXNativeTarget "university-ios-assignment-5Tests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +533,7 @@
 				841E24DD1D34F6090001DCF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		841E24DE1D34F6090001DCF1 /* Build configuration list for PBXNativeTarget "university-ios-assignment-5UITests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +542,7 @@
 				841E24E01D34F6090001DCF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
