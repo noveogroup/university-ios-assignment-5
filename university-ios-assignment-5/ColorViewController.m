@@ -6,7 +6,10 @@
 #import "ColorViewController.h"
 #import "UIColor+HexColor.h"
 
-@interface ColorViewController ()
+NSString *hexSymbols = @"0123456789ABCDEFabcdef";
+NSInteger characterCount = 6;
+
+@interface ColorViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UISlider *rColorSlider;
 @property (weak, nonatomic) IBOutlet UISlider *gColorSlider;
@@ -22,11 +25,25 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
+    self.colorTextField.delegate = self;
     [self.colorTextField addTarget:self action:@selector(colorTextFieldValuechanged:) forControlEvents:UIControlEventEditingChanged];
     [self.rColorSlider addTarget:self action:@selector(changeColorBySliders) forControlEvents:UIControlEventValueChanged];
     [self.gColorSlider addTarget:self action:@selector(changeColorBySliders) forControlEvents:UIControlEventValueChanged];
     [self.bColorSlider addTarget:self action:@selector(changeColorBySliders) forControlEvents:UIControlEventValueChanged];
     self.navigationItem.title = [NSString stringWithFormat:@"%@: (%lu)", self.navigationController.tabBarItem.title, self.navigationController.viewControllers.count];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    
+    [self.colorTextField resignFirstResponder];
+    return YES;
+}
+
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    NSUInteger newLength = self.colorTextField.text.length + string.length - range.length;
+    NSCharacterSet *set = [[NSCharacterSet characterSetWithCharactersInString:hexSymbols] invertedSet];
+    NSString *filtered = [[string componentsSeparatedByCharactersInSet:set] componentsJoinedByString:@""];
+    return (([string isEqualToString:filtered]) && (newLength <= characterCount));
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -36,10 +53,7 @@
 }
 
 - (IBAction)colorTextFieldValuechanged:(id)sender {
-    NSCharacterSet* nonHex = [[NSCharacterSet
-                               characterSetWithCharactersInString: @"0123456789ABCDEFabcdef"]
-                              invertedSet];
-    if ([self.colorTextField.text rangeOfCharacterFromSet: nonHex].location == NSNotFound && self.colorTextField.text.length == 6) {
+    if (self.colorTextField.text.length == characterCount) {
         UIColor *color =[UIColor colorWithHexString:self.colorTextField.text];
         self.view.backgroundColor = color;
         const CGFloat *components = CGColorGetComponents(color.CGColor);
