@@ -9,12 +9,10 @@
 /* Begin PBXBuildFile section */
 		F5D49EA01D3675E2002E9CB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D49E9F1D3675E2002E9CB4 /* main.m */; };
 		F5D49EA31D3675E2002E9CB4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D49EA21D3675E2002E9CB4 /* AppDelegate.m */; };
-		F5D49EA61D3675E2002E9CB4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D49EA51D3675E2002E9CB4 /* ViewController.m */; };
+		F5D49EA61D3675E2002E9CB4 /* ColorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D49EA51D3675E2002E9CB4 /* ColorVC.m */; };
 		F5D49EA91D3675E2002E9CB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D49EA71D3675E2002E9CB4 /* Main.storyboard */; };
 		F5D49EAB1D3675E2002E9CB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D49EAA1D3675E2002E9CB4 /* Assets.xcassets */; };
 		F5D49EAE1D3675E2002E9CB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D49EAC1D3675E2002E9CB4 /* LaunchScreen.storyboard */; };
-		F5D49EB71D3686B2002E9CB4 /* FirstNC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D49EB61D3686B2002E9CB4 /* FirstNC.m */; };
-		F5D49EBA1D368755002E9CB4 /* SecondNC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D49EB91D368755002E9CB4 /* SecondNC.m */; };
 		F5D49EC01D3696DA002E9CB4 /* AuthorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D49EBF1D3696DA002E9CB4 /* AuthorVC.m */; };
 		F5D49EC31D369B86002E9CB4 /* AboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D49EC21D369B86002E9CB4 /* AboutVC.m */; };
 /* End PBXBuildFile section */
@@ -24,16 +22,12 @@
 		F5D49E9F1D3675E2002E9CB4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F5D49EA11D3675E2002E9CB4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F5D49EA21D3675E2002E9CB4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F5D49EA41D3675E2002E9CB4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F5D49EA51D3675E2002E9CB4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F5D49EA41D3675E2002E9CB4 /* ColorVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorVC.h; sourceTree = "<group>"; };
+		F5D49EA51D3675E2002E9CB4 /* ColorVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorVC.m; sourceTree = "<group>"; };
 		F5D49EA81D3675E2002E9CB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5D49EAA1D3675E2002E9CB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5D49EAD1D3675E2002E9CB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5D49EAF1D3675E2002E9CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F5D49EB51D3686B2002E9CB4 /* FirstNC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstNC.h; sourceTree = "<group>"; };
-		F5D49EB61D3686B2002E9CB4 /* FirstNC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstNC.m; sourceTree = "<group>"; };
-		F5D49EB81D368755002E9CB4 /* SecondNC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondNC.h; sourceTree = "<group>"; };
-		F5D49EB91D368755002E9CB4 /* SecondNC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondNC.m; sourceTree = "<group>"; };
 		F5D49EBE1D3696DA002E9CB4 /* AuthorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorVC.h; sourceTree = "<group>"; };
 		F5D49EBF1D3696DA002E9CB4 /* AuthorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorVC.m; sourceTree = "<group>"; };
 		F5D49EC11D369B86002E9CB4 /* AboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutVC.h; sourceTree = "<group>"; };
@@ -77,12 +71,8 @@
 				F5D49EAC1D3675E2002E9CB4 /* LaunchScreen.storyboard */,
 				F5D49EAF1D3675E2002E9CB4 /* Info.plist */,
 				F5D49E9E1D3675E2002E9CB4 /* Supporting Files */,
-				F5D49EA41D3675E2002E9CB4 /* ViewController.h */,
-				F5D49EA51D3675E2002E9CB4 /* ViewController.m */,
-				F5D49EB51D3686B2002E9CB4 /* FirstNC.h */,
-				F5D49EB61D3686B2002E9CB4 /* FirstNC.m */,
-				F5D49EB81D368755002E9CB4 /* SecondNC.h */,
-				F5D49EB91D368755002E9CB4 /* SecondNC.m */,
+				F5D49EA41D3675E2002E9CB4 /* ColorVC.h */,
+				F5D49EA51D3675E2002E9CB4 /* ColorVC.m */,
 				F5D49EBE1D3696DA002E9CB4 /* AuthorVC.h */,
 				F5D49EBF1D3696DA002E9CB4 /* AuthorVC.m */,
 				F5D49EC11D369B86002E9CB4 /* AboutVC.h */,
@@ -169,11 +159,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5D49EA61D3675E2002E9CB4 /* ViewController.m in Sources */,
-				F5D49EB71D3686B2002E9CB4 /* FirstNC.m in Sources */,
+				F5D49EA61D3675E2002E9CB4 /* ColorVC.m in Sources */,
 				F5D49EA31D3675E2002E9CB4 /* AppDelegate.m in Sources */,
 				F5D49EC01D3696DA002E9CB4 /* AuthorVC.m in Sources */,
-				F5D49EBA1D368755002E9CB4 /* SecondNC.m in Sources */,
 				F5D49EC31D369B86002E9CB4 /* AboutVC.m in Sources */,
 				F5D49EA01D3675E2002E9CB4 /* main.m in Sources */,
 			);

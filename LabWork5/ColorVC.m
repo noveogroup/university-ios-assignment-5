@@ -1,10 +1,9 @@
 
-#import "ViewController.h"
+#import "ColorVC.h"
 
-@interface ViewController ()
+@interface ColorVC ()
 
 @property (nonatomic) NSCharacterSet *nonHex;
-@property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UITextField *colorTextFiled;
 @property (weak, nonatomic) IBOutlet UISlider *redColorSlider;
 @property (weak, nonatomic) IBOutlet UISlider *greenColorSlider;
@@ -13,7 +12,7 @@
 
 @end
 
-@implementation ViewController
+@implementation ColorVC
 
 - (void)viewDidLoad
 {
@@ -34,12 +33,12 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    self.label.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.count];
+    self.navigationItem.title = [NSString stringWithFormat:@"%@ %lu", self.navigationController.title, (unsigned long)self.count];
 }
 
 - (IBAction)gotoNextVC:(id)sender
 {
-    ViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+    ColorVC *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ColorVC"];
     vc.count = self.count + 1;
     [self.navigationController pushViewController:vc animated:YES];
 }
@@ -62,8 +61,12 @@
     
     if (colorText.length != 6 || !isHex) {
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Invalid hex color" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-        [alert show];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"Invalid hex color" preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [alert dismissViewControllerAnimated:YES completion:nil];
+        }]];
+        [self presentViewController:alert animated:YES completion:nil];
+        
         return;
     }
     
