@@ -28,11 +28,6 @@
     
     [self sliderValueChanged:self];
     
-    self.navigationItem.title = self.navigationController.title;
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
     self.navigationItem.title = [NSString stringWithFormat:@"%@ %lu", self.navigationController.title, (unsigned long)self.count];
 }
 
