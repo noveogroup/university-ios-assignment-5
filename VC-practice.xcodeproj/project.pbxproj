@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		843F6CAF1D38BD1800DA17F6 /* Image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 843F6CAE1D38BD1800DA17F6 /* Image.jpg */; };
 		843F6CB21D38BEA800DA17F6 /* AthorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843F6CB11D38BEA800DA17F6 /* AthorViewController.m */; };
+		843F6CB51D38CF9000DA17F6 /* MoreInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 843F6CB41D38CF9000DA17F6 /* MoreInfoVC.m */; };
 		845F69611D360B0E00DE20AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845F69601D360B0E00DE20AD /* main.m */; };
 		845F69641D360B0E00DE20AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 845F69631D360B0E00DE20AD /* AppDelegate.m */; };
 		845F69671D360B0E00DE20AD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845F69661D360B0E00DE20AD /* ViewController.m */; };
@@ -40,6 +41,9 @@
 		843F6CAE1D38BD1800DA17F6 /* Image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Image.jpg; sourceTree = "<group>"; };
 		843F6CB01D38BEA800DA17F6 /* AthorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AthorViewController.h; sourceTree = "<group>"; };
 		843F6CB11D38BEA800DA17F6 /* AthorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AthorViewController.m; sourceTree = "<group>"; };
+		843F6CB31D38CF9000DA17F6 /* MoreInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreInfoVC.h; sourceTree = "<group>"; };
+		843F6CB41D38CF9000DA17F6 /* MoreInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreInfoVC.m; sourceTree = "<group>"; };
+		843F6CB71D38EA0900DA17F6 /* MoreInfoVCDelegateProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreInfoVCDelegateProtocol.h; sourceTree = "<group>"; };
 		845F695C1D360B0E00DE20AD /* VC-practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VC-practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		845F69601D360B0E00DE20AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		845F69621D360B0E00DE20AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -115,12 +119,15 @@
 		845F695E1D360B0E00DE20AD /* VC-practice */ = {
 			isa = PBXGroup;
 			children = (
+				843F6CB71D38EA0900DA17F6 /* MoreInfoVCDelegateProtocol.h */,
 				845F69621D360B0E00DE20AD /* AppDelegate.h */,
 				845F69631D360B0E00DE20AD /* AppDelegate.m */,
 				845F69651D360B0E00DE20AD /* ViewController.h */,
 				845F69661D360B0E00DE20AD /* ViewController.m */,
 				843F6CB01D38BEA800DA17F6 /* AthorViewController.h */,
 				843F6CB11D38BEA800DA17F6 /* AthorViewController.m */,
+				843F6CB31D38CF9000DA17F6 /* MoreInfoVC.h */,
+				843F6CB41D38CF9000DA17F6 /* MoreInfoVC.m */,
 				845F69681D360B0E00DE20AD /* Main.storyboard */,
 				845F696B1D360B0E00DE20AD /* Assets.xcassets */,
 				845F696D1D360B0E00DE20AD /* LaunchScreen.storyboard */,
@@ -289,6 +296,7 @@
 			files = (
 				845F69671D360B0E00DE20AD /* ViewController.m in Sources */,
 				843F6CB21D38BEA800DA17F6 /* AthorViewController.m in Sources */,
+				843F6CB51D38CF9000DA17F6 /* MoreInfoVC.m in Sources */,
 				845F69641D360B0E00DE20AD /* AppDelegate.m in Sources */,
 				845F69611D360B0E00DE20AD /* main.m in Sources */,
 			);

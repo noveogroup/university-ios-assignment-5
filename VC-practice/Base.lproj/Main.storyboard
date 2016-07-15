@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZjU-sE-kTz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZjU-sE-kTz">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -25,7 +25,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSL-wM-ho0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1391" y="-533"/>
+            <point key="canvasLocation" x="-934" y="-528"/>
         </scene>
         <!--VC1-->
         <scene sceneID="2XK-Ul-6cP">
@@ -42,7 +42,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Udk-jO-eiM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-856" y="-831"/>
+            <point key="canvasLocation" x="-457" y="-833"/>
         </scene>
         <!--VC2-->
         <scene sceneID="ok0-o0-ff6">
@@ -59,7 +59,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZm-Ik-s0L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-856" y="-214"/>
+            <point key="canvasLocation" x="-456.5333333333333" y="-202.58666666666667"/>
         </scene>
         <!--Author-->
         <scene sceneID="ibQ-kk-DIO">
@@ -77,7 +77,7 @@
                                 <rect key="frame" x="205" y="489" width="65" height="30"/>
                                 <state key="normal" title="More info"/>
                                 <connections>
-                                    <segue destination="ypp-Up-Hsl" kind="presentation" id="pYJ-Nw-Qv5"/>
+                                    <segue destination="ypp-Up-Hsl" kind="modal" identifier="ShowMoreInfoID" id="pYJ-Nw-Qv5"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Короткий текcт об авторе" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LkB-nV-QQ6">
@@ -94,7 +94,7 @@
                                 <rect key="frame" x="50" y="489" width="76" height="30"/>
                                 <state key="normal" title="Make allert"/>
                                 <connections>
-                                    <action selector="MakeAllert:" destination="4mA-qJ-MZv" eventType="touchDown" id="pQZ-Bo-93k"/>
+                                    <action selector="makeAllert:" destination="4mA-qJ-MZv" eventType="touchDown" id="Y2C-8T-mu0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -112,12 +112,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8xZ-7w-abr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1391" y="410"/>
+            <point key="canvasLocation" x="-934" y="457"/>
         </scene>
         <!--More info-->
         <scene sceneID="JO5-G8-Jrr">
             <objects>
-                <viewController title="More info" id="ypp-Up-Hsl" sceneMemberID="viewController">
+                <viewController title="More info" id="ypp-Up-Hsl" customClass="MoreInfoVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FH6-OS-xIc"/>
                         <viewControllerLayoutGuide type="bottom" id="s2w-Dq-cGc"/>
@@ -148,6 +148,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Yt-mC-1Ql">
                                                 <rect key="frame" x="131" y="789" width="58" height="30"/>
                                                 <state key="normal" title="Few info"/>
+                                                <connections>
+                                                    <action selector="fewInfoTapped:" destination="ypp-Up-Hsl" eventType="touchDown" id="LJy-gx-xgX"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -184,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="li6-DL-qNF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-856" y="410"/>
+            <point key="canvasLocation" x="-457" y="457"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="EtS-C0-wZe">
@@ -202,7 +205,7 @@
                                 <rect key="frame" x="124" y="489" width="72" height="30"/>
                                 <state key="normal" title="Go deeper"/>
                                 <connections>
-                                    <segue destination="1jw-dO-kom" kind="show" id="WWE-is-oFB"/>
+                                    <segue destination="1jw-dO-kom" kind="push" id="WWE-is-oFB"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OWC-ZG-Rwv">
@@ -334,13 +337,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eYP-li-JTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-340" y="-548"/>
+            <point key="canvasLocation" x="62" y="-528"/>
         </scene>
     </scenes>
     <resources>
         <image name="Image.jpg" width="604" height="327"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5qa-ZL-l5e"/>
+        <segue reference="MB0-V8-v4e"/>
     </inferredMetricsTieBreakers>
 </document>
