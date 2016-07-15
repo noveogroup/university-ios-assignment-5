@@ -32,7 +32,8 @@
             <objects>
                 <navigationController id="hiO-Kg-GEN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="VC1" id="8DX-aL-NLs"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WIF-Lh-Sca">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="WIF-Lh-Sca">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -198,18 +199,18 @@
                         <viewControllerLayoutGuide type="bottom" id="8fP-sw-KXK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GE2-WU-diW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2El-F8-Zvj">
-                                <rect key="frame" x="124" y="489" width="72" height="30"/>
+                                <rect key="frame" x="124" y="425" width="72" height="30"/>
                                 <state key="normal" title="Go deeper"/>
                                 <connections>
                                     <segue destination="1jw-dO-kom" kind="push" id="WWE-is-oFB"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OWC-ZG-Rwv">
-                                <rect key="frame" x="0.0" y="64" width="320" height="417"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="417"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M21-PC-BzI">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="245"/>
@@ -322,6 +323,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ATj-8A-b26"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="blueLabel" destination="EFR-42-O8y" id="Tio-Ho-OWU"/>

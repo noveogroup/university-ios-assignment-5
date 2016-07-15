@@ -51,16 +51,6 @@
 
 - (void)setUpLabels
 {
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardDidShow:)
-                                                 name:UIKeyboardDidShowNotification
-                                               object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardDidHide:)
-                                                 name:UIKeyboardDidHideNotification
-                                               object:nil];
-    
     self.redLabel.text = [NSString stringWithFormat:@"%.*f", 2, self.redSlider.value];
     self.greenLabel.text = [NSString stringWithFormat:@"%.*f", 2, self.greenSlider.value];
     self.blueLabel.text = [NSString stringWithFormat:@"%.*f", 2, self.blueSlider.value];
@@ -79,6 +69,15 @@
 {
     [super viewDidLoad];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardDidShow:)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardDidHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
     [self setUpLabels];
     [self setUpColorWithSliders];
     self.textField.text = [ViewController hexFromColor:self.view.backgroundColor];
@@ -148,9 +147,13 @@
 - (void)keyboardDidShow:(NSNotification *)notification
 {
     NSDictionary* info = [notification userInfo];
-    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    CGRect kbRect = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    kbRect = [self.view convertRect:kbRect fromView:nil];
     
-    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
+    CGRect scrollViewRect = self.scrollView.frame;
+    
+    CGRect hiddenScrollViewRect = CGRectIntersection(scrollViewRect, kbRect);
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, hiddenScrollViewRect.size.height, 0.0);
     self.scrollView.contentInset = contentInsets;
     self.scrollView.scrollIndicatorInsets = contentInsets;
 }
