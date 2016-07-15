@@ -24,16 +24,18 @@
 
 + (UIColor *)colorFromHex:(NSString *)hex
 {
-    NSScanner *scanner2 = [NSScanner scannerWithString:hex];
-    uint baseColor1;
-    if ([scanner2 scanHexInt:&baseColor1]) {
-        CGFloat red   = ((baseColor1 & 0xFF0000) >> 16) / 255.0f;
-        CGFloat green = ((baseColor1 & 0x00FF00) >>  8) / 255.0f;
-        CGFloat blue  =  (baseColor1 & 0x0000FF) / 255.0f;
+    if (hex.length != 6) {
+        return nil;
+    }
+    NSScanner *scanner = [NSScanner scannerWithString:hex];
+    uint baseColor;
+    if ([scanner scanHexInt:&baseColor]) {
+        CGFloat red   = ((baseColor & 0xFF0000) >> 16) / 255.0f;
+        CGFloat green = ((baseColor & 0x00FF00) >>  8) / 255.0f;
+        CGFloat blue  =  (baseColor & 0x0000FF) / 255.0f;
         return [UIColor colorWithRed:red green:green blue:blue alpha:1];
     }
     return nil;
-
 }
 
 + (NSString *)hexFromColor:(UIColor *)color
