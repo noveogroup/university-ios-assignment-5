@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *blueLabel;
 @property (weak, nonatomic) IBOutlet UIView *subView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *textFieldCenterConstraint;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
@@ -50,6 +51,16 @@
 
 - (void)setUpLabels
 {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardDidShow:)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardDidHide:)
+                                                 name:UIKeyboardDidHideNotification
+                                               object:nil];
+    
     self.redLabel.text = [NSString stringWithFormat:@"%.*f", 2, self.redSlider.value];
     self.greenLabel.text = [NSString stringWithFormat:@"%.*f", 2, self.greenSlider.value];
     self.blueLabel.text = [NSString stringWithFormat:@"%.*f", 2, self.blueSlider.value];
@@ -132,6 +143,23 @@
     self.blueSlider.value = blue;
     [self setUpColorWithSliders];
     [self setUpLabels];
+}
+
+- (void)keyboardDidShow:(NSNotification *)notification
+{
+    NSDictionary* info = [notification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
+    self.scrollView.contentInset = contentInsets;
+    self.scrollView.scrollIndicatorInsets = contentInsets;
+}
+
+- (void)keyboardDidHide:(NSNotification *)notification
+{
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    self.scrollView.contentInset = contentInsets;
+    self.scrollView.scrollIndicatorInsets = contentInsets;
 }
 
 #pragma mark - UITextFieldDelegate methods

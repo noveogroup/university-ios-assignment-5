@@ -330,6 +330,7 @@
                         <outlet property="greenSlider" destination="EU7-5I-f50" id="2vg-yx-6rz"/>
                         <outlet property="redLabel" destination="GTK-62-nxK" id="cAh-i1-eam"/>
                         <outlet property="redSlider" destination="f4n-fI-IFB" id="Nk8-zV-qMf"/>
+                        <outlet property="scrollView" destination="OWC-ZG-Rwv" id="g8v-M5-Nzs"/>
                         <outlet property="subView" destination="M21-PC-BzI" id="fJH-QS-Ocj"/>
                         <outlet property="textField" destination="g93-IM-5wh" id="aMu-8e-Qh2"/>
                         <outlet property="textFieldCenterConstraint" destination="qOY-eO-xmG" id="H9w-gS-C4l"/>
