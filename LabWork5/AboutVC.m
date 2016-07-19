@@ -3,15 +3,13 @@
 
 @interface AboutVC ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
-
 @end
 
 @implementation AboutVC
 
 - (void)viewDidLoad
 {
-    self.imageView.image = [UIImage imageNamed:@"OSX"];
+    [super viewDidLoad];
 }
 
 - (IBAction)dismissView:(id)sender

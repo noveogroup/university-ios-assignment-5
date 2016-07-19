@@ -1,5 +1,6 @@
 
 #import "ColorVC.h"
+#import "UIColor+HexColor.h"
 
 @interface ColorVC ()
 
@@ -8,7 +9,7 @@
 @property (weak, nonatomic) IBOutlet UISlider *redColorSlider;
 @property (weak, nonatomic) IBOutlet UISlider *greenColorSlider;
 @property (weak, nonatomic) IBOutlet UISlider *blueColorSlider;
-@property (nonatomic) NSUInteger count;
+@property (copy, nonatomic) NSString *lastValidColorString;
 
 @end
 
@@ -18,23 +19,25 @@
 {
     [super viewDidLoad];
     
-    self.nonHex = [[NSCharacterSet
-                               characterSetWithCharactersInString: @"0123456789ABCDEFabcdef"]
-                              invertedSet];
+    self.nonHex = [[NSCharacterSet characterSetWithCharactersInString: @"0123456789ABCDEFabcdef"] invertedSet];
     
     self.redColorSlider.value = (arc4random() % 255) / 255.0;
     self.greenColorSlider.value = (arc4random() % 255) / 255.0;
     self.blueColorSlider.value = (arc4random() % 255) / 255.0;
     
     [self sliderValueChanged:self];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     
-    self.navigationItem.title = [NSString stringWithFormat:@"%@ %lu", self.navigationController.title, (unsigned long)self.count];
+    self.navigationItem.title = [NSString stringWithFormat:@"%@ %lu", self.navigationController.title, self.navigationController.viewControllers.count];
 }
 
 - (IBAction)gotoNextVC:(id)sender
 {
     ColorVC *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ColorVC"];
-    vc.count = self.count + 1;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -44,42 +47,52 @@
     float green = self.greenColorSlider.value;
     float blue = self.blueColorSlider.value;
     self.view.backgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
-    self.colorTextFiled.text = [NSString stringWithFormat:@"%x%x%x", (int)(red * 255), (int)(green * 255), (int)(blue * 255)];
+    self.lastValidColorString = [NSString stringWithFormat:@"%02X%02X%02X",
+                                 (int)(red * 255), (int)(green * 255), (int)(blue * 255)];
+    self.colorTextFiled.text = self.lastValidColorString;
 }
 
-- (IBAction)colorTextFieldChanged:(id)sender
+- (IBAction)colorTextFieldDidEndOnExit:(id)sender
 {
-    NSString *colorText = self.colorTextFiled.text;
+    NSError *error = nil;
+    UIColor *color = [UIColor colorWithHexString:self.colorTextFiled.text error:&error];
     
-    NSRange nonHexRange = [colorText rangeOfCharacterFromSet:self.nonHex];
-    BOOL isHex = (nonHexRange.location == NSNotFound);
-    
-    if (colorText.length != 6 || !isHex) {
+    if (color == nil) {
         
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"Invalid hex color" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:error.domain message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertController *__weak weakAlert = alert;
+        
         [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            [alert dismissViewControllerAnimated:YES completion:nil];
+            [weakAlert dismissViewControllerAnimated:YES completion:nil];
         }]];
         [self presentViewController:alert animated:YES completion:nil];
-        
-        return;
+        self.colorTextFiled.text = self.lastValidColorString;
     }
+}
+
+- (IBAction)colorTextFieldEditingChanged:(id)sender
+{
+    CGFloat red, green, blue, alpha;
     
-    unsigned int red, green, blue;
-    NSScanner* scanner = [NSScanner scannerWithString:[colorText substringWithRange:NSMakeRange(0, 2)]];
-    [scanner scanHexInt:&red];
-    scanner = [NSScanner scannerWithString:[colorText substringWithRange:NSMakeRange(2, 2)]];
-    [scanner scanHexInt:&green];
-    scanner = [NSScanner scannerWithString:[colorText substringWithRange:NSMakeRange(4, 2)]];
-    [scanner scanHexInt:&blue];
+    NSError *error = nil;
+    UIColor *color = [UIColor colorWithHexString:self.colorTextFiled.text error:&error];
     
-    self.redColorSlider.value = red / 255.0;
-    self.greenColorSlider.value = green / 255.0;
-    self.blueColorSlider.value = blue / 255.0;
-    
-    [self sliderValueChanged:self];
-    
-    [self resignFirstResponder];
+    if (color != nil) {
+        
+        [color getRed:&red green:&green blue:&blue alpha:&alpha];
+        
+        self.redColorSlider.value = red;
+        self.greenColorSlider.value = green;
+        self.blueColorSlider.value = blue;
+        
+        [self sliderValueChanged:self];
+        [self resignFirstResponder];
+    }
+    else if (error.code == HexColorErrorInvalidCharacter || error.code == HexColorErrorLenghtIsGreaterThan6) {
+        
+        self.colorTextFiled.text = self.lastValidColorString;
+    }
 }
 
 @end

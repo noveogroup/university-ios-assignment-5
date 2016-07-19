@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F58FB58A1D3D28D1005847F4 /* UIColor+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F58FB5891D3D28D1005847F4 /* UIColor+HexColor.m */; };
 		F5D49EA01D3675E2002E9CB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D49E9F1D3675E2002E9CB4 /* main.m */; };
 		F5D49EA31D3675E2002E9CB4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D49EA21D3675E2002E9CB4 /* AppDelegate.m */; };
 		F5D49EA61D3675E2002E9CB4 /* ColorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D49EA51D3675E2002E9CB4 /* ColorVC.m */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F58FB5881D3D28D1005847F4 /* UIColor+HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexColor.h"; sourceTree = "<group>"; };
+		F58FB5891D3D28D1005847F4 /* UIColor+HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexColor.m"; sourceTree = "<group>"; };
 		F5D49E9B1D3675E2002E9CB4 /* LabWork5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LabWork5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D49E9F1D3675E2002E9CB4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F5D49EA11D3675E2002E9CB4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -77,6 +80,8 @@
 				F5D49EBF1D3696DA002E9CB4 /* AuthorVC.m */,
 				F5D49EC11D369B86002E9CB4 /* AboutVC.h */,
 				F5D49EC21D369B86002E9CB4 /* AboutVC.m */,
+				F58FB5881D3D28D1005847F4 /* UIColor+HexColor.h */,
+				F58FB5891D3D28D1005847F4 /* UIColor+HexColor.m */,
 			);
 			path = LabWork5;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 				F5D49EC01D3696DA002E9CB4 /* AuthorVC.m in Sources */,
 				F5D49EC31D369B86002E9CB4 /* AboutVC.m in Sources */,
 				F5D49EA01D3675E2002E9CB4 /* main.m in Sources */,
+				F58FB58A1D3D28D1005847F4 /* UIColor+HexColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
