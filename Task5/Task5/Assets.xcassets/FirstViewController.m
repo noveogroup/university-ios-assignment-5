@@ -23,8 +23,8 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIButton *colorBackgroundButton;
 
-- (IBAction)colorTextEndEditing:(UITextField *)sender;
-- (IBAction)backgroundTap:(UIControl *)sender;
+//- (IBAction)colorTextEndEditing:(UITextField *)sender;
+//- (IBAction)backgroundTap:(UIControl *)sender;
 
 @end
 
@@ -34,13 +34,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self addLayers];
     [self addKeyboardToolbar];
     
-    self.navigationItem.title = [NSString stringWithFormat:@"%@(%i)",
+    self.navigationItem.title = [NSString stringWithFormat:@"%@(%lu)",
                                  self.tabBarController.tabBar.selectedItem.title,
-                                 self.navigationController.viewControllers.count];
+                                 (long)self.navigationController.viewControllers.count];
 }
 
 #pragma mark Keyboard's Hidden Methods
@@ -61,7 +59,7 @@
 - (void)deregisterFromKeyboardNotifications
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:UIKeyboardDidHideNotification
+                                                    name:UIKeyboardDidShowNotification
                                                   object:nil];
     
     [[NSNotificationCenter defaultCenter] removeObserver:self
@@ -144,53 +142,16 @@
     if (!error) {
         self.view.backgroundColor = color;
     } else {
-        UIAlertController *alertConrtoller = [UIAlertController alertControllerWithTitle:@"Invalid Enter" message:nil preferredStyle:(UIAlertControllerStyle)UIAlertActionStyleDefault];
+        UIAlertController *alertConrtoller = [UIAlertController alertControllerWithTitle:@"Invalid Enter" message:nil preferredStyle:(UIAlertControllerStyle)UIAlertControllerStyleAlert];
         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault   handler:nil];
         [alertConrtoller addAction:cancelAction];
         [self presentViewController:alertConrtoller animated:YES completion:nil];
     }
 }
 
-- (void)addLayers
-{
-    UIColor *startColor = [UIColor colorWithRed:0 green:_greenColorSlider.value blue:_blueColorSlider.value alpha:1];
-    UIColor *endColor = [UIColor colorWithRed:1 green:_greenColorSlider.value blue:_blueColorSlider.value alpha:1];
-    
-    _redGradient.frame = _redColorSlider.bounds;
-    _redGradient.colors = [NSArray arrayWithObjects:(id)[startColor CGColor], (id)[endColor CGColor], nil];
-    
-    [_redGradient setStartPoint:CGPointMake(0.0, 0.5)];
-    [_redGradient setEndPoint:CGPointMake(1.0, 0.5)];
-    
-    [_redColorSlider.layer insertSublayer:_redGradient atIndex:2];
-    
-    startColor = [UIColor colorWithRed:_redColorSlider.value green:0 blue:_blueColorSlider.value alpha:1];
-    endColor = [UIColor colorWithRed:_redColorSlider.value green:1 blue:_blueColorSlider.value alpha:1];
-    
-    _greenGradient.frame = _greenColorSlider.bounds;
-    _greenGradient.colors = [NSArray arrayWithObjects:(id)[startColor CGColor], (id)[endColor CGColor], nil];
-    
-    [_greenGradient setStartPoint:CGPointMake(0.0, 0.5)];
-    [_greenGradient setEndPoint:CGPointMake(1.0, 0.5)];
-    
-    [_greenColorSlider.layer insertSublayer:_greenGradient atIndex:2];
-    
-    startColor = [UIColor colorWithRed:_redColorSlider.value green:_greenColorSlider.value blue:0 alpha:1];
-    endColor = [UIColor colorWithRed:_redColorSlider.value green:_greenColorSlider.value blue:1 alpha:1];
-    
-    _blueGradient.frame = _blueColorSlider.bounds;
-    _blueGradient.colors = [NSArray arrayWithObjects:(id)[startColor CGColor], (id)[endColor CGColor], nil];
-    
-    [_blueGradient setStartPoint:CGPointMake(0.0, 0.5)];
-    [_blueGradient setEndPoint:CGPointMake(1.0, 0.5)];
-    
-    [_blueColorSlider.layer insertSublayer:_blueGradient atIndex:2];
-}
-
 - (IBAction)sliderValue:(UISlider*)sender
 {
-    [self addLayers];
-    UIColor *newColor = [UIColor colorWithRed:_redColorSlider.value green:_greenColorSlider.value blue:_blueColorSlider.value alpha:1];
+    UIColor *newColor = [UIColor colorWithRed:self.redColorSlider.value green:self.greenColorSlider.value blue:self.blueColorSlider.value alpha:1];
     self.view.backgroundColor = newColor;
 }
 

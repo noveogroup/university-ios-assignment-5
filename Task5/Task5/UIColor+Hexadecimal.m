@@ -15,7 +15,7 @@
     NSRegularExpression *regex = [NSRegularExpression
         regularExpressionWithPattern:@"^#(?:[0-9a-fA-F]{3}){1,2}$"
         options:NSRegularExpressionCaseInsensitive error:nil];
-    
+ 
     NSUInteger numberOfMatches = [regex numberOfMatchesInString:hexString
         options:0 range:NSMakeRange(0, [hexString length])];
     

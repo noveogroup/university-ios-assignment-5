@@ -17,11 +17,6 @@
 
 @implementation ColorViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-
 - (IBAction)pickColor:(id)sender
 {
     FCColorPickerViewController *colorPicker = [FCColorPickerViewController colorPickerWithColor:self.color

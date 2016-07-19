@@ -10,16 +10,7 @@
 
 #import "AuthorViewController.h"
 
-@interface AuthorViewController ()
-
-@end
-
 @implementation AuthorViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
 
 - (IBAction)didClose:(id)sender
 {

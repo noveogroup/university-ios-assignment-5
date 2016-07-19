@@ -15,10 +15,6 @@
 
 @implementation ThirdTabViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
 - (void)didCloseViewController:(AuthorViewController *)authorViewController
 {
     [self dismissViewControllerAnimated:YES completion:nil];
