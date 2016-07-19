@@ -46,21 +46,21 @@
                                 <rect key="frame" x="14" y="110" width="347" height="31"/>
                                 <color key="minimumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <action selector="sliderValueChanged:" destination="GR1-5s-6by" eventType="valueChanged" id="zTW-xQ-jbh"/>
+                                    <action selector="sliderValueChanged" destination="GR1-5s-6by" eventType="valueChanged" id="rgm-2P-JYH"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zq0-Yk-BR2">
                                 <rect key="frame" x="14" y="186" width="347" height="31"/>
                                 <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <action selector="sliderValueChanged:" destination="GR1-5s-6by" eventType="valueChanged" id="PNv-tZ-9Gv"/>
+                                    <action selector="sliderValueChanged" destination="GR1-5s-6by" eventType="valueChanged" id="PVm-9v-gTv"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NgF-hP-lie">
                                 <rect key="frame" x="14" y="148" width="347" height="31"/>
                                 <color key="minimumTrackTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <action selector="sliderValueChanged:" destination="GR1-5s-6by" eventType="valueChanged" id="DN3-gO-egn"/>
+                                    <action selector="sliderValueChanged" destination="GR1-5s-6by" eventType="valueChanged" id="LzE-0f-iFc"/>
                                 </connections>
                             </slider>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="FFFFFF" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Yr-NC-n5t">

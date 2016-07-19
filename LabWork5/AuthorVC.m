@@ -1,10 +1,6 @@
 
 #import "AuthorVC.h"
 
-@interface AuthorVC ()
-
-@end
-
 @implementation AuthorVC
 
 - (IBAction)showAlertView:(id)sender

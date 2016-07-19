@@ -1,7 +1,7 @@
 
 #import "UIColor+HexColor.h"
 
-NSString *const HexColorErrorDomain = @"HexErrorDomain";
+NSString *const HexColorErrorDomain = @"com.librecht.LabWork5.HexColorErrorDomain";
 
 @implementation UIColor (HexColor)
 

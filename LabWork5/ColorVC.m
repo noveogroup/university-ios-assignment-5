@@ -2,12 +2,12 @@
 #import "ColorVC.h"
 #import "UIColor+HexColor.h"
 
-@interface ColorVC ()
+@interface ColorVC () <UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet UITextField *colorTextFiled;
-@property (weak, nonatomic) IBOutlet UISlider *redColorSlider;
-@property (weak, nonatomic) IBOutlet UISlider *greenColorSlider;
-@property (weak, nonatomic) IBOutlet UISlider *blueColorSlider;
+@property (nonatomic) IBOutlet UITextField *colorTextFiled;
+@property (nonatomic) IBOutlet UISlider *redColorSlider;
+@property (nonatomic) IBOutlet UISlider *greenColorSlider;
+@property (nonatomic) IBOutlet UISlider *blueColorSlider;
 
 @end
 
@@ -21,7 +21,7 @@
     self.greenColorSlider.value = (arc4random() % 255) / 255.0;
     self.blueColorSlider.value = (arc4random() % 255) / 255.0;
     
-    [self sliderValueChanged:self];
+    [self sliderValueChanged];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -37,7 +37,7 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (IBAction)sliderValueChanged:(id)sender
+- (IBAction)sliderValueChanged
 {
     float red = self.redColorSlider.value;
     float green = self.greenColorSlider.value;
