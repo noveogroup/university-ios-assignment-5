@@ -68,8 +68,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
                                 <connections>
-                                    <action selector="colorTextFieldDidEndOnExit:" destination="GR1-5s-6by" eventType="editingDidEndOnExit" id="c2L-qk-z8j"/>
-                                    <action selector="colorTextFieldEditingChanged:" destination="GR1-5s-6by" eventType="editingChanged" id="3Io-mc-pkF"/>
+                                    <outlet property="delegate" destination="GR1-5s-6by" id="nT1-ly-Iuy"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -205,40 +204,36 @@
                                             <constraint firstAttribute="height" constant="225" id="i5Z-rz-jOf"/>
                                         </constraints>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oYg-8X-Xeb">
-                                        <rect key="frame" x="20" y="282" width="335" height="573"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="573" id="Lmb-tK-84S"/>
-                                        </constraints>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruv-cv-WZ6">
-                                        <rect key="frame" x="20" y="863" width="335" height="30"/>
+                                        <rect key="frame" x="20" y="858.5" width="335" height="30"/>
                                         <state key="normal" title="OK"/>
                                         <connections>
                                             <action selector="dismissView:" destination="hIs-7p-l1f" eventType="touchUpInside" id="DAP-IO-7gG"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeO-6L-MUg">
+                                        <rect key="frame" x="20" y="282" width="335" height="568.5"/>
+                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="LbY-9k-9cT" firstAttribute="trailing" secondItem="oYg-8X-Xeb" secondAttribute="trailing" id="12v-6H-8Ar"/>
                                     <constraint firstItem="LbY-9k-9cT" firstAttribute="leading" secondItem="JT9-nn-Tgc" secondAttribute="leading" constant="20" id="1xf-CD-Kb9"/>
+                                    <constraint firstItem="ruv-cv-WZ6" firstAttribute="top" secondItem="qeO-6L-MUg" secondAttribute="bottom" constant="8" symbolic="YES" id="8jj-1I-0U5"/>
                                     <constraint firstItem="LbY-9k-9cT" firstAttribute="centerX" secondItem="JT9-nn-Tgc" secondAttribute="centerX" id="BHS-VI-V94"/>
                                     <constraint firstAttribute="trailing" secondItem="LbY-9k-9cT" secondAttribute="trailing" constant="20" id="PfK-pn-2hw"/>
+                                    <constraint firstItem="qeO-6L-MUg" firstAttribute="trailing" secondItem="LbY-9k-9cT" secondAttribute="trailing" id="Waj-kW-grA"/>
                                     <constraint firstItem="LbY-9k-9cT" firstAttribute="leading" secondItem="Q7Q-aB-WAe" secondAttribute="leading" constant="-55" id="bRY-P7-bot"/>
-                                    <constraint firstAttribute="bottom" secondItem="oYg-8X-Xeb" secondAttribute="bottom" constant="58" id="dVj-Y7-waQ"/>
-                                    <constraint firstItem="oYg-8X-Xeb" firstAttribute="top" secondItem="Q7Q-aB-WAe" secondAttribute="bottom" constant="8" symbolic="YES" id="eLc-KM-BEb"/>
+                                    <constraint firstItem="qeO-6L-MUg" firstAttribute="trailing" secondItem="ruv-cv-WZ6" secondAttribute="trailing" id="dtl-xO-LPu"/>
+                                    <constraint firstItem="qeO-6L-MUg" firstAttribute="leading" secondItem="ruv-cv-WZ6" secondAttribute="leading" id="gDw-li-GBN"/>
                                     <constraint firstItem="LbY-9k-9cT" firstAttribute="top" secondItem="JT9-nn-Tgc" secondAttribute="top" constant="20" id="kPk-dP-ljX"/>
-                                    <constraint firstItem="ruv-cv-WZ6" firstAttribute="trailing" secondItem="oYg-8X-Xeb" secondAttribute="trailing" id="m9x-fq-Yas"/>
-                                    <constraint firstItem="ruv-cv-WZ6" firstAttribute="leading" secondItem="oYg-8X-Xeb" secondAttribute="leading" id="s21-fi-hfT"/>
+                                    <constraint firstItem="qeO-6L-MUg" firstAttribute="leading" secondItem="LbY-9k-9cT" secondAttribute="leading" id="s1W-bf-fa9"/>
                                     <constraint firstItem="Q7Q-aB-WAe" firstAttribute="top" secondItem="LbY-9k-9cT" secondAttribute="bottom" constant="8" symbolic="YES" id="sqz-E0-krK"/>
                                     <constraint firstItem="LbY-9k-9cT" firstAttribute="trailing" secondItem="Q7Q-aB-WAe" secondAttribute="trailing" constant="55" id="t4z-nN-FpK"/>
-                                    <constraint firstItem="LbY-9k-9cT" firstAttribute="leading" secondItem="oYg-8X-Xeb" secondAttribute="leading" id="vGx-TJ-Sda"/>
-                                    <constraint firstItem="ruv-cv-WZ6" firstAttribute="top" secondItem="oYg-8X-Xeb" secondAttribute="bottom" constant="8" symbolic="YES" id="vHX-TL-anC"/>
+                                    <constraint firstAttribute="bottom" secondItem="qeO-6L-MUg" secondAttribute="bottom" constant="58" id="twC-ff-ZRw"/>
+                                    <constraint firstItem="qeO-6L-MUg" firstAttribute="top" secondItem="Q7Q-aB-WAe" secondAttribute="bottom" constant="8" symbolic="YES" id="xkb-ht-jhI"/>
                                 </constraints>
                             </scrollView>
                         </subviews>

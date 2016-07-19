@@ -1,7 +1,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ColorVC : UIViewController
+@interface ColorVC : UIViewController <UITextFieldDelegate>
 
 @end
 
