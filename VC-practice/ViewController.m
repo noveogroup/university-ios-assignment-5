@@ -88,6 +88,11 @@
     self.navigationItem.title = title;
 }
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 #pragma mark - Action methods
 
 - (IBAction)sliderChanged:(id)sender

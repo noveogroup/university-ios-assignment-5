@@ -88,7 +88,7 @@
                                     <constraint firstAttribute="width" constant="126" id="hCt-2r-hsG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9g-zj-ZgL">
@@ -135,9 +135,9 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZ1-bR-RD7">
                                                 <rect key="frame" x="8" y="327" width="304" height="454"/>
-                                                <mutableString key="text">Сессия собирается, и начинается мой дозор. Он не окончится до самой её сдачи. Я не возьму себе ни жены, ни земель, не буду отцом детям. Я сяду за матан и буду добиваться славы. Я буду жить и умру на своем посту. Я — дифференциальное уравнение во тьме; я — производная от е^x ; я — студент, который сдаст матан; я — свет, который приносит конспект; я — рог, который будит спящих; я — щит, который охраняет царство гуманитариев. Я отдаю свою жизнь и честь деканату среди этой сессии и всех, которые грядут после нее...</mutableString>
+                                                <string key="text">Сессия собирается, и начинается мой дозор. Он не окончится до самой её сдачи. Я не возьму себе ни жены, ни земель, не буду отцом детям. Я сяду за матан и буду добиваться славы. Я буду жить и умру на своем посту. Я — дифференциальное уравнение во тьме; я — производная от е^x ; я — студент, который сдаст матан; я — свет, который приносит конспект; я — рог, который будит спящих; я — щит, который охраняет царство гуманитариев. Я отдаю свою жизнь и честь деканату среди этой сессии и всех, которые грядут после нее...</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cpz-c7-Fb6">
