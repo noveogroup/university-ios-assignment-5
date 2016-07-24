@@ -25,11 +25,6 @@ NSInteger characterCount = 6;
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    self.colorTextField.delegate = self;
-    [self.colorTextField addTarget:self action:@selector(colorTextFieldValuechanged:) forControlEvents:UIControlEventEditingChanged];
-    [self.rColorSlider addTarget:self action:@selector(changeColorBySliders) forControlEvents:UIControlEventValueChanged];
-    [self.gColorSlider addTarget:self action:@selector(changeColorBySliders) forControlEvents:UIControlEventValueChanged];
-    [self.bColorSlider addTarget:self action:@selector(changeColorBySliders) forControlEvents:UIControlEventValueChanged];
     self.navigationItem.title = [NSString stringWithFormat:@"%@: (%lu)", self.navigationController.tabBarItem.title, self.navigationController.viewControllers.count];
 }
 
@@ -63,7 +58,7 @@ NSInteger characterCount = 6;
     }
 }
 
-- (void)changeColorBySliders
+- (IBAction)changeColorBySliders
 {
     UIColor *color = [UIColor colorWithRed:self.rColorSlider.value green:self.gColorSlider.value blue:self.bColorSlider.value alpha:1];
     self.view.backgroundColor = color;

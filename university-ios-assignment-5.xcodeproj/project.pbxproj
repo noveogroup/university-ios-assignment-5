@@ -11,7 +11,6 @@
 		58603FCB2F9040B9350DA80B /* UIColor+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 58603554D7637A0B64FDD7B7 /* UIColor+HexColor.m */; };
 		841E24B01D34F6080001DCF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 841E24AF1D34F6080001DCF1 /* main.m */; };
 		841E24B31D34F6080001DCF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 841E24B21D34F6080001DCF1 /* AppDelegate.m */; };
-		841E24B61D34F6080001DCF1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841E24B51D34F6080001DCF1 /* MainViewController.m */; };
 		841E24B91D34F6080001DCF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841E24B71D34F6080001DCF1 /* Main.storyboard */; };
 		841E24BB1D34F6080001DCF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841E24BA1D34F6080001DCF1 /* Assets.xcassets */; };
 		841E24BE1D34F6080001DCF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841E24BC1D34F6080001DCF1 /* LaunchScreen.storyboard */; };
@@ -47,8 +46,6 @@
 		841E24AF1D34F6080001DCF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		841E24B11D34F6080001DCF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		841E24B21D34F6080001DCF1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		841E24B41D34F6080001DCF1 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		841E24B51D34F6080001DCF1 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		841E24B81D34F6080001DCF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		841E24BA1D34F6080001DCF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		841E24BD1D34F6080001DCF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -115,8 +112,6 @@
 			children = (
 				841E24B11D34F6080001DCF1 /* AppDelegate.h */,
 				841E24B21D34F6080001DCF1 /* AppDelegate.m */,
-				841E24B41D34F6080001DCF1 /* MainViewController.h */,
-				841E24B51D34F6080001DCF1 /* MainViewController.m */,
 				841E24B71D34F6080001DCF1 /* Main.storyboard */,
 				841E24BA1D34F6080001DCF1 /* Assets.xcassets */,
 				841E24BC1D34F6080001DCF1 /* LaunchScreen.storyboard */,
@@ -291,7 +286,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				842650EA1D376AD700C06DDE /* AboutViewController.m in Sources */,
-				841E24B61D34F6080001DCF1 /* MainViewController.m in Sources */,
 				841E24B31D34F6080001DCF1 /* AppDelegate.m in Sources */,
 				841E24B01D34F6080001DCF1 /* main.m in Sources */,
 				586039963857E5246C52FF64 /* ColorViewController.m in Sources */,
