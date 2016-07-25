@@ -9,5 +9,6 @@
 
 + (UIColor *)colorWithHexString:(NSString *)stringToConvert;
 + (NSString *)hexStringForColor:(UIColor *)color;
++ (BOOL)validHEXString:(NSString *) string;
 
 @end

@@ -6,9 +6,6 @@
 #import "ColorViewController.h"
 #import "UIColor+HexColor.h"
 
-NSString *hexSymbols = @"0123456789ABCDEFabcdef";
-NSInteger characterCount = 6;
-
 @interface ColorViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UISlider *rColorSlider;
@@ -35,10 +32,8 @@ NSInteger characterCount = 6;
 }
 
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
-    NSUInteger newLength = self.colorTextField.text.length + string.length - range.length;
-    NSCharacterSet *set = [[NSCharacterSet characterSetWithCharactersInString:hexSymbols] invertedSet];
-    NSString *filtered = [[string componentsSeparatedByCharactersInSet:set] componentsJoinedByString:@""];
-    return (([string isEqualToString:filtered]) && (newLength <= characterCount));
+    NSString *newString = [self.colorTextField.text stringByReplacingCharactersInRange:range withString:string];
+    return [UIColor validHEXString:newString];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -48,14 +43,12 @@ NSInteger characterCount = 6;
 }
 
 - (IBAction)colorTextFieldValuechanged:(id)sender {
-    if (self.colorTextField.text.length == characterCount) {
-        UIColor *color =[UIColor colorWithHexString:self.colorTextField.text];
-        self.view.backgroundColor = color;
-        const CGFloat *components = CGColorGetComponents(color.CGColor);
-        self.rColorSlider.value = components[0];
-        self.gColorSlider.value = components[1];
-        self.bColorSlider.value = components[2];
-    }
+    UIColor *color =[UIColor colorWithHexString:self.colorTextField.text];
+    self.view.backgroundColor = color;
+    const CGFloat *components = CGColorGetComponents(color.CGColor);
+    self.rColorSlider.value = components[0];
+    self.gColorSlider.value = components[1];
+    self.bColorSlider.value = components[2];
 }
 
 - (IBAction)changeColorBySliders

@@ -4,6 +4,8 @@
 //
 
 #import "UIColor+HexColor.h"
+NSString *hexSymbols = @"0123456789ABCDEFabcdef";
+NSInteger characterCount = 6;
 
 
 @implementation UIColor (HexColor)
@@ -33,6 +35,14 @@
     CGFloat b = components[2];
     NSString *hexString=[NSString stringWithFormat:@"%02X%02X%02X", (int)(r * 255), (int)(g * 255), (int)(b * 255)];
     return hexString;
+}
+
++ (BOOL)validHEXString:(NSString *)string
+{
+    NSUInteger newLength = string.length;
+    NSCharacterSet *set = [[NSCharacterSet characterSetWithCharactersInString:hexSymbols] invertedSet];
+    NSString *filtered = [[string componentsSeparatedByCharactersInSet:set] componentsJoinedByString:@""];
+    return (([string isEqualToString:filtered]) && (newLength <= characterCount));
 }
 
 @end
