@@ -95,7 +95,7 @@
                                 <rect key="frame" x="36" y="64" width="248" height="180"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nhJ-Tc-qzB">
-                                        <rect key="frame" x="35" y="47" width="177" height="87"/>
+                                        <rect key="frame" x="35" y="47" width="177" height="85"/>
                                         <color key="thumbTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="changeColorBySliders" destination="wVe-zd-qmd" eventType="valueChanged" id="abZ-HR-UYG"/>
@@ -123,7 +123,7 @@
                                     <constraint firstItem="V5k-jx-M51" firstAttribute="top" secondItem="bUa-cZ-GF9" secondAttribute="top" id="Bsh-lQ-6AJ"/>
                                     <constraint firstItem="V5k-jx-M51" firstAttribute="leading" secondItem="bUa-cZ-GF9" secondAttribute="leading" constant="37" id="MVV-iL-CUo"/>
                                     <constraint firstAttribute="bottom" secondItem="7hF-v3-L1L" secondAttribute="bottom" constant="2" id="g4u-Og-UQd"/>
-                                    <constraint firstItem="7hF-v3-L1L" firstAttribute="top" secondItem="nhJ-Tc-qzB" secondAttribute="bottom" constant="15" id="gjd-lD-U3K"/>
+                                    <constraint firstItem="7hF-v3-L1L" firstAttribute="top" secondItem="nhJ-Tc-qzB" secondAttribute="bottom" constant="17" id="gjd-lD-U3K"/>
                                     <constraint firstAttribute="trailing" secondItem="V5k-jx-M51" secondAttribute="trailing" constant="38" id="lRD-8c-JeK"/>
                                     <constraint firstItem="7hF-v3-L1L" firstAttribute="leading" secondItem="bUa-cZ-GF9" secondAttribute="leading" constant="37" id="leN-Xf-VY5"/>
                                     <constraint firstAttribute="trailing" secondItem="nhJ-Tc-qzB" secondAttribute="trailing" constant="38" id="nht-Y7-liQ"/>

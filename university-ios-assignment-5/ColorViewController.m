@@ -27,13 +27,14 @@
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    UIColor *color =[UIColor colorWithHexString:textField.text];
-    self.view.backgroundColor = color;
-    const CGFloat *components = CGColorGetComponents(color.CGColor);
-    self.rColorSlider.value = components[0];
-    self.gColorSlider.value = components[1];
-    self.bColorSlider.value = components[2];
-    
+    if (textField.text.length == 6) {
+        UIColor *color =[UIColor colorWithHexString:textField.text];
+        self.view.backgroundColor = color;
+        const CGFloat *components = CGColorGetComponents(color.CGColor);
+        self.rColorSlider.value = components[0];
+        self.gColorSlider.value = components[1];
+        self.bColorSlider.value = components[2];
+    }
     [self.colorTextField resignFirstResponder];
     return YES;
 }
