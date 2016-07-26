@@ -22,17 +22,25 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.title = [NSString stringWithFormat:@"%@: (%lu)", self.navigationController.tabBarItem.title, self.navigationController.viewControllers.count];
+    self.navigationItem.title = [NSString stringWithFormat:@"%@: (%u)", self.navigationController.tabBarItem.title, self.navigationController.viewControllers.count];
 }
 
--(BOOL)textFieldShouldReturn:(UITextField *)textField{
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    UIColor *color =[UIColor colorWithHexString:textField.text];
+    self.view.backgroundColor = color;
+    const CGFloat *components = CGColorGetComponents(color.CGColor);
+    self.rColorSlider.value = components[0];
+    self.gColorSlider.value = components[1];
+    self.bColorSlider.value = components[2];
     
     [self.colorTextField resignFirstResponder];
     return YES;
 }
 
--(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
-    NSString *newString = [self.colorTextField.text stringByReplacingCharactersInRange:range withString:string];
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
     return [UIColor validHEXString:newString];
 }
 
@@ -40,15 +48,6 @@
 {
     [super viewWillAppear:animated];
     [self changeColorBySliders];
-}
-
-- (IBAction)colorTextFieldValuechanged:(id)sender {
-    UIColor *color =[UIColor colorWithHexString:self.colorTextField.text];
-    self.view.backgroundColor = color;
-    const CGFloat *components = CGColorGetComponents(color.CGColor);
-    self.rColorSlider.value = components[0];
-    self.gColorSlider.value = components[1];
-    self.bColorSlider.value = components[2];
 }
 
 - (IBAction)changeColorBySliders

@@ -14,8 +14,6 @@
 		841E24B91D34F6080001DCF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841E24B71D34F6080001DCF1 /* Main.storyboard */; };
 		841E24BB1D34F6080001DCF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841E24BA1D34F6080001DCF1 /* Assets.xcassets */; };
 		841E24BE1D34F6080001DCF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841E24BC1D34F6080001DCF1 /* LaunchScreen.storyboard */; };
-		841E24C91D34F6090001DCF1 /* university_ios_assignment_5Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 841E24C81D34F6090001DCF1 /* university_ios_assignment_5Tests.m */; };
-		841E24D41D34F6090001DCF1 /* university_ios_assignment_5UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 841E24D31D34F6090001DCF1 /* university_ios_assignment_5UITests.m */; };
 		842650EA1D376AD700C06DDE /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842650E91D376AD700C06DDE /* AboutViewController.m */; };
 		842650ED1D376FFE00C06DDE /* DetailInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842650EC1D376FFE00C06DDE /* DetailInfoViewController.m */; };
 /* End PBXBuildFile section */
@@ -51,11 +49,7 @@
 		841E24BD1D34F6080001DCF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		841E24BF1D34F6080001DCF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		841E24C41D34F6080001DCF1 /* university-ios-assignment-5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "university-ios-assignment-5Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		841E24C81D34F6090001DCF1 /* university_ios_assignment_5Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = university_ios_assignment_5Tests.m; sourceTree = "<group>"; };
-		841E24CA1D34F6090001DCF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		841E24CF1D34F6090001DCF1 /* university-ios-assignment-5UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "university-ios-assignment-5UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		841E24D31D34F6090001DCF1 /* university_ios_assignment_5UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = university_ios_assignment_5UITests.m; sourceTree = "<group>"; };
-		841E24D51D34F6090001DCF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		842650E81D376AD700C06DDE /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		842650E91D376AD700C06DDE /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		842650EB1D376FFE00C06DDE /* DetailInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailInfoViewController.h; sourceTree = "<group>"; };
@@ -91,8 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				841E24AD1D34F6080001DCF1 /* university-ios-assignment-5 */,
-				841E24C71D34F6080001DCF1 /* university-ios-assignment-5Tests */,
-				841E24D21D34F6090001DCF1 /* university-ios-assignment-5UITests */,
 				841E24AC1D34F6080001DCF1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -135,24 +127,6 @@
 				841E24AF1D34F6080001DCF1 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		841E24C71D34F6080001DCF1 /* university-ios-assignment-5Tests */ = {
-			isa = PBXGroup;
-			children = (
-				841E24C81D34F6090001DCF1 /* university_ios_assignment_5Tests.m */,
-				841E24CA1D34F6090001DCF1 /* Info.plist */,
-			);
-			path = "university-ios-assignment-5Tests";
-			sourceTree = "<group>";
-		};
-		841E24D21D34F6090001DCF1 /* university-ios-assignment-5UITests */ = {
-			isa = PBXGroup;
-			children = (
-				841E24D31D34F6090001DCF1 /* university_ios_assignment_5UITests.m */,
-				841E24D51D34F6090001DCF1 /* Info.plist */,
-			);
-			path = "university-ios-assignment-5UITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,7 +272,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				841E24C91D34F6090001DCF1 /* university_ios_assignment_5Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +279,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				841E24D41D34F6090001DCF1 /* university_ios_assignment_5UITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

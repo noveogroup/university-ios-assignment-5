@@ -7,10 +7,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Main-->
+        <!--Tab Bar Controller-->
         <scene sceneID="0DG-5i-eDV">
             <objects>
-                <tabBarController storyboardIdentifier="MainViewController" id="lx5-RS-iTN" customClass="Main" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainViewController" id="lx5-RS-iTN" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="0C3-Kc-GIg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -73,20 +73,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="V5k-jx-M51">
-                                <rect key="frame" x="68" y="99" width="184" height="31"/>
-                                <color key="thumbTintColor" red="1" green="0.30407257250000003" blue="0.17002990009999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="changeColorBySliders" destination="wVe-zd-qmd" eventType="valueChanged" id="JBS-aX-fCM"/>
-                                </connections>
-                            </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nhJ-Tc-qzB">
-                                <rect key="frame" x="68" y="144" width="184" height="121"/>
-                                <color key="thumbTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="changeColorBySliders" destination="wVe-zd-qmd" eventType="valueChanged" id="abZ-HR-UYG"/>
-                                </connections>
-                            </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7p-Jt-av9">
                                 <rect key="frame" x="135" y="489" width="50" height="30"/>
                                 <constraints>
@@ -98,39 +84,64 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gv1-MT-tLi">
-                                <rect key="frame" x="70" y="339" width="180" height="30"/>
+                                <rect key="frame" x="66" y="244" width="188" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="colorTextFieldValuechanged:" destination="wVe-zd-qmd" eventType="valueChanged" id="KVb-8R-jUr"/>
-                                    <outlet property="delegate" destination="wVe-zd-qmd" id="yGN-we-Q3L"/>
+                                    <outlet property="delegate" destination="wVe-zd-qmd" id="BdQ-iL-vU3"/>
                                 </connections>
                             </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7hF-v3-L1L">
-                                <rect key="frame" x="68" y="279" width="184" height="31"/>
-                                <color key="thumbTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="changeColorBySliders" destination="wVe-zd-qmd" eventType="valueChanged" id="rNV-xB-XWX"/>
-                                </connections>
-                            </slider>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bUa-cZ-GF9">
+                                <rect key="frame" x="36" y="64" width="248" height="180"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nhJ-Tc-qzB">
+                                        <rect key="frame" x="35" y="47" width="177" height="87"/>
+                                        <color key="thumbTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="changeColorBySliders" destination="wVe-zd-qmd" eventType="valueChanged" id="abZ-HR-UYG"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7hF-v3-L1L">
+                                        <rect key="frame" x="35" y="148" width="177" height="31"/>
+                                        <color key="thumbTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="changeColorBySliders" destination="wVe-zd-qmd" eventType="valueChanged" id="rNV-xB-XWX"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="V5k-jx-M51">
+                                        <rect key="frame" x="35" y="0.0" width="177" height="31"/>
+                                        <color key="thumbTintColor" red="1" green="0.30407257250000003" blue="0.17002990009999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="changeColorBySliders" destination="wVe-zd-qmd" eventType="valueChanged" id="JBS-aX-fCM"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="nhJ-Tc-qzB" firstAttribute="top" secondItem="V5k-jx-M51" secondAttribute="bottom" constant="17" id="81H-Q7-EyK"/>
+                                    <constraint firstAttribute="trailing" secondItem="7hF-v3-L1L" secondAttribute="trailing" constant="38" id="A96-if-1XC"/>
+                                    <constraint firstItem="V5k-jx-M51" firstAttribute="top" secondItem="bUa-cZ-GF9" secondAttribute="top" id="Bsh-lQ-6AJ"/>
+                                    <constraint firstItem="V5k-jx-M51" firstAttribute="leading" secondItem="bUa-cZ-GF9" secondAttribute="leading" constant="37" id="MVV-iL-CUo"/>
+                                    <constraint firstAttribute="bottom" secondItem="7hF-v3-L1L" secondAttribute="bottom" constant="2" id="g4u-Og-UQd"/>
+                                    <constraint firstItem="7hF-v3-L1L" firstAttribute="top" secondItem="nhJ-Tc-qzB" secondAttribute="bottom" constant="15" id="gjd-lD-U3K"/>
+                                    <constraint firstAttribute="trailing" secondItem="V5k-jx-M51" secondAttribute="trailing" constant="38" id="lRD-8c-JeK"/>
+                                    <constraint firstItem="7hF-v3-L1L" firstAttribute="leading" secondItem="bUa-cZ-GF9" secondAttribute="leading" constant="37" id="leN-Xf-VY5"/>
+                                    <constraint firstAttribute="trailing" secondItem="nhJ-Tc-qzB" secondAttribute="trailing" constant="38" id="nht-Y7-liQ"/>
+                                    <constraint firstItem="nhJ-Tc-qzB" firstAttribute="leading" secondItem="bUa-cZ-GF9" secondAttribute="leading" constant="37" id="x97-35-CBZ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7hF-v3-L1L" firstAttribute="top" secondItem="nhJ-Tc-qzB" secondAttribute="bottom" constant="15" id="0mC-dv-aUh"/>
-                            <constraint firstItem="Gv1-MT-tLi" firstAttribute="leading" secondItem="7hF-v3-L1L" secondAttribute="leading" id="1DU-oA-GSt"/>
                             <constraint firstItem="lPr-bc-H7r" firstAttribute="top" secondItem="F7p-Jt-av9" secondAttribute="bottom" id="2Dh-k4-kkd"/>
-                            <constraint firstItem="nhJ-Tc-qzB" firstAttribute="top" secondItem="V5k-jx-M51" secondAttribute="bottom" constant="15" id="7ak-3M-H8k"/>
+                            <constraint firstItem="Gv1-MT-tLi" firstAttribute="leading" secondItem="AAo-3X-P6o" secondAttribute="leadingMargin" constant="50" id="AZa-L4-c4Z"/>
                             <constraint firstItem="Gv1-MT-tLi" firstAttribute="centerX" secondItem="AAo-3X-P6o" secondAttribute="centerX" id="C1w-ln-FhX"/>
-                            <constraint firstItem="7hF-v3-L1L" firstAttribute="leading" secondItem="V5k-jx-M51" secondAttribute="leading" id="DaR-l3-Xof"/>
+                            <constraint firstItem="bUa-cZ-GF9" firstAttribute="leading" secondItem="AAo-3X-P6o" secondAttribute="leadingMargin" constant="20" id="DTL-NA-y0i"/>
                             <constraint firstItem="F7p-Jt-av9" firstAttribute="centerX" secondItem="AAo-3X-P6o" secondAttribute="centerX" id="Ds0-Ro-xfg"/>
-                            <constraint firstItem="V5k-jx-M51" firstAttribute="centerX" secondItem="AAo-3X-P6o" secondAttribute="centerX" id="ZDx-zG-9zu"/>
-                            <constraint firstItem="7hF-v3-L1L" firstAttribute="leading" secondItem="AAo-3X-P6o" secondAttribute="leadingMargin" constant="54" id="dA5-qH-OdK"/>
-                            <constraint firstItem="7hF-v3-L1L" firstAttribute="centerX" secondItem="AAo-3X-P6o" secondAttribute="centerX" id="eHT-wy-qpz"/>
-                            <constraint firstItem="Gv1-MT-tLi" firstAttribute="centerY" secondItem="AAo-3X-P6o" secondAttribute="centerY" constant="70" id="enx-z6-DDX"/>
-                            <constraint firstItem="nhJ-Tc-qzB" firstAttribute="centerX" secondItem="AAo-3X-P6o" secondAttribute="centerX" id="guz-rv-cnq"/>
-                            <constraint firstItem="Gv1-MT-tLi" firstAttribute="top" secondItem="7hF-v3-L1L" secondAttribute="bottom" constant="30" id="hY3-y5-8BB"/>
-                            <constraint firstItem="V5k-jx-M51" firstAttribute="top" secondItem="H9E-7l-g0A" secondAttribute="bottom" constant="35" id="mcR-Yq-sye"/>
-                            <constraint firstItem="7hF-v3-L1L" firstAttribute="leading" secondItem="nhJ-Tc-qzB" secondAttribute="leading" id="qPz-cp-tEJ"/>
+                            <constraint firstItem="Gv1-MT-tLi" firstAttribute="top" secondItem="bUa-cZ-GF9" secondAttribute="bottom" id="a2s-Ze-I1O"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bUa-cZ-GF9" secondAttribute="trailing" constant="20" id="dAZ-Ex-7r8"/>
+                            <constraint firstItem="Gv1-MT-tLi" firstAttribute="centerY" secondItem="AAo-3X-P6o" secondAttribute="centerY" constant="-25" id="enx-z6-DDX"/>
+                            <constraint firstItem="bUa-cZ-GF9" firstAttribute="top" secondItem="H9E-7l-g0A" secondAttribute="bottom" id="rgE-rh-q56"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Wig-pR-UL7"/>
