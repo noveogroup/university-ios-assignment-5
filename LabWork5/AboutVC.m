@@ -5,7 +5,7 @@
 
 - (IBAction)dismissView:(id)sender
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.delegate aboutViewControllerDidFinish:self];
 }
 
 @end

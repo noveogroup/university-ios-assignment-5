@@ -13,24 +13,24 @@ NSString *const HexColorErrorDomain = @"com.librecht.LabWork5.HexColorErrorDomai
     if (!isHex) {
         
         *error = [NSError errorWithDomain:HexColorErrorDomain
-                                     code:HexColorErrorLenghtIsGreaterThan6
-                                 userInfo:@{NSLocalizedDescriptionKey: NSLocalizedString(@"Hex code contain illegal characters", nil)}];
+            code:HexColorErrorLenghtIsGreaterThan6
+            userInfo:@{NSLocalizedDescriptionKey: NSLocalizedString(@"Hex code contain illegal characters", nil)}];
         return nil;
     }
     
     if (hexString.length < 6) {
         
         *error = [NSError errorWithDomain:HexColorErrorDomain
-                                     code:HexColorErrorLenghtIsLessThan6
-                                 userInfo:@{NSLocalizedDescriptionKey: NSLocalizedString(@"Hex code contain less than 6 characters", nil)}];
+            code:HexColorErrorLenghtIsLessThan6
+            userInfo:@{NSLocalizedDescriptionKey: NSLocalizedString(@"Hex code contain less than 6 characters", nil)}];
         return nil;
     }
     
     if (hexString.length > 6) {
         
         *error = [NSError errorWithDomain:HexColorErrorDomain
-                                     code:HexColorErrorLenghtIsGreaterThan6
-                                 userInfo:@{NSLocalizedDescriptionKey: NSLocalizedString(@"Hex code contain more than 6 characters", nil)}];
+            code:HexColorErrorLenghtIsGreaterThan6
+            userInfo:@{NSLocalizedDescriptionKey: NSLocalizedString(@"Hex code contain more than 6 characters", nil)}];
         return nil;
     }
     

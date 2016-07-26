@@ -8,6 +8,9 @@
 @property (nonatomic) IBOutlet UISlider *redColorSlider;
 @property (nonatomic) IBOutlet UISlider *greenColorSlider;
 @property (nonatomic) IBOutlet UISlider *blueColorSlider;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+
+@property (nonatomic) UITextField *activeField;
 
 @end
 
@@ -29,6 +32,14 @@
     [super viewWillAppear:animated];
     
     self.navigationItem.title = [NSString stringWithFormat:@"%@ %lu", self.navigationController.title, self.navigationController.viewControllers.count];
+    
+    [self registerForKeyboardNotifications];
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [super viewWillDisappear:animated];
 }
 
 - (IBAction)gotoNextVC:(id)sender
@@ -88,6 +99,67 @@
     }
     [textField resignFirstResponder];
     return YES;
+}
+
+#pragma mark - Scroll-Keyboard routines
+
+- (void)registerForKeyboardNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillBeHidden:)
+                                                 name:UIKeyboardWillHideNotification object:nil];
+    
+}
+
+- (void)keyboardWasShown:(NSNotification*)aNotification
+{
+    NSDictionary* info = [aNotification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    
+    NSLog(@"%f", kbSize.height);
+    
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
+    self.scrollView.contentInset = contentInsets;
+    self.scrollView.scrollIndicatorInsets = contentInsets;
+    
+    // If active text field is hidden by keyboard, scroll it so it's visible
+    // Your app might not need or want this behavior.
+//    CGRect aRect = self.view.frame;
+//    aRect.size.height -= kbSize.height;
+//    if (!CGRectContainsPoint(aRect, self.activeField.frame.origin) ) {
+//        [self.scrollView scrollRectToVisible:self.activeField.frame animated:YES];
+//    }
+}
+
+//- (void)keyboardWasShown:(NSNotification*)aNotification {
+//    
+//    NSDictionary* info = [aNotification userInfo];
+//    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+//    CGRect bkgndRect = self.activeField.superview.frame;
+//    bkgndRect.size.height += kbSize.height;
+//    [self.activeField.superview setFrame:bkgndRect];
+//    [self.scrollView setContentOffset:CGPointMake(0.0, self.activeField.frame.origin.y-kbSize.height) animated:YES];
+//}
+
+- (void)keyboardWillBeHidden:(NSNotification*)aNotification
+{
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    self.scrollView.contentInset = contentInsets;
+    self.scrollView.scrollIndicatorInsets = contentInsets;
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    self.activeField = textField;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    self.activeField = nil;
 }
 
 @end

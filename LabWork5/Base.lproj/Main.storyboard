@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6cy-fy-bJe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6cy-fy-bJe">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -35,60 +35,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJX-Nn-omZ">
-                                <rect key="frame" x="16" y="580" width="343" height="30"/>
-                                <state key="normal" title="Go to Next VC"/>
-                                <connections>
-                                    <action selector="gotoNextVC:" destination="GR1-5s-6by" eventType="touchUpInside" id="2pI-sX-Sc5"/>
-                                </connections>
-                            </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="sE4-38-w88">
-                                <rect key="frame" x="14" y="110" width="347" height="31"/>
-                                <color key="minimumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="sliderValueChanged" destination="GR1-5s-6by" eventType="valueChanged" id="rgm-2P-JYH"/>
-                                </connections>
-                            </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zq0-Yk-BR2">
-                                <rect key="frame" x="14" y="186" width="347" height="31"/>
-                                <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="sliderValueChanged" destination="GR1-5s-6by" eventType="valueChanged" id="PVm-9v-gTv"/>
-                                </connections>
-                            </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NgF-hP-lie">
-                                <rect key="frame" x="14" y="148" width="347" height="31"/>
-                                <color key="minimumTrackTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="sliderValueChanged" destination="GR1-5s-6by" eventType="valueChanged" id="LzE-0f-iFc"/>
-                                </connections>
-                            </slider>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="FFFFFF" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Yr-NC-n5t">
-                                <rect key="frame" x="16" y="72" width="343" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
-                                <connections>
-                                    <outlet property="delegate" destination="GR1-5s-6by" id="nT1-ly-Iuy"/>
-                                </connections>
-                            </textField>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5X3-SJ-igB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhE-7E-ppL">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="FFFFFF" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Yr-NC-n5t">
+                                                <rect key="frame" x="16" y="72" width="343" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="GR1-5s-6by" id="nT1-ly-Iuy"/>
+                                                </connections>
+                                            </textField>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="sE4-38-w88">
+                                                <rect key="frame" x="14" y="110" width="347" height="31"/>
+                                                <color key="minimumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="sliderValueChanged" destination="GR1-5s-6by" eventType="valueChanged" id="rgm-2P-JYH"/>
+                                                </connections>
+                                            </slider>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NgF-hP-lie">
+                                                <rect key="frame" x="14" y="148" width="347" height="31"/>
+                                                <color key="minimumTrackTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="sliderValueChanged" destination="GR1-5s-6by" eventType="valueChanged" id="LzE-0f-iFc"/>
+                                                </connections>
+                                            </slider>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zq0-Yk-BR2">
+                                                <rect key="frame" x="14" y="186" width="347" height="31"/>
+                                                <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="sliderValueChanged" destination="GR1-5s-6by" eventType="valueChanged" id="PVm-9v-gTv"/>
+                                                </connections>
+                                            </slider>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJX-Nn-omZ">
+                                                <rect key="frame" x="16" y="580" width="343" height="30"/>
+                                                <state key="normal" title="Go to Next VC"/>
+                                                <connections>
+                                                    <action selector="gotoNextVC:" destination="GR1-5s-6by" eventType="touchUpInside" id="2pI-sX-Sc5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="IJX-Nn-omZ" secondAttribute="trailing" constant="16" id="33t-2l-LRK"/>
+                                            <constraint firstItem="4Yr-NC-n5t" firstAttribute="leading" secondItem="jhE-7E-ppL" secondAttribute="leading" constant="16" id="3F5-gq-pgB"/>
+                                            <constraint firstItem="sE4-38-w88" firstAttribute="top" secondItem="4Yr-NC-n5t" secondAttribute="bottom" constant="8" id="3LD-39-aO0"/>
+                                            <constraint firstItem="4Yr-NC-n5t" firstAttribute="top" secondItem="jhE-7E-ppL" secondAttribute="top" constant="72" id="8Xy-tQ-0vS"/>
+                                            <constraint firstItem="IJX-Nn-omZ" firstAttribute="leading" secondItem="jhE-7E-ppL" secondAttribute="leading" constant="16" id="BwK-MU-vOP"/>
+                                            <constraint firstItem="zq0-Yk-BR2" firstAttribute="leading" secondItem="jhE-7E-ppL" secondAttribute="leading" constant="16" id="PFI-QM-XoA"/>
+                                            <constraint firstItem="sE4-38-w88" firstAttribute="leading" secondItem="jhE-7E-ppL" secondAttribute="leading" constant="16" id="TGr-oH-usn"/>
+                                            <constraint firstAttribute="trailing" secondItem="NgF-hP-lie" secondAttribute="trailing" constant="16" id="VK5-UB-02k"/>
+                                            <constraint firstAttribute="trailing" secondItem="zq0-Yk-BR2" secondAttribute="trailing" constant="16" id="Yrc-kW-1ls"/>
+                                            <constraint firstAttribute="trailing" secondItem="sE4-38-w88" secondAttribute="trailing" constant="16" id="dhX-Lr-49t"/>
+                                            <constraint firstItem="NgF-hP-lie" firstAttribute="leading" secondItem="jhE-7E-ppL" secondAttribute="leading" constant="16" id="fhu-Wr-07c"/>
+                                            <constraint firstAttribute="trailing" secondItem="4Yr-NC-n5t" secondAttribute="trailing" constant="16" id="gya-TE-Bcw"/>
+                                            <constraint firstItem="zq0-Yk-BR2" firstAttribute="top" secondItem="NgF-hP-lie" secondAttribute="bottom" constant="8" id="hMW-Kt-xUm"/>
+                                            <constraint firstAttribute="bottom" secondItem="IJX-Nn-omZ" secondAttribute="bottom" constant="57" id="wCZ-Td-WlU"/>
+                                            <constraint firstItem="NgF-hP-lie" firstAttribute="top" secondItem="sE4-38-w88" secondAttribute="bottom" constant="8" id="xPQ-5I-UBN"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="jhE-7E-ppL" firstAttribute="height" secondItem="5X3-SJ-igB" secondAttribute="height" id="6eC-3c-Rkl"/>
+                                    <constraint firstAttribute="width" secondItem="jhE-7E-ppL" secondAttribute="width" id="Aeq-Qh-NlX"/>
+                                    <constraint firstAttribute="trailing" secondItem="jhE-7E-ppL" secondAttribute="trailing" id="ajw-Qf-6Bx"/>
+                                    <constraint firstItem="jhE-7E-ppL" firstAttribute="top" secondItem="5X3-SJ-igB" secondAttribute="top" id="hLN-TR-8co"/>
+                                    <constraint firstItem="jhE-7E-ppL" firstAttribute="leading" secondItem="5X3-SJ-igB" secondAttribute="leading" id="nae-zg-17k"/>
+                                    <constraint firstAttribute="bottom" secondItem="jhE-7E-ppL" secondAttribute="bottom" id="nzl-Hj-T8z"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="leadingMargin" secondItem="sE4-38-w88" secondAttribute="leading" id="1Nu-oe-Ycc"/>
-                            <constraint firstItem="zq0-Yk-BR2" firstAttribute="top" secondItem="NgF-hP-lie" secondAttribute="bottom" constant="8" id="908-ka-Cjj"/>
-                            <constraint firstItem="NgF-hP-lie" firstAttribute="top" secondItem="sE4-38-w88" secondAttribute="bottom" constant="8" id="CIX-PW-y78"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="NgF-hP-lie" secondAttribute="leading" id="DMk-3T-etb"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="4Yr-NC-n5t" secondAttribute="leading" id="GJv-5P-UPh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="IJX-Nn-omZ" secondAttribute="trailing" id="Qdc-lC-U08"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4Yr-NC-n5t" secondAttribute="trailing" id="SbI-nU-14X"/>
-                            <constraint firstItem="sE4-38-w88" firstAttribute="top" secondItem="4Yr-NC-n5t" secondAttribute="bottom" constant="8" id="agL-wn-PhE"/>
-                            <constraint firstItem="4Yr-NC-n5t" firstAttribute="top" secondItem="ovq-nt-6N6" secondAttribute="bottom" constant="8" id="gvj-SJ-fc7"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="zq0-Yk-BR2" secondAttribute="leading" id="gwd-PD-Vvv"/>
-                            <constraint firstItem="hsb-UG-gzG" firstAttribute="top" secondItem="IJX-Nn-omZ" secondAttribute="bottom" constant="8" id="j2H-FN-5G4"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="IJX-Nn-omZ" secondAttribute="leading" id="nUT-Cg-eTY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zq0-Yk-BR2" secondAttribute="trailing" id="pxk-0f-DNe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="sE4-38-w88" secondAttribute="trailing" id="qEA-N2-V1j"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="NgF-hP-lie" secondAttribute="trailing" id="zm9-uE-kA6"/>
+                            <constraint firstItem="5X3-SJ-igB" firstAttribute="leading" secondItem="6ea-m9-OvW" secondAttribute="leading" id="Jkv-I1-77j"/>
+                            <constraint firstAttribute="bottom" secondItem="5X3-SJ-igB" secondAttribute="bottom" id="lad-fX-dIG"/>
+                            <constraint firstItem="5X3-SJ-igB" firstAttribute="top" secondItem="6ea-m9-OvW" secondAttribute="top" id="wf2-u4-6yQ"/>
+                            <constraint firstAttribute="trailing" secondItem="5X3-SJ-igB" secondAttribute="trailing" id="xqZ-22-4Ab"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="BOI-9H-nCn"/>
@@ -154,7 +179,7 @@
                                 <rect key="frame" x="16" y="318.5" width="343" height="30"/>
                                 <state key="normal" title="Show More Info"/>
                                 <connections>
-                                    <segue destination="hIs-7p-l1f" kind="presentation" id="jdr-zb-hHn"/>
+                                    <segue destination="hIs-7p-l1f" kind="presentation" identifier="FromAuthorToAbout" id="jdr-zb-hHn"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -213,7 +238,7 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeO-6L-MUg">
                                         <rect key="frame" x="20" y="282" width="335" height="568.5"/>
-                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</mutableString>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>

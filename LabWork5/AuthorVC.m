@@ -1,5 +1,12 @@
 
 #import "AuthorVC.h"
+#import "AboutVC.h"
+
+
+@interface AuthorVC () <AboutVCDelegate>
+
+@end
+
 
 @implementation AuthorVC
 
@@ -10,4 +17,32 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"FromAuthorToAbout"]) {
+        
+        AboutVC *aboutVC = [segue destinationViewController];
+        
+        aboutVC.delegate = self;
+    }
+}
+
+- (void)aboutViewControllerDidFinish:(AboutVC *)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
