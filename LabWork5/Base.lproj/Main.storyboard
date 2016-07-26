@@ -26,7 +26,7 @@
         <!--Item 1-->
         <scene sceneID="5SQ-it-Ea1">
             <objects>
-                <viewController storyboardIdentifier="ColorVC" id="GR1-5s-6by" customClass="ColorVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ColorVC" automaticallyAdjustsScrollViewInsets="NO" id="GR1-5s-6by" customClass="ColorVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ovq-nt-6N6"/>
                         <viewControllerLayoutGuide type="bottom" id="hsb-UG-gzG"/>
@@ -99,21 +99,21 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="jhE-7E-ppL" firstAttribute="height" secondItem="5X3-SJ-igB" secondAttribute="height" id="6eC-3c-Rkl"/>
-                                    <constraint firstAttribute="width" secondItem="jhE-7E-ppL" secondAttribute="width" id="Aeq-Qh-NlX"/>
-                                    <constraint firstAttribute="trailing" secondItem="jhE-7E-ppL" secondAttribute="trailing" id="ajw-Qf-6Bx"/>
-                                    <constraint firstItem="jhE-7E-ppL" firstAttribute="top" secondItem="5X3-SJ-igB" secondAttribute="top" id="hLN-TR-8co"/>
-                                    <constraint firstItem="jhE-7E-ppL" firstAttribute="leading" secondItem="5X3-SJ-igB" secondAttribute="leading" id="nae-zg-17k"/>
-                                    <constraint firstAttribute="bottom" secondItem="jhE-7E-ppL" secondAttribute="bottom" id="nzl-Hj-T8z"/>
+                                    <constraint firstItem="jhE-7E-ppL" firstAttribute="height" secondItem="5X3-SJ-igB" secondAttribute="height" id="1Tr-kE-V2k"/>
+                                    <constraint firstItem="jhE-7E-ppL" firstAttribute="leading" secondItem="5X3-SJ-igB" secondAttribute="leading" id="MEM-1C-YnL"/>
+                                    <constraint firstItem="jhE-7E-ppL" firstAttribute="width" secondItem="5X3-SJ-igB" secondAttribute="width" id="Uw6-15-zVe"/>
+                                    <constraint firstItem="jhE-7E-ppL" firstAttribute="top" secondItem="5X3-SJ-igB" secondAttribute="top" id="Z9H-TL-Wm7"/>
+                                    <constraint firstAttribute="trailing" secondItem="jhE-7E-ppL" secondAttribute="trailing" id="rgB-rU-oYo"/>
+                                    <constraint firstAttribute="bottom" secondItem="jhE-7E-ppL" secondAttribute="bottom" id="yf4-Pf-KQy"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="5X3-SJ-igB" firstAttribute="leading" secondItem="6ea-m9-OvW" secondAttribute="leading" id="Jkv-I1-77j"/>
-                            <constraint firstAttribute="bottom" secondItem="5X3-SJ-igB" secondAttribute="bottom" id="lad-fX-dIG"/>
-                            <constraint firstItem="5X3-SJ-igB" firstAttribute="top" secondItem="6ea-m9-OvW" secondAttribute="top" id="wf2-u4-6yQ"/>
-                            <constraint firstAttribute="trailing" secondItem="5X3-SJ-igB" secondAttribute="trailing" id="xqZ-22-4Ab"/>
+                            <constraint firstItem="5X3-SJ-igB" firstAttribute="top" secondItem="6ea-m9-OvW" secondAttribute="top" id="0oA-FW-NwI"/>
+                            <constraint firstAttribute="trailing" secondItem="5X3-SJ-igB" secondAttribute="trailing" id="3fb-bU-EdR"/>
+                            <constraint firstItem="5X3-SJ-igB" firstAttribute="leading" secondItem="6ea-m9-OvW" secondAttribute="leading" id="FQg-2m-rVR"/>
+                            <constraint firstAttribute="bottom" secondItem="5X3-SJ-igB" secondAttribute="bottom" id="gwI-Zn-6xl"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="BOI-9H-nCn"/>
@@ -124,6 +124,7 @@
                         <outlet property="colorTextFiled" destination="4Yr-NC-n5t" id="8Mk-en-DBk"/>
                         <outlet property="greenColorSlider" destination="NgF-hP-lie" id="7WZ-yy-IWB"/>
                         <outlet property="redColorSlider" destination="sE4-38-w88" id="XZP-Lf-xhQ"/>
+                        <outlet property="scrollView" destination="5X3-SJ-igB" id="U4a-9H-E3x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifj-l7-2w3" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -25,6 +25,10 @@
     self.blueColorSlider.value = (arc4random() % 255) / 255.0;
     
     [self sliderValueChanged];
+    
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    self.scrollView.contentInset = contentInsets;
+    self.scrollView.scrollIndicatorInsets = contentInsets;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -118,7 +122,7 @@
 - (void)keyboardWasShown:(NSNotification*)aNotification
 {
     NSDictionary* info = [aNotification userInfo];
-    CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     
     NSLog(@"%f", kbSize.height);
     
@@ -126,24 +130,14 @@
     self.scrollView.contentInset = contentInsets;
     self.scrollView.scrollIndicatorInsets = contentInsets;
     
-    // If active text field is hidden by keyboard, scroll it so it's visible
-    // Your app might not need or want this behavior.
+//     If active text field is hidden by keyboard, scroll it so it's visible
+//     Your app might not need or want this behavior.
 //    CGRect aRect = self.view.frame;
 //    aRect.size.height -= kbSize.height;
 //    if (!CGRectContainsPoint(aRect, self.activeField.frame.origin) ) {
 //        [self.scrollView scrollRectToVisible:self.activeField.frame animated:YES];
 //    }
 }
-
-//- (void)keyboardWasShown:(NSNotification*)aNotification {
-//    
-//    NSDictionary* info = [aNotification userInfo];
-//    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-//    CGRect bkgndRect = self.activeField.superview.frame;
-//    bkgndRect.size.height += kbSize.height;
-//    [self.activeField.superview setFrame:bkgndRect];
-//    [self.scrollView setContentOffset:CGPointMake(0.0, self.activeField.frame.origin.y-kbSize.height) animated:YES];
-//}
 
 - (void)keyboardWillBeHidden:(NSNotification*)aNotification
 {
