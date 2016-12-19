@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthorVC">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhC-lm-qHI">
+                    <state key="normal" title="Show Alert!"/>
+                    <connections>
+                        <action selector="showAnswerButtonClicked:" destination="-1" eventType="touchUpInside" id="UBx-4E-AsX"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIo-Xk-hPx">
+                    <state key="normal" title="Full detail"/>
+                    <connections>
+                        <action selector="fullDetailButtonClicked:" destination="-1" eventType="touchUpInside" id="qAx-c9-04X"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click &quot;Full detail&quot; button to show  more information" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5k-6M-5b8">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Y5k-6M-5b8" secondAttribute="trailing" constant="20" id="Lx4-Tw-UYd"/>
+                <constraint firstAttribute="trailing" secondItem="bIo-Xk-hPx" secondAttribute="trailing" constant="25" id="Ng4-Lc-iD6"/>
+                <constraint firstItem="rhC-lm-qHI" firstAttribute="top" secondItem="Y5k-6M-5b8" secondAttribute="bottom" constant="80" id="b65-zd-Yzw"/>
+                <constraint firstItem="Y5k-6M-5b8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="bTN-nd-RMe"/>
+                <constraint firstItem="bIo-Xk-hPx" firstAttribute="top" secondItem="Y5k-6M-5b8" secondAttribute="bottom" constant="80" id="kI5-45-yHG"/>
+                <constraint firstItem="rhC-lm-qHI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="vbG-FL-BnZ"/>
+                <constraint firstItem="Y5k-6M-5b8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="x0l-tX-ALW"/>
+            </constraints>
+            <point key="canvasLocation" x="117.5" y="156.5"/>
+        </view>
+    </objects>
+</document>
