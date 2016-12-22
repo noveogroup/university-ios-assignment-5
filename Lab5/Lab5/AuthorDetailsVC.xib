@@ -61,6 +61,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="kNY-FJ-hLa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="43p-TH-Ly8"/>
+                <constraint firstItem="0Dc-QJ-F9w" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" constant="-40" id="5Bs-mn-Poj"/>
                 <constraint firstItem="Riq-9q-KHE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="7nl-M0-oIP"/>
                 <constraint firstItem="Riq-9q-KHE" firstAttribute="top" secondItem="kNY-FJ-hLa" secondAttribute="bottom" constant="20" id="82x-6m-D82"/>
                 <constraint firstAttribute="bottom" secondItem="Riq-9q-KHE" secondAttribute="bottom" constant="20" id="9ym-j2-fmD"/>
