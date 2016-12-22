@@ -58,29 +58,19 @@
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-    if ([string isEqualToString:@""]) return YES;
-
-    unichar newLetter = [string characterAtIndex:0];
-    NSCharacterSet *charSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789ABCDEF"];
-
-    UITextRange *selRange = _colorTF.selectedTextRange;
-    UITextPosition *selStartPos = selRange.start;
-    NSInteger cursorPosition = [_colorTF offsetFromPosition:_colorTF.beginningOfDocument toPosition:selStartPos];
-
-    if ([charSet characterIsMember:newLetter]) {
-        return [self changeBGColorByTextFieldWith:newLetter at:(NSUInteger)cursorPosition];
+    NSMutableString *futureString = [[_colorTF.text stringByReplacingCharactersInRange:range withString:string] mutableCopy];
+    if([self validateString:futureString]){
+        while (futureString.length < 6){
+            [futureString appendString:@"0"];
+        }
+        [self changeBGColorByTextFieldWith:futureString];
+        return YES;
     }
     return NO;
 }
 
-- (BOOL)changeBGColorByTextFieldWith:(unichar)newLetter at:(NSUInteger)position {
-
-    if ([_colorTF.text length] > 5) {
-        return NO;
-    }
-
-    NSMutableString *str = [self prepareStringForChangeColorWith:[_colorTF.text mutableCopy] and:newLetter at:position];
-
+- (BOOL)changeBGColorByTextFieldWith:(NSString *)str
+{
     unsigned colorInt = 0;
     [[NSScanner scannerWithString:str] scanHexInt:&colorInt];
 
@@ -96,13 +86,13 @@
     return YES;
 }
 
-- (NSMutableString *)prepareStringForChangeColorWith:(NSMutableString *)string and:(unichar)newLetter at:(NSUInteger)position
+- (BOOL)validateString:(NSString *)string
 {
-    while (string.length < 5){
-        [string appendString:@"0"];
-    }
-    [string insertString:[NSString stringWithFormat:@"%c", newLetter] atIndex:position];
-    return string;
+    if(string.length > 6) return NO;
+    
+    NSCharacterSet *charsToRemove = [[NSCharacterSet characterSetWithCharactersInString:@"0123456789ABCDEF"] invertedSet];
+    return [string rangeOfCharacterFromSet:charsToRemove].location == NSNotFound;
+
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
