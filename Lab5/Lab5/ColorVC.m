@@ -14,12 +14,10 @@
 
 @implementation ColorVC
 
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self.navigationItem setTitle:[NSString stringWithFormat:@"%@.%@", self.title, _titleDeepCount]];
+    [self.navigationItem setTitle:[NSString stringWithFormat:@"%@.%@", self.title, self.titleDeepCount]];
 
     UIBarButtonItem *createNewVCButton = [[UIBarButtonItem alloc] initWithTitle:@"Create new" style:UIBarButtonItemStylePlain target:self action:@selector(createNewViewController)];
     [self.navigationItem setRightBarButtonItem:createNewVCButton];
@@ -30,35 +28,35 @@
 {
     ColorVC *newVC = [ColorVC new];
     newVC.title = self.title;
-    newVC.titleDeepCount = @([_titleDeepCount integerValue] + 1);
+    newVC.titleDeepCount = @([self.titleDeepCount integerValue] + 1);
     [self.navigationController pushViewController:newVC animated:YES];
 }
 
 - (IBAction)dragSliders:(id)sender
 {
     [self setViewBackgroundColor];
-    _colorTF.text = [[NSString stringWithFormat:@"%02x%02x%02x", (int)(_redSlider.value*255), (int)(_greenSlider.value*255), (int)(_blueSlider.value*255)] uppercaseString];
+    self.colorTF.text = [[NSString stringWithFormat:@"%02x%02x%02x", (int)(self.redSlider.value*255), (int)(self.greenSlider.value*255), (int)(self.blueSlider.value*255)] uppercaseString];
 }
 
 - (void)setViewBackgroundColor {
-    self.view.backgroundColor = _innerView.backgroundColor = [UIColor colorWithRed:_redSlider.value green:_greenSlider.value blue:_blueSlider.value alpha:1];
+    self.view.backgroundColor = self.innerView.backgroundColor = [UIColor colorWithRed:self.redSlider.value green:self.greenSlider.value blue:self.blueSlider.value alpha:1];
 
-    if((_redSlider.value + _greenSlider.value + _blueSlider.value) < 0.8){
-        _redLabel.textColor = [UIColor whiteColor];
-        _greenLabel.textColor = [UIColor whiteColor];
-        _blueLabel.textColor = [UIColor whiteColor];
-        _titleLabel.textColor = [UIColor whiteColor];
+    if((self.redSlider.value + self.greenSlider.value + self.blueSlider.value) < 0.8){
+        self.redLabel.textColor = [UIColor whiteColor];
+        self.greenLabel.textColor = [UIColor whiteColor];
+        self.blueLabel.textColor = [UIColor whiteColor];
+        self.titleLabel.textColor = [UIColor whiteColor];
     } else {
-        _redLabel.textColor = [UIColor blackColor];
-        _greenLabel.textColor = [UIColor blackColor];
-        _blueLabel.textColor = [UIColor blackColor];
-        _titleLabel.textColor = [UIColor blackColor];
+        self.redLabel.textColor = [UIColor blackColor];
+        self.greenLabel.textColor = [UIColor blackColor];
+        self.blueLabel.textColor = [UIColor blackColor];
+        self.titleLabel.textColor = [UIColor blackColor];
     }
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-    NSMutableString *futureString = [[_colorTF.text stringByReplacingCharactersInRange:range withString:string] mutableCopy];
+    NSMutableString *futureString = [[self.colorTF.text stringByReplacingCharactersInRange:range withString:string] mutableCopy];
     if([self validateString:futureString]){
         while (futureString.length < 6){
             [futureString appendString:@"0"];
@@ -75,11 +73,11 @@
     [[NSScanner scannerWithString:str] scanHexInt:&colorInt];
 
     double valueForRedSlider = ((colorInt & 0xFF0000) >> 16) / 255.0;
-    _redSlider.value = (float)valueForRedSlider;
+    self.redSlider.value = (float)valueForRedSlider;
     double valueForGreenSlider = ((colorInt & 0xFF00) >> 8) / 255.0;
-    _greenSlider.value = (float)valueForGreenSlider;
+    self.greenSlider.value = (float)valueForGreenSlider;
     double valueForBlueSlider = (colorInt & 0xFF) / 255.0;
-    _blueSlider.value = (float)valueForBlueSlider;
+    self.blueSlider.value = (float)valueForBlueSlider;
 
     [self setViewBackgroundColor];
 
@@ -88,7 +86,9 @@
 
 - (BOOL)validateString:(NSString *)string
 {
-    if(string.length > 6) return NO;
+    if(string.length > 6) {
+        return NO;
+    }
     
     NSCharacterSet *charsToRemove = [[NSCharacterSet characterSetWithCharactersInString:@"0123456789ABCDEF"] invertedSet];
     return [string rangeOfCharacterFromSet:charsToRemove].location == NSNotFound;
