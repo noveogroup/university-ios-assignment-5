@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BackgroundColourController">
+            <connections>
+                <outlet property="blueSlider" destination="dTR-zf-zyL" id="Opp-54-AEU"/>
+                <outlet property="greenSlider" destination="nPc-hg-Sgq" id="pHn-Ow-2Hf"/>
+                <outlet property="nextLevelButton" destination="8ad-lV-h2T" id="guR-4S-BKT"/>
+                <outlet property="redSlider" destination="ioH-BD-C0k" id="N0X-y5-8QO"/>
+                <outlet property="textField" destination="NsF-l2-EJ4" id="abA-kz-cIq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dTR-zf-zyL">
+                    <rect key="frame" x="101" y="200" width="118" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="sliderValueChanged:" destination="-1" eventType="valueChanged" id="T19-ra-Pf5"/>
+                    </connections>
+                </slider>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nPc-hg-Sgq">
+                    <rect key="frame" x="101" y="160" width="118" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="sliderValueChanged:" destination="-1" eventType="valueChanged" id="mVg-Wh-aJI"/>
+                    </connections>
+                </slider>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ioH-BD-C0k">
+                    <rect key="frame" x="101" y="120" width="118" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="114" id="muP-8v-1Qd"/>
+                        <constraint firstAttribute="height" constant="30" id="wmK-6Y-9xc"/>
+                    </constraints>
+                    <connections>
+                        <action selector="sliderValueChanged:" destination="-1" eventType="valueChanged" id="aJk-43-Pi1"/>
+                    </connections>
+                </slider>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NsF-l2-EJ4">
+                    <rect key="frame" x="112" y="70" width="97" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="97" id="E43-OK-Ylq"/>
+                        <constraint firstAttribute="height" constant="30" id="T4u-Qu-ByC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ad-lV-h2T">
+                    <rect key="frame" x="109" y="240" width="100" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="gJV-gw-1WY"/>
+                        <constraint firstAttribute="height" constant="31" id="jga-B5-L9O"/>
+                    </constraints>
+                    <state key="normal" title="Next Level">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="nextLevelButtonTap:" destination="-1" eventType="touchUpInside" id="z7i-Tq-txh"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="nPc-hg-Sgq" firstAttribute="width" secondItem="dTR-zf-zyL" secondAttribute="width" id="3fY-dc-xTL"/>
+                <constraint firstAttribute="centerX" secondItem="ioH-BD-C0k" secondAttribute="centerX" id="4j6-83-L97"/>
+                <constraint firstAttribute="centerX" secondItem="8ad-lV-h2T" secondAttribute="centerX" constant="1" id="BnV-vT-Plt"/>
+                <constraint firstItem="NsF-l2-EJ4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="FuW-pB-wYL"/>
+                <constraint firstItem="nPc-hg-Sgq" firstAttribute="width" secondItem="ioH-BD-C0k" secondAttribute="width" id="Jap-os-2Jm"/>
+                <constraint firstItem="nPc-hg-Sgq" firstAttribute="top" secondItem="ioH-BD-C0k" secondAttribute="bottom" constant="10" id="L6N-3H-RWM"/>
+                <constraint firstAttribute="centerX" secondItem="NsF-l2-EJ4" secondAttribute="centerX" id="NhF-JQ-97f"/>
+                <constraint firstItem="8ad-lV-h2T" firstAttribute="top" secondItem="dTR-zf-zyL" secondAttribute="bottom" constant="10" id="Ynw-qH-1oI"/>
+                <constraint firstAttribute="centerX" secondItem="nPc-hg-Sgq" secondAttribute="centerX" id="m63-KC-tWS"/>
+                <constraint firstAttribute="centerX" secondItem="dTR-zf-zyL" secondAttribute="centerX" id="mtc-vE-MTA"/>
+                <constraint firstItem="ioH-BD-C0k" firstAttribute="top" secondItem="NsF-l2-EJ4" secondAttribute="bottom" constant="20" id="sHJ-1O-vPS"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="8ad-lV-h2T" secondAttribute="bottom" constant="30" id="wVs-J2-X5P"/>
+                <constraint firstItem="dTR-zf-zyL" firstAttribute="top" secondItem="nPc-hg-Sgq" secondAttribute="bottom" constant="10" id="yFe-Gz-kpW"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+            <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>
