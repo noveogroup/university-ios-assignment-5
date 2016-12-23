@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthorDetailsVC">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vTP-fV-v7f">
+                    <rect key="frame" x="5" y="20" width="590" height="257.5"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7lQ-uH-dgs">
+                    <rect key="frame" x="280" y="550" width="40" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="Etm-Em-58V"/>
+                        <constraint firstAttribute="height" constant="30" id="hnJ-AB-sKW"/>
+                    </constraints>
+                    <state key="normal" title="Close">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="closeButtonTapped:" destination="-1" eventType="touchUpInside" id="duo-of-yBZ"/>
+                    </connections>
+                </button>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJL-cA-hga">
+                    <rect key="frame" x="0.0" y="282" width="600" height="257.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMa-d9-clC">
+                            <rect key="frame" x="5" y="0.0" width="590" height="852"/>
+                            <mutableString key="text">Lorem ipsum dolor sit amet, tempor egestas fusce, vivamus lacinia aliquam fermentum nam pellentesque mauris. Sed placeat laboriosam id ac sociis, hymenaeos pede ipsum nullam nulla in, vulputate vestibulum. Aenean feugiat. Per odio pellentesque eros, sagittis aenean varius nonummy integer. Morbi quis dui blandit, vivamus libero penatibus odio nunc donec sit, ac pede et erat felis placerat, elit gravida fringilla bibendum cursus. Semper accumsan felis blandit. Lorem ornare nec aliquet curae consectetuer pellentesque, est sapien sagittis elit nec vel. Tellus vitae convallis fermentum erat ornare, vel aenean dolor, proin ipsum, bibendum sint neque molestie nam lectus, phasellus elit est ad vestibulum massa lacus. Aliquam consequat donec auctor cras magna. Enim phasellus dolore aliquam massa vestibulum.
+Eu consequatur risus, nam in at fermentum. Aptent id dignissim, donec accumsan blandit vestibulum eget. Condimentum vel ac, consectetuer potenti varius egestas ligula sed dolor, ultrices sociosqu et nunc sem, amet tellus suscipit libero mauris, a libero sollicitudin mauris arcu. Suspendisse feugiat ultrices neque etiam. Interdum lacus aenean ultricies mus, proin amet et rhoncus, pharetra non rutrum quisque taciti, vulputate at velit sem orci. Dolor faucibus libero mauris. Tempus elit ligula. Dolor nec turpis, pede laoreet accumsan diam nonummy vivamus. Metus felis lacus, vehicula velit eu quis, etiam duis justo. Elit eligendi arcu elementum nullam, vestibulum tempus condimentum ut, imperdiet sed lorem. Nec amet sed ac non, venenatis ipsum dis vulputate id amet mi. Eros dapibus mauris, ligula donec lorem erat lobortis ac vehicula, turpis tristique, lacus sed lectus felis, aliquam dolor metus.
+Varius sollicitudin, venenatis nisl etiam vel, ut lacus. Metus dictum blandit, et proin, malesuada consectetuer error, sit at duis. Non mollis sollicitudin posuere quisque odio at, sunt tincidunt, maecenas morbi nibh, felis aliquet wisi sit dictum varius tristique, amet in vel. Wisi libero quis wisi libero, praesent pulvinar ligula, in lacus integer erat id tristique ut, curabitur congue consequat ultricies nunc erat neque. Id neque posuere ac a arcu commodo, laoreet et eget sociosqu pulvinar magna, vel leo mauris vitae, proin at lectus lorem netus vestibulum ornare.
+Sociis et, sit non mauris aenean adipiscing accumsan, quis ullamcorper lectus vivamus, velit vivamus rhoncus justo at, diam amet felis. Nam erat, sed in donec vel, fringilla consequat a rutrum lacus id. Fusce ut pellentesque suspendisse in, urna lorem, conubia bibendum molestie. Qui itaque per risus vestibulum enim quisque, lobortis massa lacus ullamcorper adipiscing, diam nec. Velit dui integer suscipit mollis nec, placerat rutrum sit, diam egestas euismod quisque nisl etiam. Lobortis suspendisse vitae neque sed vestibulum mauris, placerat metus proin, turpis in sit id tenetur sollicitudin, lobortis amet.</mutableString>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="SMa-d9-clC" firstAttribute="top" secondItem="RJL-cA-hga" secondAttribute="top" id="CSo-gD-EmK"/>
+                        <constraint firstAttribute="bottom" secondItem="SMa-d9-clC" secondAttribute="bottom" id="OAb-Ge-NqW"/>
+                        <constraint firstAttribute="trailing" secondItem="SMa-d9-clC" secondAttribute="trailing" id="riD-cB-dcg"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="SMa-d9-clC" firstAttribute="trailing" secondItem="vTP-fV-v7f" secondAttribute="trailing" id="0Cl-zk-l8E"/>
+                <constraint firstAttribute="trailing" secondItem="RJL-cA-hga" secondAttribute="trailing" id="2jz-qo-loj"/>
+                <constraint firstAttribute="trailing" secondItem="vTP-fV-v7f" secondAttribute="trailing" constant="5" id="7Z8-2l-zB1"/>
+                <constraint firstItem="RJL-cA-hga" firstAttribute="height" secondItem="vTP-fV-v7f" secondAttribute="height" id="8cJ-dl-hbl"/>
+                <constraint firstItem="RJL-cA-hga" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ABK-mL-Mp2"/>
+                <constraint firstAttribute="bottom" secondItem="7lQ-uH-dgs" secondAttribute="bottom" constant="20" id="BOc-y5-19B"/>
+                <constraint firstItem="vTP-fV-v7f" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="JKP-Ue-keh"/>
+                <constraint firstAttribute="centerX" secondItem="7lQ-uH-dgs" secondAttribute="centerX" id="NIW-pf-w6E"/>
+                <constraint firstItem="vTP-fV-v7f" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="awq-0f-RlY"/>
+                <constraint firstItem="SMa-d9-clC" firstAttribute="leading" secondItem="vTP-fV-v7f" secondAttribute="leading" id="jQ0-Lb-Iy6"/>
+                <constraint firstItem="7lQ-uH-dgs" firstAttribute="top" secondItem="RJL-cA-hga" secondAttribute="bottom" constant="10" id="l2u-iS-fEU"/>
+                <constraint firstItem="RJL-cA-hga" firstAttribute="top" secondItem="vTP-fV-v7f" secondAttribute="bottom" constant="5" id="ne1-XX-gtS"/>
+                <constraint firstItem="SMa-d9-clC" firstAttribute="width" secondItem="vTP-fV-v7f" secondAttribute="width" id="yfG-zA-nYf"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="my_photo.jpg" width="768" height="1024"/>
+    </resources>
+</document>

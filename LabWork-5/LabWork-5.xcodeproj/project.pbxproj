@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B52CCF0F1AAD797900E7828A /* ColorSliderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B52CCF0D1AAD797900E7828A /* ColorSliderVC.m */; };
+		B52CCF101AAD797900E7828A /* ColorSliderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B52CCF0E1AAD797900E7828A /* ColorSliderVC.xib */; };
+		B52CCF141AADA45D00E7828A /* AboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B52CCF121AADA45D00E7828A /* AboutVC.m */; };
+		B52CCF151AADA45D00E7828A /* AboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B52CCF131AADA45D00E7828A /* AboutVC.xib */; };
+		B52CCF1B1AADDBD900E7828A /* AuthorDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B52CCF191AADDBD900E7828A /* AuthorDetailsVC.m */; };
+		B52CCF1C1AADDBD900E7828A /* AuthorDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B52CCF1A1AADDBD900E7828A /* AuthorDetailsVC.xib */; };
+		B52CCF1E1AADDE4C00E7828A /* my_photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B52CCF1D1AADDE4C00E7828A /* my_photo.jpg */; };
+		B5C35F8D1AA9E558008023C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C35F8C1AA9E558008023C4 /* main.m */; };
+		B5C35F901AA9E558008023C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C35F8F1AA9E558008023C4 /* AppDelegate.m */; };
+		B5C35F931AA9E558008023C4 /* ColorPickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C35F921AA9E558008023C4 /* ColorPickerVC.m */; };
+		B5C35F981AA9E558008023C4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5C35F971AA9E558008023C4 /* Images.xcassets */; };
+		B5C35F9B1AA9E558008023C4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5C35F991AA9E558008023C4 /* LaunchScreen.xib */; };
+		B5C35FA71AA9E558008023C4 /* LabWork_5Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C35FA61AA9E558008023C4 /* LabWork_5Tests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5C35FA11AA9E558008023C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5C35F7F1AA9E558008023C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5C35F861AA9E558008023C4;
+			remoteInfo = "LabWork-5";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B52CCF0C1AAD797900E7828A /* ColorSliderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorSliderVC.h; sourceTree = "<group>"; };
+		B52CCF0D1AAD797900E7828A /* ColorSliderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSliderVC.m; sourceTree = "<group>"; };
+		B52CCF0E1AAD797900E7828A /* ColorSliderVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorSliderVC.xib; sourceTree = "<group>"; };
+		B52CCF111AADA45D00E7828A /* AboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutVC.h; sourceTree = "<group>"; };
+		B52CCF121AADA45D00E7828A /* AboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutVC.m; sourceTree = "<group>"; };
+		B52CCF131AADA45D00E7828A /* AboutVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutVC.xib; sourceTree = "<group>"; };
+		B52CCF181AADDBD900E7828A /* AuthorDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AuthorDetailsVC.h; path = ../AuthorDetailsVC.h; sourceTree = "<group>"; };
+		B52CCF191AADDBD900E7828A /* AuthorDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AuthorDetailsVC.m; path = ../AuthorDetailsVC.m; sourceTree = "<group>"; };
+		B52CCF1A1AADDBD900E7828A /* AuthorDetailsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AuthorDetailsVC.xib; path = ../AuthorDetailsVC.xib; sourceTree = "<group>"; };
+		B52CCF1D1AADDE4C00E7828A /* my_photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = my_photo.jpg; sourceTree = "<group>"; };
+		B5C35F871AA9E558008023C4 /* LabWork-5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LabWork-5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5C35F8B1AA9E558008023C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5C35F8C1AA9E558008023C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B5C35F8E1AA9E558008023C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B5C35F8F1AA9E558008023C4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B5C35F911AA9E558008023C4 /* ColorPickerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPickerVC.h; sourceTree = "<group>"; };
+		B5C35F921AA9E558008023C4 /* ColorPickerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorPickerVC.m; sourceTree = "<group>"; };
+		B5C35F971AA9E558008023C4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B5C35F9A1AA9E558008023C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		B5C35FA01AA9E558008023C4 /* LabWork-5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LabWork-5Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5C35FA51AA9E558008023C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5C35FA61AA9E558008023C4 /* LabWork_5Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LabWork_5Tests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5C35F841AA9E558008023C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5C35F9D1AA9E558008023C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B5C35F7E1AA9E558008023C4 = {
+			isa = PBXGroup;
+			children = (
+				B5C35F891AA9E558008023C4 /* LabWork-5 */,
+				B5C35FA31AA9E558008023C4 /* LabWork-5Tests */,
+				B5C35F881AA9E558008023C4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B5C35F881AA9E558008023C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5C35F871AA9E558008023C4 /* LabWork-5.app */,
+				B5C35FA01AA9E558008023C4 /* LabWork-5Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5C35F891AA9E558008023C4 /* LabWork-5 */ = {
+			isa = PBXGroup;
+			children = (
+				B52CCF1D1AADDE4C00E7828A /* my_photo.jpg */,
+				B5C35F8E1AA9E558008023C4 /* AppDelegate.h */,
+				B5C35F8F1AA9E558008023C4 /* AppDelegate.m */,
+				B5C35F911AA9E558008023C4 /* ColorPickerVC.h */,
+				B5C35F921AA9E558008023C4 /* ColorPickerVC.m */,
+				B52CCF0C1AAD797900E7828A /* ColorSliderVC.h */,
+				B52CCF0D1AAD797900E7828A /* ColorSliderVC.m */,
+				B52CCF0E1AAD797900E7828A /* ColorSliderVC.xib */,
+				B52CCF111AADA45D00E7828A /* AboutVC.h */,
+				B52CCF121AADA45D00E7828A /* AboutVC.m */,
+				B52CCF131AADA45D00E7828A /* AboutVC.xib */,
+				B52CCF181AADDBD900E7828A /* AuthorDetailsVC.h */,
+				B52CCF191AADDBD900E7828A /* AuthorDetailsVC.m */,
+				B52CCF1A1AADDBD900E7828A /* AuthorDetailsVC.xib */,
+				B5C35F971AA9E558008023C4 /* Images.xcassets */,
+				B5C35F991AA9E558008023C4 /* LaunchScreen.xib */,
+				B5C35F8A1AA9E558008023C4 /* Supporting Files */,
+			);
+			path = "LabWork-5";
+			sourceTree = "<group>";
+		};
+		B5C35F8A1AA9E558008023C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5C35F8B1AA9E558008023C4 /* Info.plist */,
+				B5C35F8C1AA9E558008023C4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B5C35FA31AA9E558008023C4 /* LabWork-5Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B5C35FA61AA9E558008023C4 /* LabWork_5Tests.m */,
+				B5C35FA41AA9E558008023C4 /* Supporting Files */,
+			);
+			path = "LabWork-5Tests";
+			sourceTree = "<group>";
+		};
+		B5C35FA41AA9E558008023C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5C35FA51AA9E558008023C4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5C35F861AA9E558008023C4 /* LabWork-5 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5C35FAA1AA9E558008023C4 /* Build configuration list for PBXNativeTarget "LabWork-5" */;
+			buildPhases = (
+				B5C35F831AA9E558008023C4 /* Sources */,
+				B5C35F841AA9E558008023C4 /* Frameworks */,
+				B5C35F851AA9E558008023C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LabWork-5";
+			productName = "LabWork-5";
+			productReference = B5C35F871AA9E558008023C4 /* LabWork-5.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B5C35F9F1AA9E558008023C4 /* LabWork-5Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5C35FAD1AA9E558008023C4 /* Build configuration list for PBXNativeTarget "LabWork-5Tests" */;
+			buildPhases = (
+				B5C35F9C1AA9E558008023C4 /* Sources */,
+				B5C35F9D1AA9E558008023C4 /* Frameworks */,
+				B5C35F9E1AA9E558008023C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5C35FA21AA9E558008023C4 /* PBXTargetDependency */,
+			);
+			name = "LabWork-5Tests";
+			productName = "LabWork-5Tests";
+			productReference = B5C35FA01AA9E558008023C4 /* LabWork-5Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5C35F7F1AA9E558008023C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Noveo;
+				TargetAttributes = {
+					B5C35F861AA9E558008023C4 = {
+						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = WL2U6TR99S;
+					};
+					B5C35F9F1AA9E558008023C4 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = B5C35F861AA9E558008023C4;
+					};
+				};
+			};
+			buildConfigurationList = B5C35F821AA9E558008023C4 /* Build configuration list for PBXProject "LabWork-5" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B5C35F7E1AA9E558008023C4;
+			productRefGroup = B5C35F881AA9E558008023C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5C35F861AA9E558008023C4 /* LabWork-5 */,
+				B5C35F9F1AA9E558008023C4 /* LabWork-5Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5C35F851AA9E558008023C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B52CCF151AADA45D00E7828A /* AboutVC.xib in Resources */,
+				B52CCF1C1AADDBD900E7828A /* AuthorDetailsVC.xib in Resources */,
+				B5C35F9B1AA9E558008023C4 /* LaunchScreen.xib in Resources */,
+				B52CCF101AAD797900E7828A /* ColorSliderVC.xib in Resources */,
+				B52CCF1E1AADDE4C00E7828A /* my_photo.jpg in Resources */,
+				B5C35F981AA9E558008023C4 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5C35F9E1AA9E558008023C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5C35F831AA9E558008023C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B52CCF1B1AADDBD900E7828A /* AuthorDetailsVC.m in Sources */,
+				B5C35F931AA9E558008023C4 /* ColorPickerVC.m in Sources */,
+				B52CCF141AADA45D00E7828A /* AboutVC.m in Sources */,
+				B52CCF0F1AAD797900E7828A /* ColorSliderVC.m in Sources */,
+				B5C35F901AA9E558008023C4 /* AppDelegate.m in Sources */,
+				B5C35F8D1AA9E558008023C4 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5C35F9C1AA9E558008023C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5C35FA71AA9E558008023C4 /* LabWork_5Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5C35FA21AA9E558008023C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5C35F861AA9E558008023C4 /* LabWork-5 */;
+			targetProxy = B5C35FA11AA9E558008023C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B5C35F991AA9E558008023C4 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5C35F9A1AA9E558008023C4 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B5C35FA81AA9E558008023C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5C35FA91AA9E558008023C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B5C35FAB1AA9E558008023C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "LabWork-5/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B5C35FAC1AA9E558008023C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "LabWork-5/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B5C35FAE1AA9E558008023C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LabWork-5Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LabWork-5.app/LabWork-5";
+			};
+			name = Debug;
+		};
+		B5C35FAF1AA9E558008023C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LabWork-5Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LabWork-5.app/LabWork-5";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5C35F821AA9E558008023C4 /* Build configuration list for PBXProject "LabWork-5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5C35FA81AA9E558008023C4 /* Debug */,
+				B5C35FA91AA9E558008023C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5C35FAA1AA9E558008023C4 /* Build configuration list for PBXNativeTarget "LabWork-5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5C35FAB1AA9E558008023C4 /* Debug */,
+				B5C35FAC1AA9E558008023C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5C35FAD1AA9E558008023C4 /* Build configuration list for PBXNativeTarget "LabWork-5Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5C35FAE1AA9E558008023C4 /* Debug */,
+				B5C35FAF1AA9E558008023C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5C35F7F1AA9E558008023C4 /* Project object */;
+}
