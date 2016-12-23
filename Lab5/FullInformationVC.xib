@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FullInformationVC">
+            <connections>
+                <outlet property="view" destination="9o1-Z4-17p" id="tfJ-F5-0gG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="fTO-JE-8xp">
+            <layoutGuides>
+                <viewControllerLayoutGuide type="top" id="V3z-qW-ndJ"/>
+                <viewControllerLayoutGuide type="bottom" id="wgh-FO-SQx"/>
+            </layoutGuides>
+            <view key="view" contentMode="scaleToFill" id="TMc-HH-830">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9o1-Z4-17p">
+                        <rect key="frame" x="0.0" y="0.0" width="460" height="387"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Jackie_Chan_Cannes_2012.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ODN-IO-daG">
+                                <rect key="frame" x="15" y="26" width="97" height="120"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25S-SV-GjE">
+                                <rect key="frame" x="120" y="26" width="122" height="263"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Джеки родился в бедной китайской семье. Его родители Чарльз Чан (1914—2008) и Лили Чан (1916—2002) бежали в Гонконг с континента во время гражданской войны, а в 1960 году перебрались в Австралию. До переезда они работали поваром и горничной в резиденции посла Франции в Гонконге[6].
+
+Учился Джеки в начальной школе «Nah-Hwa Primary School», но в возрасте 6 лет был отдан в школу пекинской оперы при Китайском институте оперных исследований в Гонконге. Помимо сценической подготовки, это помогло маленькому Чану научиться лучше владеть телом. Джеки увлекался и боевым искусством кунг-фу[7].
+
+В эпизодических ролях в кино стал сниматься ещё ребёнком — в возрасте 8—10 лет снялся в массовке классики фильма в жанре оперы Хуанмэй[en] «Вечная Любовь», в фильме «Большой и маленький Вонг Тин Бар» в роли сына главной героини в исполнении Ли Лихуа и пекинской опере «История Цинь Сянлянь». В подростково-юношеском возрасте участвовал в трюковой массовке, в частности, фильмов «Кулак ярости» и «Выход дракона» с участием Брюса Ли[8]. Чан входил в группу «Семи везунчиков» вместе с Саммо Хунгом, Юэнем Бяо и Кори Квай, также ставших популярными актёрами[9].
+
+В 1976 году Джеки переехал к родителям в Канберру, где он недолго учился в «Dickson College» и работал строителем[10].</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="025-Op-3Qo">
+                                <rect key="frame" x="8" y="159" width="98" height="30"/>
+                                <state key="normal" title="BackButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BackButtonClick" destination="-1" eventType="touchUpInside" id="rPY-am-m3I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.88156836770000002" blue="0.55459476159999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            </view>
+            <point key="canvasLocation" x="408" y="441"/>
+        </viewController>
+    </objects>
+    <resources>
+        <image name="Jackie_Chan_Cannes_2012.jpg" width="247" height="350"/>
+    </resources>
+</document>
