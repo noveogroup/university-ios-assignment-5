@@ -3,13 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthorDetailsVC">
             <connections>
                 <outlet property="label" destination="u4b-cf-yeb" id="Hc3-Fm-HhO"/>
-                <outlet property="scrollView" destination="Riq-9q-KHE" id="MjC-4Y-rcb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,7 +25,7 @@
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="horse.png" translatesAutoresizingMaskIntoConstraints="NO" id="kNY-FJ-hLa">
                                     <constraints>
-                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="550" id="3q2-f8-Rcb"/>
+                                        <constraint firstAttribute="width" secondItem="kNY-FJ-hLa" secondAttribute="height" multiplier="144:125" id="vq1-1y-VdJ"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Very big text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4b-cf-yeb">
@@ -45,8 +46,6 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="kNY-FJ-hLa" firstAttribute="width" secondItem="LUb-fK-sYW" secondAttribute="width" id="2uZ-F5-2uw"/>
-                                <constraint firstItem="kNY-FJ-hLa" firstAttribute="leading" secondItem="LUb-fK-sYW" secondAttribute="leading" id="7JX-EU-ZRf"/>
                                 <constraint firstAttribute="trailing" secondItem="u4b-cf-yeb" secondAttribute="trailing" constant="20" id="93s-FP-SEH"/>
                                 <constraint firstItem="kNY-FJ-hLa" firstAttribute="centerX" secondItem="LUb-fK-sYW" secondAttribute="centerX" id="FV3-u7-z4s"/>
                                 <constraint firstItem="Mux-yH-WLA" firstAttribute="top" secondItem="u4b-cf-yeb" secondAttribute="bottom" id="G64-2F-0Si"/>
@@ -55,7 +54,6 @@
                                 <constraint firstAttribute="bottom" secondItem="Mux-yH-WLA" secondAttribute="bottom" constant="10" id="oQr-p1-xSI"/>
                                 <constraint firstItem="kNY-FJ-hLa" firstAttribute="top" secondItem="LUb-fK-sYW" secondAttribute="top" id="rmk-rq-J4K"/>
                                 <constraint firstItem="u4b-cf-yeb" firstAttribute="top" secondItem="kNY-FJ-hLa" secondAttribute="bottom" id="suq-le-qhI"/>
-                                <constraint firstAttribute="trailing" secondItem="kNY-FJ-hLa" secondAttribute="trailing" id="vK7-GV-2dv"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -69,6 +67,7 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="kNY-FJ-hLa" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.9" id="99C-2C-Q6K"/>
                 <constraint firstAttribute="trailing" secondItem="Riq-9q-KHE" secondAttribute="trailing" id="Mfe-jI-1at"/>
                 <constraint firstItem="Riq-9q-KHE" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" constant="-20" id="m62-8u-Sge"/>
                 <constraint firstItem="Riq-9q-KHE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nPc-lk-RU8"/>
