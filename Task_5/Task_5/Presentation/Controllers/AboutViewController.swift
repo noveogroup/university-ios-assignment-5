@@ -23,7 +23,6 @@ class AboutViewController: UIViewController, DetailsViewControllerDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print(segue.identifier)
         if segue.identifier == segueIdentifierShowDetails {
             let uiViewController = segue.destination
             let detailsViewController: DetailsViewController = uiViewController.childViewControllers.last as! DetailsViewController
