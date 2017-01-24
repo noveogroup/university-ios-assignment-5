@@ -97,7 +97,7 @@ class ColorViewController: UIViewController, UITextFieldDelegate {
 
 private extension ColorViewController {
     @objc func keyboardWillShow(notification: NSNotification) {
-        let size = (notification.userInfo![UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        let size = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         scrollView.contentInset = UIEdgeInsetsMake(0, 0, size.height, 0)
     }
     
